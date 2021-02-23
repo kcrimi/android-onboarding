@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar"
+        style="@style/SkStyle.Toolbar.Transparent"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/onboarding_signup_content_separator"
+        android:layout_below="@id/action_bar">
+
+        <LinearLayout
+            style="@style/SkStyle.TabletFriendlyWidthContainer"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/activity_margin_medium"
+                android:id="@+id/onboarding_signup_title"
+                style="@style/SkStyle.Text.Header.H3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sign_up_to_continue" />
+
+            <TextView
+                android:id="@+id/onboarding_signup_subtitle"
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_small"
+                android:layout_marginBottom="@dimen/activity_content_margin_xlarge"
+                android:gravity="center"
+                android:text="@string/sign_up_explore_copy" />
+
+            <Button
+                android:id="@+id/onboarding_signup_google_button"
+                style="@style/SkStyle.Button.Social.Google"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_content_vertical_margin"
+                android:gravity="center"
+                android:text="@string/sign_up_with_google" />
+
+            <Button
+                android:id="@+id/onboarding_signup_facebook_button"
+                style="@style/SkStyle.Button.Social.Facebook"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_content_vertical_margin_medium"
+                android:gravity="center"
+                android:text="@string/sign_up_with_facebook" />
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_medium_plus"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?themeColorGreyLight" />
+
+                <TextView
+                    style="@style/SkStyle.Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_content_margin_small"
+                    android:layout_marginRight="@dimen/card_content_margin_small"
+                    android:text="@string/or"
+                    android:textAllCaps="true" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?themeColorGreyLight" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/onboarding_signup_email_button"
+                style="@style/SkStyle.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_margin_medium_plus"
+                android:text="@string/sign_up_with_email" />
+
+            <TextView
+                android:id="@+id/onboarding_signup_terms_button"
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_medium_plus"
+                android:gravity="center"
+                android:textAllCaps="false"
+                tools:text="@string/terms_and_privacy" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/onboarding_signup_content_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/onboarding_signup_signin_text"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:background="@color/concrete" />
+
+    <TextView
+        android:id="@+id/onboarding_signup_signin_text"
+        style="@style/SkStyle.Text.Body3.Highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:gravity="center_horizontal"
+        android:onClick="onContactSupport"
+        tools:text="@string/onboarding_signup_sign_in_text" />
+
+
+</RelativeLayout>

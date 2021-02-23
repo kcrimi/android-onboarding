@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/featured_list_cell_width"
+    android:layout_height="@dimen/featured_list_cell_height"
+    android:paddingLeft="10dp">
+
+    <RelativeLayout
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="124dp">
+
+        <ImageView
+            android:id="@+id/featured_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editor_pick_bg">
+
+                <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+                    android:id="@+id/class_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5.5dp"
+                    android:text="1m"
+                    android:textColor="@android:color/white"
+                    android:textSize="10.6dp"
+                    app:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="3.2dp"
+                    android:src="@drawable/icon_hours_outline" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/course_cell_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:paddingTop="10.5dp"
+        android:textColor="@color/text_gray"
+        android:textSize="14dp"
+        app:textStyle="semibold" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/course_cell_teacher_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/course_cell_title_text_view"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_gray"
+        android:textSize="12dp"
+        app:textStyle="normal" />
+
+</RelativeLayout>

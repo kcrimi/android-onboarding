@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_margin"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/project_data"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/project_profile_pic"
+            android:src="?themeColorGreyMedium"
+            android:layout_width="55dp"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/activity_content_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_title"
+                style="@style/SkStyle.Text.Header.H5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Bighorn Sheep" />
+
+            <TextView
+                android:id="@+id/project_author"
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="Matt Anderson" />
+
+            <LinearLayout
+                android:id="@+id/project_stats"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_projectdetail_views" />
+
+                <TextView
+                    android:id="@+id/project_views"
+                    style="@style/SkStyle.Text.Body3"
+                    android:layout_marginLeft="@dimen/line_item_horizontal_margin_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2.3k" />
+
+
+                <ImageView
+                    style="@style/SkStyle.Icon.Small"
+                    android:layout_marginLeft="@dimen/line_item_horizontal_margin_medium"
+                    android:src="@drawable/ic_heart_stroke" />
+
+                <TextView
+                    android:id="@+id/project_likes"
+                    style="@style/SkStyle.Text.Body3"
+                    android:layout_marginLeft="@dimen/line_item_horizontal_margin_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="543" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/project_parent_class_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_content_vertical_margin_medium"
+            android:text="@string/projects_created_in"/>
+
+
+        <TextView
+            android:id="@+id/project_parent_class"
+            style="@style/SkStyle.Text.Header.H6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_content_vertical_margin_xsmall"
+            android:paddingBottom="@dimen/activity_content_vertical_margin_xsmall"
+            android:focusable="true"
+            android:clickable="true"
+            android:onClick="onParentClick"
+            tools:text="Brand Identity: Design Adaptable "/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skillshare.Skillshare.client.discussion_details.DiscussionDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_discussion_details_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:navigationIcon="@drawable/ic_back"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/activity_discussion_details_toolbar_title"
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Replies" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp">
+
+        <com.skillshare.Skillshare.client.course_details.discussions.post_discussion.widget.PostBarView
+            android:id="@+id/activity_discussion_details_post_reply_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:elevation="8dp"
+            android:outlineProvider="bounds" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_discussion_details_replies_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/activity_discussion_details_post_reply_bar_view"
+            android:elevation="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <requestFocus />
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+            android:id="@+id/activity_discussion_details_offline_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

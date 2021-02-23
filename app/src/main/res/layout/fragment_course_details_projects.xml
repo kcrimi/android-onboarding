@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".client.course_details.projects.projects.view.ProjectsFragment">
+
+    <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+        android:id="@+id/fragment_course_details_projects_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_course_details_projects_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/fragment_course_details_projects_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
+
+            <com.skillshare.Skillshare.client.common.component.project.collection_row.ProjectCollectionRow
+                android:id="@+id/fragment_course_details_projects_course_featured_projects_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/standard_vertical_spacing"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/fragment_course_details_projects_download_extra_content_row"
+                layout="@layout/view_projects_download_extras_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/standard_vertical_spacing"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:visibility="gone"
+                />
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/fragment_course_details_projects_loading_progress_wheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/activity_margin"
+                android:visibility="gone"
+                app:matProg_barColor="?attr/themeColorPrimary"
+                app:matProg_barWidth="2dp"
+                app:matProg_progressIndeterminate="true" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

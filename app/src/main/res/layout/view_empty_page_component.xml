@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_margin"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/view_empty_page_component_icon_image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/icon_course_list_image"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/view_empty_page_component_title_text_view"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:textStyle="semibold"
+            tools:text="No Classes" />
+
+        <TextView
+            android:id="@+id/view_empty_page_component_subtitle_text_view"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/half_activity_margin"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:text="Try reseting your filters" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/view_empty_page_component_button"
+            style="@style/SkStyle.Button.Secondary"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:text="Create" />
+    </LinearLayout>
+</merge>

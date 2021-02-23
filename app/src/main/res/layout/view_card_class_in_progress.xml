@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SkStyle.Card"
+    android:orientation="vertical"
+    android:layout_width="@dimen/card_carousel_item_width"
+    android:layout_height="@dimen/card_carousel_item_class_in_progress_height">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/class_card_in_progress_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_carousel_item_image_thumbnail_height">
+
+            <ImageView
+                android:id="@+id/class_card_in_progress_preview_image"
+                android:src="?themeColorGreyLight"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <com.skillshare.Skillshare.client.common.recyclerview.cards.ClassCardBadgeOverlay
+                android:id="@+id/class_card_in_progress_badge_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/play_hover_teal"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height" />
+
+            <ProgressBar
+                android:id="@+id/class_card_in_progress_progress_bar"
+                style="@style/SkStyle.ProgressBar"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@id/class_card_in_progress_image_container"
+            android:id="@+id/class_card_in_progress_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/card_content_margin"
+            android:paddingLeft="@dimen/card_content_margin"
+            android:paddingRight="@dimen/card_content_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/class_card_in_progress_class_title"
+                style="@style/SkStyle.Text.Header.H6"
+                tools:text="This is the class title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                style="@style/SkStyle.Element.Separator"
+                android:layout_marginTop="@dimen/card_content_margin_medium"/>
+
+            <TextView
+                android:id="@+id/class_card_in_progress_lesson_title"
+                style="@style/SkStyle.Text.Header.H4"
+                tools:text="1. This is the class title and will only be 2 lines"
+                android:maxLines="2"
+                android:minLines="2"
+                android:layout_weight="100"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/card_content_margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/class_card_in_progress_remaining_time"
+                style="@style/SkStyle.Text.Header.H5"
+                tools:text="4m left in lesson"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/card_content_margin_medium"
+                android:paddingBottom="@dimen/card_content_margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            style="@style/SkStyle.Icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/class_card_in_progress_text_container"
+            android:paddingRight="@dimen/card_content_margin"
+            android:paddingBottom="@dimen/card_content_margin_medium"
+            android:paddingTop="@dimen/card_content_margin_medium"
+            android:paddingLeft="@dimen/card_content_margin_medium"
+            android:id="@+id/class_card_in_progress_options_button"
+            android:src="@drawable/ic_overflow_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

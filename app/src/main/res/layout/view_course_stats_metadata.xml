@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:showIn="@layout/view_course_hero_metadata">
+
+    <com.skillshare.Skillshare.client.common.component.free_premium_tag.FreePremiumTag
+        android:id="@+id/view_course_stats_metadata_free_premium_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/half_activity_margin"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/view_course_stats_metadata_video_duration_text_view"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTint="?android:colorForeground"
+        android:drawableLeft="@drawable/icon_time_gray"
+        tools:text="1h23" />
+
+    <TextView
+        android:id="@+id/view_course_stats_metadata_video_duration_separator"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/half_activity_margin"
+        android:paddingRight="@dimen/half_activity_margin"
+        android:text="@string/separation_dot_large"/>
+
+    <TextView
+        android:id="@+id/view_course_stats_metadata_student_number_text_view"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_class_students"
+        android:drawableTint="?android:colorForeground"
+        android:singleLine="true"
+        tools:text="8234" />
+</LinearLayout>

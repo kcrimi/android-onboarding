@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SkStyle.Card"
+    android:layout_marginLeft="@dimen/activity_margin"
+    android:layout_marginRight="@dimen/activity_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/reminder_main_content"
+                    android:layout_margin="@dimen/card_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/reminder_list_card_title"
+                            style="@style/SkStyle.Text.Header.H6"
+                            tools:text="Friday at 9:30AM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/reminder_list_card_today"
+                            style="@style/SkStyle.Text.Header.H5.Highlight"
+                            tools:text="@string/reminder_card_today"
+                            android:layout_gravity="right"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/reminder_list_card_separator"
+                            android:layout_below="@id/reminder_list_card_title"
+                            style="@style/SkStyle.Element.Separator"
+                            android:layout_marginTop="@dimen/card_content_margin"/>
+
+                        <TextView
+                            android:id="@+id/reminder_list_card_subtitle"
+                            style="@style/SkStyle.Text.Body2"
+                            android:layout_marginTop="@dimen/card_content_margin"
+                            tools:text="@string/reminder_card_subtitle_morning"
+                            android:layout_below="@id/reminder_list_card_separator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/reminder_list_card_delete_button"
+                    android:layout_below="@id/reminder_main_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="@dimen/activity_margin"
+                    android:paddingRight="@dimen/activity_margin"
+                    android:paddingBottom="@dimen/activity_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SkStyle.Icon"
+                    android:src="@drawable/ic_trash" />
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

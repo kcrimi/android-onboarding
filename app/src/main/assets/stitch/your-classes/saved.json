@@ -1,0 +1,585 @@
+{
+  "spaces": [
+    {
+      "space_type": "navigation",
+      "blocks": [
+        {
+          "block_title": "Saved Classes",
+          "block_type": "navbar",
+          "item_type": "NavbarButton",
+          "accessories": [],
+          "items": []
+        }
+      ]
+    },
+    {
+      "space_type": "vertical_list",
+      "previous_page_url": null,
+      "self_url": "/stitch/your-classes/saved",
+      "next_page_url": null,
+      "blocks": [
+        {
+          "block_type": "row",
+          "block_title": "Hand Lettering Essentials for Beginners",
+          "item_type": "ParentClasses",
+          "accessories": [
+            {
+              "accessory_type": "icon",
+              "title": "more",
+              "id": "more_button",
+              "icon_id": "more_icon",
+              "actions": [
+                {
+                  "action_id": "open_action_sheet",
+                  "action_type": "open_action_sheet",
+                  "action_uri": null,
+                  "data_type": "ActionSheetItem",
+                  "data": [
+                    {
+                      "title": "Remove",
+                      "actions": [
+                        {
+                          "action_id": "unsave_class",
+                          "action_type": "unsave_class",
+                          "action_uri": null,
+                          "data_type": "ParentClasses",
+                          "data": [
+                            {
+                              "id": 105379,
+                              "sku": 389616295,
+                              "title": "Hand Lettering Essentials for Beginners",
+                              "project_title": "Hand letter your favorite quote, title, or phrase.",
+                              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                              "total_videos_duration": "1h 57m",
+                              "num_reviews": 1421,
+                              "num_positive_reviews": 1395,
+                              "num_students": 36983
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 105379,
+              "sku": 389616295,
+              "title": "Hand Lettering Essentials for Beginners",
+              "project_title": "Hand letter your favorite quote, title, or phrase.",
+              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+              "total_videos_duration": "1h 57m",
+              "num_reviews": 1421,
+              "num_positive_reviews": 1395,
+              "num_students": 36983,
+              "actions": [
+                {
+                  "action_id": "open_class_details",
+                  "action_type": "open_applink",
+                  "action_uri": "skillshare://class_details?via=Discover%3A%20Hero&page_title=Hand%20Lettering%20Essentials%20for%20Beginners",
+                  "data_type": "ParentClasses",
+                  "data": [
+                    {
+                      "id": 105379,
+                      "sku": 389616295,
+                      "title": "Hand Lettering Essentials for Beginners",
+                      "project_title": "Hand letter your favorite quote, title, or phrase.",
+                      "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                      "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                      "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                      "total_videos_duration": "1h 57m",
+                      "num_reviews": 1421,
+                      "num_positive_reviews": 1395,
+                      "num_students": 36983
+                    }
+                  ]
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "/classes/389616295",
+                  "title": "Hand Lettering Essentials for Beginners"
+                },
+                "teacher": {
+                  "href": "/users/962856",
+                  "title": "Mary Kate McDevitt - Letterer"
+                },
+                "units": {
+                  "href": "/classes/389616295/units",
+                  "title": "Units for Class: 389616295"
+                },
+                "sessions": {
+                  "href": "/classes/389616295/sessions",
+                  "title": "Sessions for Class: 389616295"
+                },
+                "category": {
+                  "href": "/tags/design",
+                  "title": "Design"
+                },
+                "students": {
+                  "href": "/classes/389616295/students",
+                  "title": "Students for Class: 389616295"
+                },
+                "projects": {
+                  "href": "/classes/389616295/projects",
+                  "title": "Projects for Class: 389616295"
+                },
+                "reviews": {
+                  "href": "/classes/389616295/reviews",
+                  "title": "Reviews for Class: 389616295"
+                }
+              },
+              "_embedded": {
+                "teacher": {
+                  "username": 6102916,
+                  "first_name": "Rich",
+                  "last_name": "Armstrong",
+                  "full_name": "Rich Armstrong",
+                  "headline": "Product designer",
+                  "url": "http://mrra.co",
+                  "pic": "https://static.skillshare.com/uploads/users/6102916/user-image-medium.jpg?1875874536",
+                  "pic_sm": "https://static.skillshare.com/uploads/users/6102916/user-image-small.jpg?1990179125",
+                  "pic_lg": "https://static.skillshare.com/uploads/users/6102916/user-image-large.jpg?1535675750",
+                  "is_teacher": true,
+                  "is_member": true,
+                  "is_ios_member": false,
+                  "membership_label": "Premium Member",
+                  "numFollowers": 5613,
+                  "numFollowing": 104,
+                  "is_profile_private": false,
+                  "_links": {
+                    "self": {
+                      "href": "/users/6102916",
+                      "title": "Rich Armstrong - Product designer"
+                    },
+                    "my_classes": {
+                      "href": "/users/6102916/classes",
+                      "title": "My Classes"
+                    },
+                    "completions": {
+                      "href": "/users/6102916/completions",
+                      "title": "Completions for User: 6102916"
+                    },
+                    "followers": {
+                      "href": "/users/6102916/followers",
+                      "title": "Followers for User: 6102916"
+                    },
+                    "following": {
+                      "href": "/users/6102916/following",
+                      "title": "Following for User: 6102916"
+                    },
+                    "notifications": {
+                      "href": "/users/6102916/notifications",
+                      "title": "Notifications for User: 6102916"
+                    },
+                    "projects": {
+                      "href": "/users/6102916/projects",
+                      "title": "Projects for User: 6102916"
+                    },
+                    "rosters": {
+                      "href": "/users/6102916/rosters",
+                      "title": "Rosters for User: 6102916"
+                    },
+                    "userTags": {
+                      "href": "/users/6102916/userTags",
+                      "title": "UserTags for User: 6102916"
+                    },
+                    "votes": {
+                      "href": "/users/6102916/votes",
+                      "title": "Votes for User: 6102916"
+                    },
+                    "wishlist": {
+                      "href": "/users/6102916/wishlist",
+                      "title": "Wishlist for User: 6102916"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "block_type": "row",
+          "block_title": "Hand Lettering Essentials for Beginners",
+          "item_type": "ParentClasses",
+          "accessories": [
+            {
+              "accessory_type": "icon",
+              "title": "more",
+              "id": "more_button",
+              "icon_id": "more_icon",
+              "actions": [
+                {
+                  "action_id": "open_action_sheet",
+                  "action_type": "open_action_sheet",
+                  "action_uri": null,
+                  "data_type": "ActionSheetItem",
+                  "data": [
+                    {
+                      "title": "Remove",
+                      "actions": [
+                        {
+                          "action_id": "unsave_class",
+                          "action_type": "unsave_class",
+                          "action_uri": null,
+                          "data_type": "ParentClasses",
+                          "data": [
+                            {
+                              "id": 105379,
+                              "sku": 389616295,
+                              "title": "Hand Lettering Essentials for Beginners",
+                              "project_title": "Hand letter your favorite quote, title, or phrase.",
+                              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                              "total_videos_duration": "1h 57m",
+                              "num_reviews": 1421,
+                              "num_positive_reviews": 1395,
+                              "num_students": 36983
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 105379,
+              "sku": 389616295,
+              "title": "Hand Lettering Essentials for Beginners",
+              "project_title": "Hand letter your favorite quote, title, or phrase.",
+              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+              "total_videos_duration": "1h 57m",
+              "num_reviews": 1421,
+              "num_positive_reviews": 1395,
+              "num_students": 36983,
+              "actions": [
+                {
+                  "action_id": "open_class_details",
+                  "action_type": "open_applink",
+                  "action_uri": "skillshare://class_details?via=Discover%3A%20Hero&page_title=Hand%20Lettering%20Essentials%20for%20Beginners",
+                  "data_type": "ParentClasses",
+                  "data": [
+                    {
+                      "id": 105379,
+                      "sku": 389616295,
+                      "title": "Hand Lettering Essentials for Beginners",
+                      "project_title": "Hand letter your favorite quote, title, or phrase.",
+                      "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                      "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                      "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                      "total_videos_duration": "1h 57m",
+                      "num_reviews": 1421,
+                      "num_positive_reviews": 1395,
+                      "num_students": 36983
+                    }
+                  ]
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "/classes/389616295",
+                  "title": "Hand Lettering Essentials for Beginners"
+                },
+                "teacher": {
+                  "href": "/users/962856",
+                  "title": "Mary Kate McDevitt - Letterer"
+                },
+                "units": {
+                  "href": "/classes/389616295/units",
+                  "title": "Units for Class: 389616295"
+                },
+                "sessions": {
+                  "href": "/classes/389616295/sessions",
+                  "title": "Sessions for Class: 389616295"
+                },
+                "category": {
+                  "href": "/tags/design",
+                  "title": "Design"
+                },
+                "students": {
+                  "href": "/classes/389616295/students",
+                  "title": "Students for Class: 389616295"
+                },
+                "projects": {
+                  "href": "/classes/389616295/projects",
+                  "title": "Projects for Class: 389616295"
+                },
+                "reviews": {
+                  "href": "/classes/389616295/reviews",
+                  "title": "Reviews for Class: 389616295"
+                }
+              },
+              "_embedded": {
+                "teacher": {
+                  "username": 6102916,
+                  "first_name": "Rich",
+                  "last_name": "Armstrong",
+                  "full_name": "Rich Armstrong",
+                  "headline": "Product designer",
+                  "url": "http://mrra.co",
+                  "pic": "https://static.skillshare.com/uploads/users/6102916/user-image-medium.jpg?1875874536",
+                  "pic_sm": "https://static.skillshare.com/uploads/users/6102916/user-image-small.jpg?1990179125",
+                  "pic_lg": "https://static.skillshare.com/uploads/users/6102916/user-image-large.jpg?1535675750",
+                  "is_teacher": true,
+                  "is_member": true,
+                  "is_ios_member": false,
+                  "membership_label": "Premium Member",
+                  "numFollowers": 5613,
+                  "numFollowing": 104,
+                  "is_profile_private": false,
+                  "_links": {
+                    "self": {
+                      "href": "/users/6102916",
+                      "title": "Rich Armstrong - Product designer"
+                    },
+                    "my_classes": {
+                      "href": "/users/6102916/classes",
+                      "title": "My Classes"
+                    },
+                    "completions": {
+                      "href": "/users/6102916/completions",
+                      "title": "Completions for User: 6102916"
+                    },
+                    "followers": {
+                      "href": "/users/6102916/followers",
+                      "title": "Followers for User: 6102916"
+                    },
+                    "following": {
+                      "href": "/users/6102916/following",
+                      "title": "Following for User: 6102916"
+                    },
+                    "notifications": {
+                      "href": "/users/6102916/notifications",
+                      "title": "Notifications for User: 6102916"
+                    },
+                    "projects": {
+                      "href": "/users/6102916/projects",
+                      "title": "Projects for User: 6102916"
+                    },
+                    "rosters": {
+                      "href": "/users/6102916/rosters",
+                      "title": "Rosters for User: 6102916"
+                    },
+                    "userTags": {
+                      "href": "/users/6102916/userTags",
+                      "title": "UserTags for User: 6102916"
+                    },
+                    "votes": {
+                      "href": "/users/6102916/votes",
+                      "title": "Votes for User: 6102916"
+                    },
+                    "wishlist": {
+                      "href": "/users/6102916/wishlist",
+                      "title": "Wishlist for User: 6102916"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "block_type": "row",
+          "block_title": "Hand Lettering Essentials for Beginners",
+          "item_type": "ParentClasses",
+          "accessories": [
+            {
+              "accessory_type": "icon",
+              "title": "more",
+              "id": "more_button",
+              "icon_id": "more_icon",
+              "actions": [
+                {
+                  "action_id": "open_action_sheet",
+                  "action_type": "open_action_sheet",
+                  "action_uri": null,
+                  "data_type": "ActionSheetItem",
+                  "data": [
+                    {
+                      "title": "Remove",
+                      "actions": [
+                        {
+                          "action_id": "unsave_class",
+                          "action_type": "unsave_class",
+                          "action_uri": null,
+                          "data_type": "ParentClasses",
+                          "data": [
+                            {
+                              "id": 105379,
+                              "sku": 389616295,
+                              "title": "Hand Lettering Essentials for Beginners",
+                              "project_title": "Hand letter your favorite quote, title, or phrase.",
+                              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                              "total_videos_duration": "1h 57m",
+                              "num_reviews": 1421,
+                              "num_positive_reviews": 1395,
+                              "num_students": 36983
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 105379,
+              "sku": 389616295,
+              "title": "Hand Lettering Essentials for Beginners",
+              "project_title": "Hand letter your favorite quote, title, or phrase.",
+              "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+              "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+              "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+              "total_videos_duration": "1h 57m",
+              "num_reviews": 1421,
+              "num_positive_reviews": 1395,
+              "num_students": 36983,
+              "actions": [
+                {
+                  "action_id": "open_class_details",
+                  "action_type": "open_applink",
+                  "action_uri": "skillshare://class_details?via=Discover%3A%20Hero&page_title=Hand%20Lettering%20Essentials%20for%20Beginners",
+                  "data_type": "ParentClasses",
+                  "data": [
+                    {
+                      "id": 105379,
+                      "sku": 389616295,
+                      "title": "Hand Lettering Essentials for Beginners",
+                      "project_title": "Hand letter your favorite quote, title, or phrase.",
+                      "image_huge": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/original",
+                      "image_small": "https://static.skillshare.com/uploads/video/thumbnails/3756411243001/448-252",
+                      "image_thumbnail": "https://s3.amazonaws.com/skillshare/uploads/video/thumbnails/3756411243001/220-124",
+                      "total_videos_duration": "1h 57m",
+                      "num_reviews": 1421,
+                      "num_positive_reviews": 1395,
+                      "num_students": 36983
+                    }
+                  ]
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "/classes/389616295",
+                  "title": "Hand Lettering Essentials for Beginners"
+                },
+                "teacher": {
+                  "href": "/users/962856",
+                  "title": "Mary Kate McDevitt - Letterer"
+                },
+                "units": {
+                  "href": "/classes/389616295/units",
+                  "title": "Units for Class: 389616295"
+                },
+                "sessions": {
+                  "href": "/classes/389616295/sessions",
+                  "title": "Sessions for Class: 389616295"
+                },
+                "category": {
+                  "href": "/tags/design",
+                  "title": "Design"
+                },
+                "students": {
+                  "href": "/classes/389616295/students",
+                  "title": "Students for Class: 389616295"
+                },
+                "projects": {
+                  "href": "/classes/389616295/projects",
+                  "title": "Projects for Class: 389616295"
+                },
+                "reviews": {
+                  "href": "/classes/389616295/reviews",
+                  "title": "Reviews for Class: 389616295"
+                }
+              },
+              "_embedded": {
+                "teacher": {
+                  "username": 6102916,
+                  "first_name": "Rich",
+                  "last_name": "Armstrong",
+                  "full_name": "Rich Armstrong",
+                  "headline": "Product designer",
+                  "url": "http://mrra.co",
+                  "pic": "https://static.skillshare.com/uploads/users/6102916/user-image-medium.jpg?1875874536",
+                  "pic_sm": "https://static.skillshare.com/uploads/users/6102916/user-image-small.jpg?1990179125",
+                  "pic_lg": "https://static.skillshare.com/uploads/users/6102916/user-image-large.jpg?1535675750",
+                  "is_teacher": true,
+                  "is_member": true,
+                  "is_ios_member": false,
+                  "membership_label": "Premium Member",
+                  "numFollowers": 5613,
+                  "numFollowing": 104,
+                  "is_profile_private": false,
+                  "_links": {
+                    "self": {
+                      "href": "/users/6102916",
+                      "title": "Rich Armstrong - Product designer"
+                    },
+                    "my_classes": {
+                      "href": "/users/6102916/classes",
+                      "title": "My Classes"
+                    },
+                    "completions": {
+                      "href": "/users/6102916/completions",
+                      "title": "Completions for User: 6102916"
+                    },
+                    "followers": {
+                      "href": "/users/6102916/followers",
+                      "title": "Followers for User: 6102916"
+                    },
+                    "following": {
+                      "href": "/users/6102916/following",
+                      "title": "Following for User: 6102916"
+                    },
+                    "notifications": {
+                      "href": "/users/6102916/notifications",
+                      "title": "Notifications for User: 6102916"
+                    },
+                    "projects": {
+                      "href": "/users/6102916/projects",
+                      "title": "Projects for User: 6102916"
+                    },
+                    "rosters": {
+                      "href": "/users/6102916/rosters",
+                      "title": "Rosters for User: 6102916"
+                    },
+                    "userTags": {
+                      "href": "/users/6102916/userTags",
+                      "title": "UserTags for User: 6102916"
+                    },
+                    "votes": {
+                      "href": "/users/6102916/votes",
+                      "title": "Votes for User: 6102916"
+                    },
+                    "wishlist": {
+                      "href": "/users/6102916/wishlist",
+                      "title": "Wishlist for User: 6102916"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

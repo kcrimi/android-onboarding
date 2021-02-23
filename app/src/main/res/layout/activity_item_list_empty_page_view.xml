@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/SkStyle.Icon.Large"
+            android:layout_gravity="center"
+            android:layout_marginBottom="36dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_course_list_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_item_list_empty_title_text_view"
+                style="@style/SkStyle.Text.Header.H5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/activity_margin"
+                android:gravity="center"
+                tools:text="@string/view_my_classes_enrolled_classes_empty_title" />
+
+            <TextView
+                android:id="@+id/activity_item_list_empty_sub_title_text_view"
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/activity_item_list_empty_title_text_view"
+                android:layout_alignRight="@id/activity_item_list_empty_title_text_view"
+                android:layout_below="@id/activity_item_list_empty_title_text_view"
+                tools:text="@string/view_my_classes_enrolled_classes_empty_sub_title" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

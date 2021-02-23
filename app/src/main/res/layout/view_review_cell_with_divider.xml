@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_margin"
+    android:layout_marginLeft="@dimen/activity_margin"
+    android:layout_marginRight="@dimen/activity_margin"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_review_cell_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?themeColorGreyLight"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/view_review_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin" />
+</LinearLayout>

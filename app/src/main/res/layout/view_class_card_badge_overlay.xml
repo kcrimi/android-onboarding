@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.FrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/badge_overlay_staff_pick"
+        android:visibility="gone"
+        android:background="@drawable/gradient_black70_transparent"
+        android:paddingBottom="@dimen/card_content_margin_large"
+        android:paddingTop="@dimen/card_content_margin"
+        android:paddingLeft="@dimen/card_content_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_badge_staff_pick"
+            android:text="@string/class_card_badge_staff_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/badge_overlay_skillshare_original"
+        android:visibility="gone"
+        android:background="@drawable/gradient_black70_transparent"
+        android:paddingBottom="@dimen/card_content_margin_large"
+        android:paddingTop="@dimen/card_content_margin"
+        android:paddingLeft="@dimen/card_content_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_badge_original"
+            android:text="@string/class_card_badge_staff_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</merge>

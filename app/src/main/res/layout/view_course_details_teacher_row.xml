@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/activity_content_vertical_margin_medium"
+    android:paddingBottom="@dimen/activity_content_vertical_margin_medium"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/view_course_details_teacher_row_profile_image_view"
+            style="@style/SkStyle.Avatar.Teacher"
+            tools:src="@drawable/splash" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_medium"
+        android:orientation="vertical"
+        android:paddingTop="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/view_course_details_teacher_row_teacher_name_text_view"
+                style="@style/SkStyle.Text.Header.H5.Ellipsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/view_course_details_teacher_row_follow_text_separator"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="John Doe" />
+
+            <TextView
+                android:id="@+id/view_course_details_teacher_row_follow_text_separator"
+                style="@style/SkStyle.Text.Header.H5.Ellipsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_item_horizontal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBaseline_toBaselineOf="@id/view_course_details_teacher_row_teacher_name_text_view"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/view_course_details_teacher_row_teacher_name_text_view"
+                app:layout_constraintRight_toRightOf="@id/view_course_details_teacher_row_follow_text_button"
+                android:text="@string/separation_dot"
+                android:visibility="invisible"
+                tools:text="·" />
+
+            <TextView
+                android:id="@+id/view_course_details_teacher_row_follow_text_button"
+                style="@style/SkStyle.Text.Header.H5.Highlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_item_horizontal_margin"
+                app:layout_constraintBaseline_toBaselineOf="@id/view_course_details_teacher_row_teacher_name_text_view"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@id/view_course_details_teacher_row_follow_text_separator"
+                app:layout_constraintRight_toRightOf="parent"
+                android:minWidth="100dp"
+                tools:text="Following" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/view_course_details_teacher_row_title_text_view"
+            style="@style/SkStyle.Text.Body3.Ellipsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Astronaut" />
+    </LinearLayout>
+
+</merge>

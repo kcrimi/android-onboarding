@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SkStyle.Card"
+    android:layout_marginLeft="@dimen/activity_margin"
+    android:layout_marginRight="@dimen/activity_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/card_padding_large"
+        android:layout_marginBottom="@dimen/card_padding_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/reminder_setup_card_title"
+            style="@style/SkStyle.Text.Header.H4"
+            android:text="@string/reminders_setup_enable_notifications_title_format"
+            android:layout_marginBottom="@dimen/activity_content_margin_large"
+            android:layout_marginLeft="@dimen/card_padding_large"
+            android:layout_marginRight="@dimen/card_padding_large"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/reminder_suggested_time_step_view"
+                android:layout_marginLeft="@dimen/card_padding_large"
+                android:layout_marginRight="@dimen/card_padding_large"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/reminder_suggested_time_image"
+                    android:src="@drawable/ic_reminders_setup1"
+                    android:layout_marginBottom="@dimen/activity_content_margin_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:gravity="center"
+                    android:text="@string/reminders_setup_suggested_time_subtitle"
+                    android:layout_marginBottom="@dimen/activity_content_margin_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/reminder_suggested_time_adjust_button"
+                        style="@style/SkStyle.Button.Secondary"
+                        android:text="@string/reminders_setup_adjust_time_button"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/reminder_suggested_time_accept_button"
+                        style="@style/SkStyle.Button.Primary"
+                        android:text="@string/reminders_setup_accept_time_button"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reminder_pick_time_step_view"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <NumberPicker
+                        android:id="@+id/day_of_week_number_picker"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_marginLeft="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TimePicker
+                        android:id="@+id/time_picker"
+                        android:descendantFocusability="blocksDescendants"
+                        android:timePickerMode="spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reminder_pick_time_button"
+                    style="@style/SkStyle.Button.Primary"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/reminders_setup_accept_time_button"
+                    android:layout_marginLeft="@dimen/card_padding_large"
+                    android:layout_marginRight="@dimen/card_padding_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/reminder_enable_notifications_step"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/card_padding_large"
+                android:layout_marginRight="@dimen/card_padding_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/reminder_enable_notifications_image"
+                    android:src="@drawable/ic_reminders_setup2"
+                    android:layout_marginBottom="@dimen/activity_content_margin_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/reminder_enable_notifications_subtitle"
+                    style="@style/SkStyle.Text.Body2"
+                    android:gravity="center"
+                    android:text="@string/reminders_setup_enable_notifications_subtitle"
+                    android:layout_marginBottom="@dimen/activity_content_margin_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reminder_enable_notifications_button"
+                    style="@style/SkStyle.Button.Primary"
+                    android:text="@string/reminders_enable_notifications_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

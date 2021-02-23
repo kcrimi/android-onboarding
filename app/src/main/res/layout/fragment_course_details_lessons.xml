@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.course_details.projects.projects.view.ProjectsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_lessons_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+        android:id="@+id/fragment_lessons_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/fragment_lessons_loading"
+        style="@style/SkStyle.Loading"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/half_activity_margin"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/view_subscription_plan_benefit_icon_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:tint="?android:colorForeground"
+        tools:src="@drawable/icon_light_bulb" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/view_subscription_plan_benefit_description_text_view"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Unlimited access to 1600+ classes" />
+</LinearLayout>

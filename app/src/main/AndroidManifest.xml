@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skillshare.Skillshare">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".application.Skillshare"
+        android:forceDarkAllowed="false"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        tools:replace="android:supportsRtl,android:allowBackup,android:fullBackupContent"
+        android:supportsRtl="false"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/SkillshareTheme"
+        tools:targetApi="30">
+
+        <activity android:name=".client.onboarding.onboarding.view.SplashActivity"
+            android:theme="@style/SkillshareTheme.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".client.purchase.PremiumCheckoutActivity"
+            android:parentActivityName=".client.main.view.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".client.main.view.MainActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".client.main.tabs.profile.settings.settings.SettingsActivity"
+            android:label="@string/activity_settings_title"
+            android:parentActivityName=".client.main.view.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.main.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".client.course_details.course_details.view.CourseDetailsActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:label="@string/title_activity_class_detail"
+            android:parentActivityName=".client.main.view.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.main.view.MainActivity" />
+
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Stitch: Accept Deeplinks to address Skillshare://class_details -->
+                <data
+                    android:host="class_details"
+                    android:scheme="skillshare" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".client.downloads.view.DownloadsActivity"
+            android:label="@string/title_activity_download">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Stitch: Accept Deeplinks to address Skillshare://download_manager -->
+                <data
+                    android:host="download_manager"
+                    android:scheme="skillshare" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".client.onboarding.welcome.view.WelcomeActivity" />
+        <activity
+            android:name=".client.session.view.SignInActivity"
+            android:label="@string/title_activity_sign_in"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".client.session.view.SignUpActivity"
+            android:label="@string/title_activity_sign_in"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".client.onboarding.SignUpChoiceActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".client.main.tabs.profile.settings.settings.WebActivity"
+            android:label="@string/title_activity_web"
+            android:parentActivityName=".client.main.tabs.profile.settings.settings.SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.main.tabs.profile.settings.settings.SettingsActivity" />
+        </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/facebook_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <meta-data
+            android:name=
+                "com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.skillshare.Skillshare.application.CastOptionsProvider"
+            />
+
+        <receiver
+            android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Install referrer tracking -->
+        <receiver
+            android:name=".util.InstallReferrerBroadcastReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".util.pushnotifications.RoutingFirebaseMessagingService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".util.pushnotifications.deeplinkrouting.NotificationActionBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+        <activity
+            android:name=".util.pushnotifications.deeplinkrouting.NotificationClicksActivity">
+            <intent-filter>
+                <action android:name="com.blueshift.NOTIFICATION_CLICK_EVENT"/>
+                <action android:name="com.blueshift.ACTION_OPEN_APP"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".util.pushnotifications.deeplinkrouting.BSDeeplinkActivity"
+            android:noHistory="true"
+            android:theme="@style/InvisibleActivityTheme">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="click.skillshare.com" android:pathPrefix="/z" />
+                <data android:scheme="https" android:host="blueshift-sandbox.skillshare.com" android:pathPrefix="/z" />
+                <data android:scheme="https" android:host="click.skillshare.com" android:pathPrefix="/track" />
+                <data android:scheme="https" android:host="blueshift-sandbox.skillshare.com" android:pathPrefix="/track" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label=""
+            android:name=".util.pushnotifications.deeplinkrouting.DeeplinkInterceptorActivity"
+            android:theme="@style/InvisibleActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="class-details" android:scheme="skillshare" />
+                <data android:host="home" android:scheme="skillshare" />
+                <data android:host="save-class" android:scheme="skillshare" />
+                <data android:host="class" android:scheme="skillshare" />
+                <data android:host="project" android:scheme="skillshare" />
+                <data android:host="class-discussion" android:scheme="skillshare" />
+                <data android:host="class-discussion-reply" android:scheme="skillshare" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="www.skillshare.com" android:pathPrefix="/classes/" />
+                <data android:scheme="http" />
+            </intent-filter>
+
+        </activity>
+        <receiver android:name=".util.alarm.AlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.skillshare.Skillshare.ACTION_APP_START"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".client.downloads.controllers.DownloadBroadcastListener">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".util.job.SaveJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service android:name=".util.alarm.AlarmSyncJobIntentService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service android:name=".util.pushnotifications.localnotifications.LocalNotificationJobIntentService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity
+            android:name=".client.project.ProjectDetailActivity"
+            android:label="@string/title_activity_project_detail" />
+        <activity
+            android:name=".client.course_details.projects.projectsList.view.ProjectsListActivity"
+            android:label="@string/title_activity_project_list" />
+        <activity
+            android:name=".client.course_details.projects.reviews.view.ReviewsActivity"
+            android:label="@string/title_activity_reviews" />
+        <activity
+            android:name=".client.main.tabs.profile.profile.user_lists.view.FollowersListActivity"
+            android:label="@string/user_list_activity_profile" />
+        <activity
+            android:name=".client.main.tabs.profile.profile.user_lists.view.FollowingListActivity"
+            android:label="@string/user_list_activity_profile" />
+        <activity
+            android:name=".client.profile.view.ProfileActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Stitch: Accept Deeplinks to address Skillshare://profile -->
+                <data
+                    android:host="profile"
+                    android:scheme="skillshare" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".client.main.tabs.profile.profile.rows.teaching.view.TeachingCoursesListActivity"
+            android:parentActivityName=".client.profile.view.ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.profile.view.ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".client.main.tabs.profile.profile.rows.projects.view.ProfileProjectsListActivity"
+            android:parentActivityName=".client.profile.view.ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.profile.view.ProfileActivity" />
+        </activity>
+
+        <activity
+            android:name=".client.discussion_details.DiscussionDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_discussion_details" />
+        <activity
+            android:name=".client.browse.FilterableStitchActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Stitch: Accept Deeplinks to address Skillshare://browse -->
+                <data
+                    android:host="browse"
+                    android:scheme="skillshare" />
+
+                <!-- Stitch: Accept Deeplinks to address Skillshare://your-classes -->
+                <data
+                    android:host="your_classes"
+                    android:scheme="skillshare" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".client.main.tabs.profile.settings.developer_options.DeveloperOptionsActivity" />
+        <activity
+            android:name=".client.purchase.MainStitchActivity"
+            android:parentActivityName=".client.main.view.MainActivity"/>
+        <activity android:name=".client.reminders.RemindersActivity" />
+        <activity
+            android:configChanges="orientation|screenSize|uiMode"
+            android:name=".client.search.view.GraphSearchActivity"
+            android:parentActivityName=".client.main.view.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".client.main.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".client.main.tabs.profile.settings.developer_options.ConfigurationActivity"
+            android:parentActivityName=".client.main.tabs.profile.settings.developer_options.DeveloperOptionsActivity"/>
+        <provider
+            android:authorities="${applicationId}.initializerProvider"
+            android:name=".application.InitializerProvider"
+            android:exported="false"/>
+
+        <service android:name=".client.course_details.course_details.view.BackgroundPlaybackService"/>
+
+        <meta-data android:name="io.sentry.auto-init"
+            android:value="false" />
+
+        <uses-library android:name="android.test.base"
+            android:required="false" />
+        <uses-library android:name="android.test.mock"
+            android:required="false" />
+
+    </application>
+
+    <queries>
+        <!--   Email Intents     -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+        <!--   Sharing     -->
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+    </queries>
+</manifest>

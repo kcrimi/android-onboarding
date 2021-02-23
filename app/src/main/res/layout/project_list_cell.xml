@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?cardStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/project_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?themeColorGreyMedium"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="?inverseTheme"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/editor_pick_bg"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/project_heart"
+                    style="@style/SkStyle.Icon.Small.Untinted"
+                    android:src="@drawable/ic_heart_fill" />
+
+
+                <TextView
+                    android:id="@+id/project_likes"
+                    style="@style/SkStyle.Text.Body3"
+                    android:layout_marginLeft="@dimen/card_content_margin_xsmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    tool:text="238" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/project_name"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="15dp"
+            tool:text="Bighorn Sheep" />
+
+        <TextView
+            android:id="@+id/project_author"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            tool:text="Andrew Mercando" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

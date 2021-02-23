@@ -1,0 +1,5 @@
+<resources>
+    <!-- Featured Course Row -->
+    <item name="featured_course_aspect_ratio" type="string">H,3:1</item>
+    <item name="search_tiles_column_count" type="integer">4</item>
+</resources>

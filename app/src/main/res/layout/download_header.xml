@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/header_text"
+        android:padding="@dimen/activity_margin_medium"
+        android:background="@color/concrete"
+        android:textAppearance="@style/SkStyle.Text.Header.H7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Downloading" />
+
+</RelativeLayout>

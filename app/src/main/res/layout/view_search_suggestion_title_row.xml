@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerVertical="true"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/view_search_suggestion_title_row_title"
+        style="@style/SkStyle.Text.Header.H4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="2"
+        tools:text="Recent" />
+
+    <TextView
+        android:id="@+id/view_search_suggestion_title_row_reset"
+        style="@style/SkStyle.Text.Body3.Highlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:text="@string/reset"
+        android:visibility="visible" />
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/view_project_carousel_component_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/half_activity_margin"
+        android:background="@drawable/white_to_silver"
+        android:clipChildren="false"
+        android:paddingBottom="@dimen/half_activity_margin"
+        android:paddingTop="@dimen/half_activity_margin">
+
+        <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+            android:id="@+id/view_project_row_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="@color/text_gray"
+            android:textSize="17dp"
+            app:textStyle="semibold"
+            tools:text="Projects" />
+
+        <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+            android:id="@+id/view_project_row_see_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/see_all_button_text"
+            android:textColor="?attr/themeColorPrimary" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <com.skillshare.Skillshare.client.common.component.project.carousel.ProjectCarouselCellView
+            android:id="@+id/view_project_row_cell_left"
+            layout="@layout/view_project_carousel_cell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="49"
+            android:clipChildren="false" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" />
+
+        <com.skillshare.Skillshare.client.common.component.project.carousel.ProjectCarouselCellView
+            android:id="@+id/view_project_row_cell_right"
+            layout="@layout/view_project_carousel_cell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="49"
+            android:clipChildren="false" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:background="@android:drawable/divider_horizontal_bright" />
+</LinearLayout>

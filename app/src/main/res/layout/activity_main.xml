@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <com.skillshare.Skillshare.client.common.component.sliding_tab_layout.SlidingTabLayout
+            android:id="@+id/activity_main_sliding_tab_layout"
+            style="@style/SkStyle.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_nav_tab_height"
+            android:layout_alignParentBottom="true"
+            app:bottomBorderAlpha="0"
+            app:distributeEvenly="true"
+            app:dividerAlpha="0"
+            app:highlightSelectedTabTitle="false"
+            app:selectedIndicatorAlpha="0"
+            app:smoothScrollOnPageChange="false" />
+
+        <com.skillshare.Skillshare.client.common.component.common.no_swipe_view_pager.NoSwipeViewPager
+            android:id="@+id/activity_main_content_no_swipe_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/activity_main_sliding_tab_layout" />
+
+        <com.skillshare.Skillshare.client.common.component.cast.CastView
+            android:id="@+id/activity_main_cast_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/activity_main_sliding_tab_layout" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

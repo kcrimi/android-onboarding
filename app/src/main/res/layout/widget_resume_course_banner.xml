@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_resume_course_banner_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner_background"
+    android:theme="?inverseTheme"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+            android:id="@+id/view_resume_course_banner_course_image_view"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/icon_broken_link" />
+
+        <ImageView
+            android:id="@+id/view_resume_course_banner_play_button_image_view"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_button" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="60"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_resume_course_banner_course_title_text_view"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_vertical_spacing"
+            android:singleLine="true"
+            tools:text="Lettering For Designers: One Drop Cap Letterform at a Time" />
+
+        <TextView
+            android:id="@+id/view_resume_course_banner_video_title_text_view"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="1. Introduction" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/view_resume_course_banner_close_image_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|right"
+        android:background="@drawable/overflow_button_background"
+        android:src="@drawable/ic_close" />
+</LinearLayout>

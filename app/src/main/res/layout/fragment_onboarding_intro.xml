@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/SkillshareTheme.Inverse">
+
+    <ImageView
+        android:id="@+id/onboarding_image_view"
+        tools:src="@drawable/welcome_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15"
+        android:background="?themeColorPrimaryDark"/>
+
+    <LinearLayout
+        android:id="@+id/onboarding_buttons"
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/activity_content_margin_large"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/onboarding_get_started_button"
+            style="@style/SkStyle.Button.Primary"
+            android:layout_width="match_parent"
+            tools:text="@string/get_started_1_month" />
+
+        <TextView
+            android:id="@+id/onboarding_sign_in_button"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin"
+            tools:text="Already have an account? Sign In" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        android:layout_above="@id/onboarding_buttons"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="60"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="80"
+                android:layout_height="0dp"
+                android:layout_width="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/onboarding_intro_title"
+                    style="@style/SkStyle.Text.Marketing"
+                    android:paddingRight="@dimen/card_content_margin_large"
+                    android:layout_marginBottom="@dimen/activity_content_margin_large"
+                    android:text="@string/get_started_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/onboarding_intro_title"
+                    android:layout_alignRight="@id/onboarding_intro_title"
+                    android:layout_below="@id/onboarding_intro_title"
+                    style="@style/SkStyle.Text.Body1"
+                    android:text="@string/get_started_subtitle"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_weight="40"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

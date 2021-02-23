@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:id="@+id/view_subscription_plan_slide_selector_cell_layout"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/view_subscription_plan_slide_selector_cell_contents_layout"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/selected_subscription_plan_slide_selector_cell_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/view_subscription_plan_slide_selector_cell_name_text_view"
+                style="@style/SkStyle.Text.Label"
+                android:layout_marginRight="@dimen/card_content_margin"
+                android:layout_marginLeft="@dimen/card_content_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                tools:text="ANNUAL" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/line_item_horizontal_margin_small"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/view_subscription_plan_slide_selector_cell_price_text_view"
+                    style="@style/SkStyle.Text.Header.H3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    tools:text="$99.99" />
+
+                <TextView
+                    android:id="@+id/view_subscription_plan_slide_selector_cell_payment_period_text_view"
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="/mo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view_subscription_plan_slide_selector_cell_description_text_view"
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/card_content_margin"
+                android:layout_marginLeft="@dimen/card_content_margin"
+                android:layout_marginTop="@dimen/card_content_margin_large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="2"
+                tools:text="billed annually" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/view_subscription_plan_slide_selector_cell_tag_text_view"
+        style="@style/SkStyle.Text.Badge"
+        android:theme="?inverseTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:background="@drawable/tag_background"
+        android:backgroundTint="?themeColorSecondary"
+        android:gravity="top|center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:text="@string/subscriptions_plan_value_label"
+        android:visibility="visible" />
+</FrameLayout>

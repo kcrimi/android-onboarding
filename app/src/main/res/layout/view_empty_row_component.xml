@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+            android:id="@+id/view_empty_row_component_title_text_view"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin"
+            tools:text="Recommended For You" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_empty_row_background"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="32dp"
+            android:paddingLeft="32dp">
+
+            <TextView
+                android:id="@+id/view_empty_row_component_empty_message_text_view"
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                tools:text="You haven't joined any groups" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/view_empty_row_component_primary_flat_button"
+                style="@style/SkStyle.Button.Primary"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="2dp"
+                tools:text="Follow Skills" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:background="@android:drawable/divider_horizontal_bright" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_gray"
+        android:textSize="17dp"
+        app:textStyle="semibold" />
+
+    <com.skillshare.Skillshare.client.common.component.common.button.FlatButton
+        android:id="@+id/see_all"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:paddingBottom="11.5dp"
+        android:paddingTop="14dp"
+        android:text="See All"
+        android:textAllCaps="false"
+        android:textColor="?attr/themeColorPrimary"
+        android:textSize="14dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

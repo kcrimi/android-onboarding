@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <!-- Change the  color of the title text in the Toolbar -->
+        <item name="toolbarNavigationButtonStyle">@style/SkStyle.Icon.ToolbarNavigation</item>
+        <!-- Change the overflow menu text color -->
+        <item name="textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge</item>
+        <item name="textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall</item>
+        <!-- Change home (back) button icon -->
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="android:alertDialogTheme">@style/SkStyle.Dialog.Alert</item>
+        <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.MediaRouteButton</item>
+        <!--<item name="android:windowDisablePreview">true</item>-->
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="cardStyle">@style/SkStyle.Card</item>
+
+        <!--Color of list view scrollbar-->
+        <item name="android:scrollbarThumbVertical">?themeColorSecondary</item>
+    </style>
+
+    <style name="SkillshareTheme" parent="BaseAppTheme">
+
+        <!-- Fonts -->
+        <item name="fontRegular">@font/gt_walsheim_pro_regular</item>
+        <item name="fontSerifBold">@font/kumlien_pro_bold</item>
+        <item name="fontSemiBold">?fontBold</item>
+        <item name="fontBold">@font/gt_walsheim_pro_bold</item>
+
+        <!-- Colors -->
+        <item name="themeColorPrimary">@color/wander_green</item>
+        <item name="themeColorCanvas">@color/canvas</item>
+        <item name="themeColorCanvas_75">@color/canvas_75</item>
+        <item name="themeColorGreyLight">@color/concrete</item>
+        <item name="themeColorGreyMedium">@color/concrete</item>
+        <item name="themeColorGreyDark">@color/charcoal</item>
+        <item name="themeColorPrimaryDark">@color/navy</item>
+        <item name="themeColorYellow">@color/yellow</item>
+        <item name="themeColorSecondary">@color/violet</item>
+        <item name="themeColorSecondary_75">@color/violet_75</item>
+        <item name="themeColorBlue">@color/blue</item>
+        <item name="themeColorRed">@color/red</item>
+
+        <item name="android:textColorPrimary">?themeColorPrimaryDark</item>
+        <item name="android:colorForeground">?themeColorPrimaryDark</item>
+        <item name="android:colorBackground">?themeColorCanvas</item>
+        <item name="themeColorTextHighlight">?themeColorSecondary</item>
+        <item name="buttonColorPrimary">?themeColorPrimary</item>
+        <item name="buttonColorSecondary">?android:colorForeground</item>
+        <item name="themeColorProgress">?themeColorSecondary</item>
+        <!-- Used to color the lines in Spinners-->
+        <item name="android:colorControlNormal">?themeColorSecondary</item>
+        <!-- Color for ripples and interactions -->
+        <item name="android:colorControlHighlight">?themeColorGreyMedium</item>
+        <!-- Used to toggle switch interactions -->
+        <item name="android:colorControlActivated">?themeColorSecondary</item>
+        <item name="colorControlActivated">?themeColorSecondary</item>
+        <!-- Hyperlink highlighting -->
+        <item name="android:textColorLink">?themeColorTextHighlight</item>
+        <item name="android:colorAccent">?themeColorSecondary</item>
+
+        <item name="inverseTheme">@style/SkillshareTheme.Inverse</item>
+        <item name="normalTheme">@style/SkillshareTheme</item>
+
+    </style>
+
+    <style name="SkillshareTheme.Inverse">
+        <item name="android:colorForeground">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="themeColorTextHighlight">?themeColorPrimary</item>
+        <item name="android:colorBackground">?themeColorPrimaryDark</item>
+        <item name="buttonColorSecondary">?themeColorPrimary</item>
+    </style>
+
+    <style name="InvisibleActivityTheme" parent="SkillshareTheme">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="SkillshareTheme.SplashActivity">
+        <item name="android:background">@drawable/splashscreen</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/SKStyle.Dialog.BottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+</resources>

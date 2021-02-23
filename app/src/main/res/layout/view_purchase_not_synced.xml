@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_purchase_not_synced_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:padding="@dimen/activity_margin"
+    android:gravity="center"
+    android:background="?android:colorBackground"
+    android:orientation="vertical">
+
+    <ImageView
+        style="@style/SkStyle.Icon.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_retry" />
+
+    <TextView
+        style="@style/SkStyle.Text.Header.H5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_content_margin_xlarge"
+        android:gravity="center"
+        android:text="@string/subscription_not_synced_title"/>
+
+    <TextView
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/half_activity_margin"
+        android:gravity="center"
+        android:text="@string/subscription_not_synced" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_purchase_not_synced_retry_button"
+        style="@style/SkStyle.Button.Secondary"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:text="@string/retry" />
+
+</LinearLayout>

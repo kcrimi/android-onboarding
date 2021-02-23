@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_margin"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/view_configuration_row_key"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/view_configuration_row_separator"
+        android:gravity="start|center_vertical"
+        android:maxLines="2"
+        tools:text="Configuration Name" />
+
+    <TextView
+        android:id="@+id/view_configuration_row_separator"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin"
+        android:layout_marginEnd="@dimen/line_item_horizontal_margin"
+        android:text="@string/equals" />
+
+    <TextView
+        android:id="@+id/view_configuration_row_value"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/view_configuration_row_separator"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        tools:text="Configuration Value" />
+
+</RelativeLayout>

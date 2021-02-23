@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/semi_trans_white_70"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dialog_overlay_card_width"
+        android:layout_height="@dimen/dialog_overlay_card_height"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:theme="?inverseTheme"
+        style="@style/SkStyle.Card.Inverse"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:paddingTop="@dimen/card_padding"
+            android:paddingLeft="@dimen/card_padding_large"
+            android:paddingRight="@dimen/card_padding_large"
+            android:paddingBottom="@dimen/card_padding_large"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dialog_cta_card_logo"
+                    app:srcCompat="@drawable/ic_logo_wordmark_mono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/dialog_cta_card_overlay_title"
+                android:layout_marginTop="@dimen/card_content_margin_xlarge"
+                tools:text="@string/signin_dialog_card_overlay_profile_title"
+                style="@style/SkStyle.Text.Header.H3.Highlight"
+                android:lines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginTop="@dimen/card_content_margin_large"
+                android:layout_marginBottom="@dimen/card_content_margin_large"
+                style="@style/SkStyle.Element.Separator" />
+
+            <TextView
+                android:id="@+id/dialog_cta_card_overlay_subtitle"
+                tools:text="@string/signin_dialog_card_overlay_profile_subtitle"
+                style="@style/SkStyle.Text.Body2"
+                android:textColor="@color/white"
+                android:layout_weight="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/dialog_cta_card_overlay_secondary_button"
+                    style="@style/SkStyle.Button.Secondary.NoPadding"
+                    android:layout_marginRight="@dimen/button_margin_size"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    tools:text="@string/sign_in" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/dialog_cta_card_overlay_primary_button"
+                    style="@style/SkStyle.Button.Primary.NoPadding"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    tools:text="@string/sign_up"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

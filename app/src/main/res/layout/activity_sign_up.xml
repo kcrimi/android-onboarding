@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar"
+        style="@style/SkStyle.Toolbar.Transparent"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:layout_above="@id/sign_up_bottom_divider"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/SkStyle.TabletFriendlyWidthContainer"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SkStyle.Text.Label.SignUp"
+                android:text="@string/sign_up_first_name" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_GIVEN"
+                android:inputType="textVisiblePassword" />
+
+            <TextView
+                style="@style/SkStyle.Text.Label.SignUp"
+                android:text="@string/sign_up_last_name" />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_FAMILY"
+                android:inputType="textVisiblePassword" />
+
+            <TextView
+                style="@style/SkStyle.Text.Label.SignUp"
+                android:text="@string/sign_in_email_address" />
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                style="@style/SkStyle.Text.Label.SignUp"
+                android:text="@string/sign_in_password" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:autofillHints=".AUTOFILL_HINT_PASSWORD"
+                android:inputType="textPassword" />
+
+            <TextView
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_content_vertical_margin_xsmall"
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                android:text="@string/password_length"
+                android:textColor="@color/navy" />
+
+            <Button
+                android:id="@+id/logged_out_layout_sign_up_button"
+                style="@style/SkStyle.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onSignUp"
+                android:text="@string/sign_up" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/sign_up_bottom_divider"
+        android:layout_above="@id/sign_up_support_team"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:background="?themeColorGreyLight" />
+
+    <TextView
+        android:id="@+id/sign_up_support_team"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:gravity="center_horizontal"
+        android:onClick="onContactSupport"
+        tools:text="@string/need_help_format" />
+</RelativeLayout>

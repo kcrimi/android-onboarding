@@ -1,0 +1,21 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_base_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.skillshare.Skillshare.client.common.view.base_activity.view.BaseActivityLayoutContainer
+        android:id="@+id/activity_base_content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@id/activity_base_cast_view"
+        app:layout_behavior="com.skillshare.Skillshare.client.common.component.cast.CastViewBehavior" />
+
+    <com.skillshare.Skillshare.client.common.component.cast.CastView
+        android:id="@+id/activity_base_cast_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

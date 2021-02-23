@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.session.view.SignInActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar"
+        style="@style/SkStyle.Toolbar.Transparent"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <ScrollView
+        android:layout_above="@+id/sign_in_bottom_divider"
+        android:id="@+id/scroll"
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium">
+
+            <Button
+                android:layout_marginTop="@dimen/activity_margin_medium"
+                android:id="@+id/activity_sign_in_google_sign_in_button"
+                style="@style/SkStyle.Button.Social.Google"
+                android:layout_width="match_parent"
+                android:text="@string/sign_in_with_google"/>
+
+            <Button
+                android:id="@+id/sign_up_facebook"
+                style="@style/SkStyle.Button.Social.Facebook"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_content_vertical_margin_medium"
+                android:text="@string/sign_in_with_facebook" />
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/activity_margin_medium_plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?themeColorGreyLight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or"
+                    android:textAllCaps="true"
+                    style="@style/SkStyle.Text.Label"
+                    android:layout_marginLeft="@dimen/card_content_margin_small"
+                    android:layout_marginRight="@dimen/card_content_margin_small"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?themeColorGreyLight" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_margin_medium_plus"
+                android:hint="@string/sign_in_email_address"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/SkStyle.EditText"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/sign_in_password"
+                android:inputType="textPassword"/>
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/logged_out_layout_sign_in_button"
+                    style="@style/SkStyle.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onSignIn"
+                    android:text="@string/sign_in" />
+
+                <ProgressBar
+                    android:id="@+id/sign_in_progress"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:indeterminate="true" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standard_button_padding"
+                android:id="@+id/sign_in_forgot_password"
+                android:textColor="?themeColorSecondary"
+                android:gravity="center_horizontal"
+                android:onClick="onForget"
+                android:text="@string/forgot_password" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/sign_in_bottom_divider"
+        android:layout_above="@id/sign_in_support_team"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:background="?themeColorGreyLight" />
+
+    <TextView
+        android:id="@+id/sign_in_support_team"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_margin_medium"
+        android:gravity="center_horizontal"
+        android:onClick="onContactSupport"
+        tools:text="@string/need_help_format" />
+</RelativeLayout>

@@ -1,0 +1,591 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Overflow menu text color -->
+    <style name="myPopupMenuTextAppearanceSmall" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLarge" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Large">
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="Widget" />
+
+    <style name="Widget.Skillshare" />
+
+    <style name="Widget.Skillshare.ShareSheet" parent="BottomSheet.Dialog">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowAnimationStyle">@style/BottomSheet.Animation</item>
+        <item name="android:textColorPrimary">@color/text_gray</item>
+        <item name="android:textColorSecondary">@color/text_gray</item>
+        <item name="android:textColorHint">@color/text_gray</item>
+        <item name="bs_dialogBackground">@color/white</item>
+        <item name="bs_dividerColor">@color/black</item>
+        <item name="bs_numColumns">3</item>
+    </style>
+
+    <style name="Widget.Skillshare.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@style/SkStyle.Animation.Dialog</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TouchOverlay">
+        <item name="android:background">@drawable/widget_flat_button_transparent</item>
+    </style>
+
+    <style name="Widget.MediaRouter.MediaRouteButton" parent="Widget.MediaRouter.Light.MediaRouteButton">
+        <item name="routeEnabledDrawable">@drawable/mr_button_light</item>
+    </style>
+
+    <!-- Post-Style Guide -->
+    <!-- Everything above this line is not considered 'current' and vetted -->
+
+    <style name="SkStyle"/>
+
+    <!-- View Containers -->
+
+    <style name="SkStyle.Activity">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="SkStyle.Activity.White">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SkStyle.TabletFriendlyWidthContainer">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SkStyle.Inverse">
+        <item name="android:background">?themeColorPrimaryDark</item>
+    </style>
+
+    <style name="SkStyle.OverlayBackground">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:alpha">0.75</item>
+    </style>
+
+    <!-- Cards -->
+
+    <style name="SkStyle.Card">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="SkStyle.Card.Inverse">
+        <item name="cardBackgroundColor">?android:colorBackground</item>
+    </style>
+
+    <!-- Text Styles -->
+
+    <style name="SkStyle.Text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?android:colorForeground</item>
+        <item name="android:fontFamily">?fontRegular</item>
+        <item name="android:drawablePadding">@dimen/standard_horizontal_spacing</item>
+    </style>
+
+        <!-- Standard Text Styles -->
+
+        <style name="SkStyle.Text.Body1">
+            <item name="android:textSize">@dimen/text_size_body1</item>
+            <item name="android:lineSpacingExtra">1sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Body2">
+            <item name="android:textSize">@dimen/text_size_body2</item>
+            <item name="android:lineSpacingExtra">4sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Body2.Highlight">
+            <item name="android:textColor">?themeColorTextHighlight</item>
+        </style>
+
+        <style name="SkStyle.Text.Body3">
+            <item name="android:textSize">@dimen/text_size_body3</item>
+            <item name="android:lineSpacingExtra">4sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Body4">
+            <item name="android:textSize">@dimen/text_size_body4</item>
+            <item name="android:lineSpacingExtra">2sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Header">
+            <item name="android:fontFamily">?fontBold</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H1">
+            <item name="android:textSize">@dimen/text_size_h1</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H2">
+            <item name="android:textSize">@dimen/text_size_h2</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H3">
+            <item name="android:textSize">@dimen/text_size_h3</item>
+            <item name="android:lineSpacingExtra">1sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H4">
+            <item name="android:textSize">@dimen/text_size_h4</item>
+            <item name="android:lineSpacingExtra">1sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H5">
+            <item name="android:textSize">@dimen/text_size_h5</item>
+            <item name="android:lineSpacingExtra">2sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H6">
+            <item name="android:textSize">@dimen/text_size_h6</item>
+            <item name="android:lineSpacingExtra">2sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H7">
+            <item name="android:textSize">@dimen/text_size_h6</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.Toolbar">
+            <item name="android:textSize">@dimen/text_size_toolbar</item>
+            <item name="android:ellipsize">end</item>
+            <item name="android:maxLines">1</item>
+        </style>
+
+        <style name="SkStyle.Text.Label">
+            <item name="android:fontFamily">?fontBold</item>
+            <item name="android:textAllCaps">true</item>
+            <item name="android:textSize">@dimen/text_size_label</item>
+            <item name="android:lineSpacingExtra">2sp</item>
+        </style>
+
+        <style name="SkStyle.Text.Badge">
+            <item name="android:textAllCaps">true</item>
+            <item name="android:textSize">@dimen/text_size_badge</item>
+            <item name="android:lineSpacingExtra">5sp</item>
+            <item name="android:fontFamily">?fontBold</item>
+        </style>
+
+        <style name="SkStyle.Text.Marketing">
+            <item name="android:fontFamily">?fontSerifBold</item>
+            <item name="android:textSize">@dimen/text_size_marketing</item>
+            <item name="android:lineHeight">@dimen/text_size_marketing</item>
+        </style>
+
+        <!-- Text Variants -->
+
+        <style name="SkStyle.Text.Body2.Ellipsize">
+            <item name="android:ellipsize">end</item>
+            <item name="android:maxLines">1</item>
+        </style>
+
+        <style name="SkStyle.Text.Body3.Ellipsize">
+            <item name="android:ellipsize">end</item>
+            <item name="android:maxLines">1</item>
+        </style>
+
+        <style name="SkStyle.Text.Body3.Highlight">
+            <item name="android:textColor">?themeColorTextHighlight</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H3.Highlight">
+            <item name="android:textColor">?themeColorTextHighlight</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H5.Ellipsize">
+            <item name="android:ellipsize">end</item>
+            <item name="android:maxLines">1</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H5.Highlight">
+            <item name="android:textColor">?themeColorTextHighlight</item>
+        </style>
+
+        <style name="SkStyle.Text.Header.H6.Highlight">
+            <item name="android:textColor">?themeColorTextHighlight</item>
+        </style>
+
+        <style name="SkStyle.Text.SearchField" parent="SkStyle.Text.Body2">
+            <item name="android:background">@null</item>
+            <item name="android:singleLine">true</item>
+            <item name="android:maxLines">1</item>
+        </style>
+
+        <style name="SkStyle.Text.TeacherBadge" parent="SkStyle.Text.Header.H6">
+            <item name="android:theme">?inverseTheme</item>
+            <item name="android:textColor">?themeColorPrimary</item>
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:background">@drawable/view_teacher_tag_background</item>
+            <item name="android:gravity">center</item>
+            <item name="android:paddingBottom">2dp</item>
+            <item name="android:paddingLeft">8dp</item>
+            <item name="android:paddingRight">8dp</item>
+            <item name="android:paddingTop">2dp</item>
+            <item name="android:text">Teacher</item>
+        </style>
+
+    <style name="SkStyle.Settings"/>
+
+    <style name="SkStyle.Settings.RowContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">@dimen/activity_margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/activity_margin_medium_plus</item>
+    </style>
+
+    <style name="SkStyle.Settings.RowContainerInner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SkStyle.Settings.RowTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/activity_margin_medium</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Header.H7</item>
+    </style>
+
+    <style name="SkStyle.Settings.RowItemText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Body2</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SkStyle.Settings.RowItemTextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/activity_margin_medium</item>
+        <item name="android:paddingTop">@dimen/activity_margin_medium</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Body2</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SkStyle.Settings.RowItemSubText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Body3</item>
+    </style>
+
+    <style name="SkStyle.Settings.Button" parent="@style/SkStyle.Button.Primary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Header.H6</item>
+    </style>
+
+    <style name="SkStyle.Settings.Button.Secondary" parent="@style/SkStyle.Button.Secondary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Header.H6</item>
+    </style>
+
+    <style name="SkStyle.Settings.Separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/concrete</item>
+    </style>
+
+    <!--Images -->
+
+    <style name="SkStyle.Icon">
+        <item name="android:tint">?android:colorForeground</item>
+        <item name="android:layout_width">@dimen/icon_size</item>
+        <item name="android:layout_height">@dimen/icon_size</item>
+    </style>
+
+        <style name="SkStyle.Icon.Untinted">
+            <item name="android:tint">@null</item>
+        </style>
+
+        <style name="SkStyle.Icon.Small">
+            <item name="android:layout_width">@dimen/icon_size_small</item>
+            <item name="android:layout_height">@dimen/icon_size_small</item>
+        </style>
+
+        <style name="SkStyle.Icon.Small.Untinted">
+            <item name="android:tint">@null</item>
+        </style>
+
+        <style name="SkStyle.Icon.Medium">
+            <item name="android:layout_width">@dimen/icon_size_medium</item>
+            <item name="android:layout_height">@dimen/icon_size_medium</item>
+        </style>
+
+        <style name="SkStyle.Icon.Medium.Untinted">
+            <item name="android:tint">@null</item>
+        </style>
+
+        <style name="SkStyle.Icon.Large">
+            <item name="android:layout_width">@dimen/icon_size_large</item>
+            <item name="android:layout_height">@dimen/icon_size_large</item>
+        </style>
+
+        <style name="SkStyle.Icon.ToolbarNavigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+            <item name="android:tint">?android:colorForeground</item>
+        </style>
+
+    <style name="SkStyle.Avatar">
+        <item name="android:layout_width">@dimen/user_avatar_diameter</item>
+        <item name="android:layout_height">@dimen/user_avatar_diameter</item>
+        <item name="android:src">?themeColorGreyMedium</item>
+    </style>
+
+        <style name="SkStyle.Avatar.Small">
+            <item name="android:layout_width">@dimen/user_avatar_diameter_small</item>
+            <item name="android:layout_height">@dimen/user_avatar_diameter_small</item>
+        </style>
+
+        <style name="SkStyle.Avatar.Teacher">
+            <item name="android:layout_width">@dimen/user_avatar_diameter_teacher</item>
+            <item name="android:layout_height">@dimen/user_avatar_diameter_teacher</item>
+        </style>
+
+        <style name="SkStyle.Avatar.MyClasses">
+            <item name="android:layout_width">@dimen/user_avatar_diameter_teacher_small</item>
+            <item name="android:layout_height">@dimen/user_avatar_diameter_teacher_small</item>
+        </style>
+
+        <style name="SkStyle.Avatar.Large">
+            <item name="android:layout_width">@dimen/user_avatar_diameter_large</item>
+            <item name="android:layout_height">@dimen/user_avatar_diameter_large</item>
+        </style>
+
+    <!-- Buttons -->
+
+    <style name="SkStyle.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button_colored_no_padding</item>
+        <item name="android:paddingLeft">@dimen/standard_button_padding</item>
+        <item name="android:paddingRight">@dimen/standard_button_padding</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textAppearance">@style/SkStyle.Text.Header.H5</item>
+    </style>
+
+        <style name="SkStyle.Button.Primary">
+            <item name="android:backgroundTint">@color/stateful_primary_button_color</item>
+            <item name="android:textColor">@color/stateful_primary_button_text_color</item>
+            <item name="android:drawableTint">@color/stateful_primary_button_text_color</item>
+            <item name="backgroundTint">@color/stateful_primary_button_color</item>
+        </style>
+
+        <style name="SkStyle.Button.Primary.NoPadding">
+            <item name="android:paddingLeft">0dp</item>
+            <item name="android:paddingRight">0dp</item>
+        </style>
+
+        <style name="SkStyle.Button.Secondary" parent="Widget.AppCompat.Button.Borderless">
+            <item name="android:textAppearance">@style/SkStyle.Text.Header.H5</item>
+            <item name="backgroundTint">?buttonColorSecondary</item>
+            <item name="android:backgroundTint">?buttonColorSecondary</item>
+            <item name="android:textColor">?buttonColorSecondary</item>
+            <item name="android:layout_height">@dimen/button_height</item>
+            <item name="android:background">@drawable/widget_raised_button_transparent_white_border_background</item>
+            <item name="android:paddingLeft">@dimen/standard_button_padding</item>
+            <item name="android:paddingRight">@dimen/standard_button_padding</item>
+        </style>
+
+        <style name="SkStyle.Button.Secondary.NoPadding">
+            <item name="android:paddingLeft">0dp</item>
+            <item name="android:paddingRight">0dp</item>
+        </style>
+
+        <style name="SkStyle.Button.Social" parent="Widget.AppCompat.Button.Borderless">
+            <item name="android:textAppearance">@style/SkStyle.Text.Header.H5</item>
+            <item name="android:textColor">?android:colorForeground</item>
+            <item name="android:layout_height">@dimen/button_height</item>
+            <item name="android:paddingLeft">@dimen/standard_button_padding</item>
+            <item name="android:paddingRight">@dimen/standard_button_padding</item>
+            <item name="android:background">@drawable/button_social_states</item>
+            <item name="android:drawableLeft">@drawable/ic_facebook</item>
+        </style>
+
+        <style name="SkStyle.Button.Social.Facebook">
+            <item name="android:drawableLeft">@drawable/ic_facebook</item>
+        </style>
+
+        <style name="SkStyle.Button.Social.Google">
+            <item name="android:drawableLeft">@drawable/icon_google</item>
+        </style>
+
+        <style name="SkStyle.ImageButton">
+            <item name="android:background">@android:color/transparent</item>
+            <item name="android:tint">?android:colorForeground</item>
+            <item name="android:layout_height">@dimen/icon_size_large</item>
+        </style>
+
+        <style name="SkStyle.ImageButton.Toolbar">
+            <item name="android:layout_width">?actionBarSize</item>
+            <item name="android:layout_height">?actionBarSize</item>
+        </style>
+
+        <style name="SkStyle.OvalButton" parent="Widget.AppCompat.Button.Colored">
+            <item name="android:background">@drawable/oval_button_background</item>
+            <item name="android:backgroundTint">?android:colorAccent</item>
+            <item name="android:paddingLeft">@dimen/standard_button_padding</item>
+            <item name="android:paddingRight">@dimen/standard_button_padding</item>
+            <item name="android:drawableTint">?android:colorAccent</item>
+            <item name="android:drawablePadding">@dimen/button_compound_drawable_padding</item>
+            <item name="android:textAppearance">@style/SkStyle.Text.Header.H5</item>
+            <item name="android:textColor">?android:colorAccent</item>
+            <item name="android:layout_height">@dimen/button_height</item>
+            <item name="android:layout_width">wrap_content</item>
+        </style>
+
+        <style name="SkStyle.OvalButton.Like">
+            <item name="android:backgroundTint">?android:colorForeground</item>
+            <item name="android:drawableTint">?android:colorForeground</item>
+            <item name="android:textColor">?android:colorForeground</item>
+        </style>
+
+        <style name="SkStyle.OvalButton.Liked">
+            <item name="android:backgroundTint">?themeColorRed</item>
+            <item name="android:drawableTint">?themeColorRed</item>
+            <item name="android:textColor">?themeColorRed</item>
+        </style>
+
+    <!-- Edit Text -->
+
+    <style name="SkStyle.EditText">
+        <item name="android:background">@drawable/text_field_background</item>
+        <item name="android:textColor">?themeColorPrimaryDark</item>
+        <item name="android:textColorHint">?themeColorGreyDark</item>
+        <item name="android:textSize">@dimen/text_size_body3</item>
+        <item name="android:fontFamily">?fontRegular</item>
+        <item name="android:paddingLeft">@dimen/line_item_horizontal_margin_large</item>
+        <item name="android:layout_height">@dimen/edittext_height</item>
+    </style>
+
+    <!--Dialogs-->
+
+    <style name="SKStyle.Dialog.BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_dialog_bg</item>
+    </style>
+
+    <style name="SkStyle.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">?attr/themeColorPrimary</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <style name="SkStyle.Dialog.Alert.NoShade">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:textColor">?android:colorForeground</item>
+    </style>
+
+    <!-- Toolbar -->
+
+    <style name="SkStyle.Toolbar">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="actionMenuTextColor">?android:colorForeground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SkStyle.Toolbar.Transparent">
+        <item name="android:elevation">0dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="actionMenuTextColor">?android:colorForeground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Custom Elements -->
+
+    <style name="SkStyle.Element"/>
+
+    <style name="SkStyle.Element.Separator">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">?android:colorForeground</item>
+    </style>
+
+    <style name="SkStyle.Element.Separator.Thin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?themeColorGreyLight</item>
+    </style>
+
+    <style name="SkStyle.ProgressBar" parent="@style/Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+        <item name="android:layout_height">@dimen/progress_bar_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SkStyle.SeekBar" parent="@style/Base.Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/seek_bar</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:thumb">@drawable/scrubber_thumb</item>
+    </style>
+
+    <style name="SkStyle.DialogTheme.FullScreen" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/SkStyle.Animation.Tooltip</item>
+    </style>
+
+    <style name="SkStyle.Loading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="matProg_barColor">?attr/themeColorPrimary</item>
+        <item name="matProg_barWidth">2dp</item>
+        <item name="matProg_progressIndeterminate">true</item>
+    </style>
+
+    <style name="SkStyle.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/class_details_tab_height</item>
+        <item name="tabBackground">@color/white</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorColor">?themeColorPrimaryDark</item>
+        <item name="tabIndicatorHeight">@dimen/class_details_tab_indicator_height</item>
+        <item name="tabMaxWidth">@dimen/match_parent</item>
+        <item name="tabRippleColor">@null</item>
+        <item name="tabSelectedTextColor">?themeColorPrimaryDark</item>
+        <item name="tabTextAppearance">@style/SkStyle.Text.Header.H5</item>
+        <item name="tabTextColor">?themeColorPrimaryDark</item>
+    </style>
+
+    <style name="SkStyle.SearchBar">
+        <item name="android:textAppearance">@style/SkStyle.Text.Header.H5</item>
+        <item name="android:background">@drawable/search_bar_background</item>
+    </style>
+
+    <!--Animations-->
+
+    <style name="SkStyle.Animation"/>
+        <style name="SkStyle.Animation.Tooltip">
+            <item name="android:windowEnterAnimation">@anim/fade_in_animate_up</item>
+            <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        </style>
+
+        <style name="SkStyle.Animation.Dialog">
+            <item name="android:windowEnterAnimation">@anim/push_down_in</item>
+            <item name="android:windowExitAnimation">@anim/push_down_out</item>
+        </style>
+
+    <!-- Page Specific -->
+    <style name="SkStyle.Text.Label.SignUp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/activity_content_vertical_margin_xsmall</item>
+    </style>
+
+</resources>

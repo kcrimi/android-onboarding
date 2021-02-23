@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/class_detail_info_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".client.course_details.course_details.view.CourseDetailsActivity">
+
+    <TextView
+        android:id="@+id/view_course_hero_metadata_title_text_view"
+        style="@style/SkStyle.Text.Header.H4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:ellipsize="end"
+        tools:text="Brand Identity: Design Adaptable Branding Systems" />
+
+    <include
+        layout="@layout/view_course_stats_metadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin" />
+
+    <com.skillshare.Skillshare.client.common.component.user.row.info.UserInfoRow
+        android:id="@+id/view_course_hero_metadata_teacher_info_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

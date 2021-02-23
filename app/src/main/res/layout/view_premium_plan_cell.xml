@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@drawable/selected_subscription_plan_slide_selector_cell_background"
+    tools:parentTag="com.skillshare.Skillshare.client.purchase.PremiumPlanView">
+
+    <TextView
+        android:id="@+id/view_subscription_plan_price_text_view"
+        style="@style/SkStyle.Text.Header.H2"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="@dimen/text_size_h2"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/card_content_margin_medium"
+        android:maxLines="1"
+        tools:text="$99.99/month" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_subscription_plan_price_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/standard_vertical_spacing"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/view_subscription_plan_description_text_view"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/line_item_horizontal_margin_small"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            tools:text="@string/just_x_per_month" />
+
+        <TextView
+            android:id="@+id/view_subscription_plan_badge"
+            style="@style/SkStyle.Text.Badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/premium_badge_background"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingLeft="6dp"
+            android:paddingTop="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/white"
+            tools:text="@string/save_x_percent" />
+
+    </LinearLayout>
+
+
+</merge>

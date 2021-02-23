@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SkStyle.Activity.White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_search_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:layout_height="@dimen/search_bar_height"
+        android:layout_margin="@dimen/activity_margin_medium"
+        android:background="@drawable/search_bar_background"
+        android:elevation="0dp"
+        android:transitionName="searchBar"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right">
+
+            <EditText
+                android:id="@+id/activity_search_search_edit_text"
+                style="@style/SkStyle.Text.SearchField"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/activity_search_bar_hint"
+                android:imeOptions="actionSearch">
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/activity_search_search_clear_image_button"
+                style="@style/SkStyle.ImageButton.Toolbar"
+                android:background="@drawable/toolbar_button_background"
+                android:src="@drawable/ic_close"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_below="@id/activity_search_toolbar"
+        android:id="@+id/fragment_search_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:stateListAnimator="@animator/state_list_animator_search">
+
+            <RelativeLayout
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:id="@+id/activity_search_filter_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_search_toolbar"
+                android:layout_marginStart="@dimen/activity_margin">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    style="@style/SkStyle.Text.Body3"
+                    android:id="@+id/activity_search_filter_bar_results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    tools:text="4,561 Results" />
+
+                <LinearLayout
+                    android:id="@+id/activity_search_filter_button_container"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:paddingStart="@dimen/activity_margin_medium"
+                    android:paddingEnd="@dimen/activity_margin_medium"
+                    android:paddingTop="@dimen/activity_margin_small"
+                    android:paddingBottom="@dimen/activity_margin_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/ic_filter_on"
+                    app:tint="?themeColorPrimaryDark"
+                    style="@style/SkStyle.Icon.Untinted"
+                    android:id="@+id/activity_search_filter_bar_icon"
+                    android:layout_marginEnd="4dp"/>
+
+                <TextView
+                    style="@style/SkStyle.Text.Body3"
+                    android:id="@+id/activity_search_filter_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:id="@+id/activity_search_header_divider"
+                style="@style/SkStyle.Element.Separator.Thin"
+                android:layout_below="@id/activity_search_filter_bar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_search_history_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:paddingStart="@dimen/search_suggestions_adapter_margin"
+        android:paddingEnd="@dimen/search_suggestions_adapter_margin"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.skillshare.Skillshare.util.SearchRecyclerView
+        android:id="@+id/activity_search_results_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+        android:id="@+id/activity_search_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/activity_search_loading_progress_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:layout_alignTop="@id/activity_search_results_recycler_view">
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/activity_margin"
+            app:matProg_barColor="?attr/themeColorPrimary"
+            app:matProg_barWidth="2dp"
+            app:matProg_progressIndeterminate="true" />
+    </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.skillshare.Skillshare.client.search.view.SearchFiltersView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_search_filter_view"/>
+</RelativeLayout>

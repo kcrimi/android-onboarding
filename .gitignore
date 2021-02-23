@@ -1,0 +1,62 @@
+\+f
+# Crypt key used to decrypt sensitive files
+skillshare.crypt-key
+
+# built application files
+*.apk
+*.ap_
+!gradle/wrapper/gradle-wrapper.jar
+
+# lint folder
+lint
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+classes/
+gen-external-apklibs/
+*node_modules/
+ajcore*
+proguard.txt
+
+# maven output folder
+target
+
+# Local configuration file (sdk path, etc)
+local.properties
+sentry.properties
+
+# Eclipse project files
+.classpath
+.project
+.metadata
+.settings
+
+# IntelliJ files
+.idea
+.idea/*
+*.iml
+
+# OSX files
+.DS_Store
+
+
+# vi swap files
+*.swp
+
+# backup files
+*.bak
+
+# gradle directory
+.gradle
+build/
+projectFilesBackup/
+
+# Heap Dumps
+*.hprof

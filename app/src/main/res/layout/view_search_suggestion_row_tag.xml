@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_search_history_row_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/view_search_suggestion_row_tag_icon"
+        style="@style/SkStyle.Icon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_tag" />
+
+    <LinearLayout
+        android:layout_toEndOf="@id/view_search_suggestion_row_tag_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_search_suggestion_row_tag_name"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="IT Security" />
+
+        <TextView
+            android:id="@+id/view_search_suggestion_row_tag_course_count"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="162 classes" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

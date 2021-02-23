@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_discussion_header_number_of_discussions_text_view"
+        style="@style/SkStyle.Text.Header.H5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="18 Discussions" />
+</LinearLayout>

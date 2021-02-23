@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="0dp"
+    android:background="@color/white"
+    tools:context=".client.course_details.projects.projects.view.ProjectsFragment">
+
+    <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+        android:id="@+id/fragment_discussions_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fragment_discussions_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fragment_discussions_empty_view_icon"
+            style="@style/SkStyle.Icon.Large"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_noreplies" />
+
+        <TextView
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_discussion_have_been_started_yet" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_discussions_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp" />
+
+    <com.skillshare.Skillshare.client.course_details.discussions.post_discussion.widget.PostBarView
+        android:id="@+id/fragment_discussions_post_discussion_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end" />
+</FrameLayout>

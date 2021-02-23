@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/discussion_border_stroke"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <com.skillshare.Skillshare.client.common.component.user.row.info.UserInfoRow
+            android:id="@+id/view_discussion_details_header_discussion_author_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.skillshare.Skillshare.client.common.component.common.text_view.ExpandableTextView
+            android:id="@+id/view_discussion_details_header_discussion_description_text_view"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="8dp"
+            tools:text="Material is the metaphor.\n\nA material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic.\n" />
+
+        <TextView
+            android:id="@+id/view_discussion_details_header_discussion_time_ago_text_view"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            tools:text="2 hours ago" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/view_discussion_details_header_view_all_replies_button_text_view"
+        style="@style/SkStyle.Text.Header.H6.Highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/half_activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:paddingBottom="@dimen/half_activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingTop="@dimen/half_activity_margin"
+        tools:text="View all 12 replies" />
+</LinearLayout>

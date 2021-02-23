@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_course_metadata_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".client.course_details.course_details.view.CourseDetailsActivity">
+
+    <TextView
+        android:id="@+id/view_course_metadata_header_title_text_view"
+        style="@style/SkStyle.Text.Header.H4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        tools:text="Brand Identity: Design Adaptable Branding Systems" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/view_course_metadata_header_students_text"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="7.3K students" />
+
+        <TextView
+            android:id="@+id/view_course_metadata_header_dot_separator_text"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_marginStart="8sp"
+            android:layout_marginEnd="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separation_dot"
+            tools:text="@string/separation_dot" />
+
+        <TextView
+            android:id="@+id/view_course_metadata_header_reviews_text"
+            style="@style/SkStyle.Text.Header.H5.Highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="198 Reviews" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="6dp"
+        android:id="@+id/view_course_metadata_header_description"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Have you ever created a great sketch only to get stuck when it's time to add color? Learn simple tools to unlock your color co... More" />
+
+    <View
+        android:layout_marginTop="@dimen/activity_content_margin_xxlarge"
+        style="@style/SkStyle.Element.Separator.Thin"/>
+
+    <com.skillshare.Skillshare.client.course_details.course_details.view.CourseDetailsTeacherRow
+        android:id="@+id/view_course_metadata_header_teacher_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginBottom="@dimen/activity_content_margin_xxlarge"
+        style="@style/SkStyle.Element.Separator.Thin"/>
+</LinearLayout>

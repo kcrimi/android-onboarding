@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_settings_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:showIn="@layout/activity_settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:id="@+id/view_settings_list_membership_section"
+            style="@style/SkStyle.Settings.RowContainer">
+
+            <TextView
+                android:id="@+id/view_settings_list_membership_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:text="@string/settings_membership" />
+
+            <LinearLayout
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/view_settings_list_membership_title_text_view"
+                    style="@style/SkStyle.Settings.RowItemText"
+                    android:text="@string/settings_basic_member" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_settings_list_membership_upgrade_button"
+                    style="@style/SkStyle.Settings.Button"
+                    android:text="@string/button_upgrade" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_settings_list_manage_subscription_button"
+                    style="@style/SkStyle.Settings.Button.Secondary"
+                    android:text="@string/button_manage"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view_settings_list_membership_footer"
+                style="@style/SkStyle.Settings.RowItemSubText"
+                android:layout_marginTop="@dimen/activity_margin_medium"
+                android:visibility="gone"
+                tools:text="@string/settings_membership_footer" />
+
+        </LinearLayout>
+
+        <View style="@style/SkStyle.Settings.Separator" />
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:id="@+id/view_settings_list_notifications_section"
+            style="@style/SkStyle.Settings.RowContainer">
+
+            <TextView
+                android:id="@+id/view_settings_list_notifications_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:text="@string/settings_notifications" />
+
+            <LinearLayout
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="@dimen/activity_margin_medium">
+
+                <TextView
+                    android:id="@+id/view_settings_list_notifications_title_text_view"
+                    style="@style/SkStyle.Settings.RowItemText"
+                    android:text="@string/settings_personalized_notifications" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_settings_list_notifications_button"
+                    style="@style/SkStyle.Settings.Button.Secondary"
+                    android:text="@string/button_turn_on"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view_settings_list_notifications_subtitle_text_view"
+                style="@style/SkStyle.Settings.RowItemSubText"
+                android:text="@string/settings_notifications_subtitle_on" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:id="@+id/view_settings_notification_divider"
+            style="@style/SkStyle.Settings.Separator" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/activity_margin_medium"
+        android:layout_marginEnd="@dimen/activity_margin_medium"
+        android:id="@+id/view_settings_list_reminders_section"
+        style="@style/SkStyle.Settings.RowContainer">
+
+        <LinearLayout
+            style="@style/SkStyle.Settings.RowContainerInner"
+            android:layout_marginBottom="@dimen/activity_margin_medium">
+
+            <TextView
+                android:id="@+id/view_settings_list_reminders_title_text_view"
+                style="@style/SkStyle.Settings.RowItemText"
+                android:text="@string/settings_reminders" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/view_settings_list_reminders_button"
+                style="@style/SkStyle.Settings.Button.Secondary"
+                android:text="@string/button_manage"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_settings_list_reminders_subtitle_text_view"
+            style="@style/SkStyle.Settings.RowItemSubText"
+            android:text="@string/settings_reminders_subtitle" />
+    </LinearLayout>
+
+        <View
+            android:id="@+id/view_settings_reminders_divider"
+            style="@style/SkStyle.Settings.Separator" />
+
+        <LinearLayout
+            android:id="@+id/view_settings_list_offline_section"
+            style="@style/SkStyle.Settings.RowContainer"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_offline_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/settings_offline_access" />
+
+            <LinearLayout
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_download_on_wifi_only_row"
+                android:background="@drawable/canvas_to_silver"
+                style="@style/SkStyle.Settings.RowContainerInner">
+
+                <TextView
+                    android:id="@+id/view_settings_list_download_on_wifi_only_text_view"
+                    style="@style/SkStyle.Settings.RowItemTextButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/only_download_over_wifi_title" />
+
+                <Switch
+                    android:id="@+id/view_settings_list_download_on_wifi_only_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_settings_list_remove_download_divider"
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                style="@style/SkStyle.Settings.Separator" />
+
+            <TextView
+                android:id="@+id/view_settings_list_remove_downloaded_courses_cell"
+                android:textSize="18sp"
+                style="@style/SkStyle.Text.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/canvas_to_silver"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_margin_medium"
+                android:paddingBottom="@dimen/activity_margin_medium"
+                android:text="@string/button_remove_all_downloaded_classes"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_settings_downloads_divider"
+            style="@style/SkStyle.Settings.Separator" />
+
+        <LinearLayout
+            android:id="@+id/view_settings_list_get_in_touch_section"
+            style="@style/SkStyle.Settings.RowContainer"
+            android:layout_marginBottom="0dp"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_get_in_touch_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/settings_get_in_touch" />
+
+            <TextView
+                android:background="@drawable/canvas_to_silver"
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_contact_support_cell"
+                style="@style/SkStyle.Settings.RowItemTextButton"
+                android:text="@string/settings_contact_support" />
+
+            <View
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                style="@style/SkStyle.Settings.Separator" />
+
+            <TextView
+                android:background="@drawable/canvas_to_silver"
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_share_feedback_cell"
+                style="@style/SkStyle.Settings.RowItemTextButton"
+                android:text="@string/settings_share_feedback" />
+
+        </LinearLayout>
+
+        <View style="@style/SkStyle.Settings.Separator" />
+
+        <LinearLayout
+            style="@style/SkStyle.Settings.RowContainer"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_about_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/settings_about" />
+
+            <TextView
+                android:background="@drawable/canvas_to_silver"
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_terms_of_service_cell"
+                style="@style/SkStyle.Settings.RowItemTextButton"
+                android:text="@string/settings_terms_of_service" />
+
+            <View
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                style="@style/SkStyle.Settings.Separator" />
+
+            <TextView
+                android:background="@drawable/canvas_to_silver"
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_privacy_cell"
+                style="@style/SkStyle.Settings.RowItemTextButton"
+                android:text="@string/settings_privacy" />
+
+        </LinearLayout>
+
+        <View style="@style/SkStyle.Settings.Separator" />
+
+        <LinearLayout
+            android:id="@+id/view_settings_list_developer_options_row"
+            style="@style/SkStyle.Settings.RowContainer"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible">
+            <TextView
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_developer_options_header"
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/settings_developers" />
+
+            <TextView
+                android:background="@drawable/canvas_to_silver"
+                android:paddingStart="@dimen/activity_margin_medium"
+                android:paddingEnd="@dimen/activity_margin_medium"
+                android:id="@+id/view_settings_list_developer_options_cell"
+                style="@style/SkStyle.Settings.RowItemTextButton"
+                android:text="@string/settings_developer_options" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_settings_developer_options_divider"
+            style="@style/SkStyle.Settings.Separator" />
+
+        <TextView
+            android:id="@+id/view_settings_list_sign_out_row_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/canvas_to_silver"
+            android:gravity="center"
+            android:padding="@dimen/activity_margin_medium"
+            android:text="@string/button_sign_out"
+            android:textSize="18sp"
+            android:textAppearance="@style/SkStyle.Text.Body2"
+            android:textColor="@color/violet" />
+
+        <TextView
+            android:id="@+id/settings_app_version_text"
+            style="@style/SkStyle.Text.Body3"
+            android:textColor="?themeColorGreyDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/half_activity_margin"
+            tools:text="Version 2.3.2" />
+
+        <TextView
+            android:id="@+id/settings_device_id_text"
+            style="@style/SkStyle.Text.Body3"
+            android:textColor="?themeColorGreyDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/activity_content_vertical_margin_xsmall"
+            tools:text="ID: aa47ec5b-838f-4644-88a5-e5360d11c115" />
+
+        <TextView
+            android:id="@+id/settings_email_text"
+            style="@style/SkStyle.Text.Body3"
+            android:textColor="?themeColorGreyDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/activity_content_vertical_margin_xsmall"
+            android:layout_marginBottom="@dimen/activity_margin"
+            tools:text="@string/logged_in_as" />
+    </LinearLayout>
+</ScrollView>

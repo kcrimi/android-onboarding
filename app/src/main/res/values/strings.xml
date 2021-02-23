@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="skillshare">Skillshare</string>
+    <string name="app_name">@string/skillshare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="activity_settings_title">Settings</string>
+    <string name="title_activity_categories">Select a category</string>
+    <string name="title_activity_course_detail">CourseDetailActivity</string>
+    <string name="title_activity_class_detail">ClassDetailActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="description">Media Controls</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+
+    <item name="tag_trending" type="id" />
+    <item name="tag_featured" type="id" />
+    <item name="tag_sku" type="id" />
+    <item name="tag_page" type="id" />
+    <item name="tag_pos" type="id" />
+
+    <string name="title_activity_web">WebActivity</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="rate_dialog_title">Rate this app</string>
+    <string name="rate_dialog_message">If you enjoy this app, would you mind taking a moment to rate it? Thanks for your support!</string>
+    <string name="rate_dialog_ok">Rate It Now</string>
+    <string name="rate_dialog_cancel">Later</string>
+    <string name="rate_dialog_no">No, Thanks</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="filters">Filters</string>
+    <string name="apply">Apply</string>
+    <string name="title_activity_old_onboarding">OnboardingBeginActivity</string>
+    <string name="got_it">Got it!</string>
+    <string name="title_activity_project_detail">ProjectDetailActivity</string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="project_text">Projects</string>
+    <string name="title_activity_student_list">StudentListActivity</string>
+    <string name="no_students">No one has enrolled in this class.</string>
+    <string name="no_projects_subtitle">Try a different filter or reset your filters to view trending projects.</string>
+    <string name="no_projects_title">No Projects</string>
+    <string name="title_activity_project_list">Projects</string>
+    <string name="class_project">Class Project:</string>
+    <string name="no_projects_posted">No one has posted a project</string>
+    <string name="title_activity_reviews">ReviewsActivity</string>
+    <string name="testimonials">Testimonials</string>
+    <string name="no_reviews">This class hasn’t been reviewed</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="me">Me</string>
+    <string name="no_activity_title_me">No activity yet</string>
+    <string name="no_activity_subtitle_me">Classes you teach, projects you create, and skills you follow will show up here.</string>
+    <string name="no_activity_subtitle_other">Any classes taught, projects created, and skills followed will show up here.</string>
+    <string name="projects_popup_message"><![CDATA[The gallery is a feed of new & popular projects created in Skillshare classes.]]></string>
+    <string name="user_list_activity_profile">UserListActivity</string>
+    <string name="double_dash">--</string>
+    <string name="following_list_title">Following</string>
+    <string name="following_list_activity_empty_message">Not following anyone just yet.</string>
+    <string name="followers_list_activity_empty_message">No followers just yet.</string>
+    <string name="followers_list_title_singular">Follower</string>
+    <string name="followers_list_title_plural">Followers</string>
+    <string name="abbreviate_number_string_millions_suffix">M</string>
+    <string name="abbreviate_number_string_thousands_suffix">K</string>
+    <string name="class_details_holder_reviews_title">Reviews</string>
+    <string name="for_you_page_title">For You</string>
+    <string name="fragment_category_details_header_follow_button_title">Follow</string>
+    <string name="following">Following</string>
+    <string name="profile_tag_cloud_title">Skills You Follow</string>
+    <string name="successfully_removed_class_message">Class removed</string>
+    <string name="error_removing_class_message">Unfortunately there was an error removing this class</string>
+    <string name="category_details_activity_title">CategoryDetailsActivity</string>
+    <string name="profile_completed_courses_row_title">Completed</string>
+    <string name="see_all_button_text">See All</string>
+    <string name="profile_teaching_courses_row_title">Teaching</string>
+    <string name="profile_projects_row_title">Projects</string>
+    <string name="me_page_followed_skills_row_title">Skills You Follow</string>
+    <string name="fragment_profile_private_user_message">This user has a private profile</string>
+    <string name="profile_enrolled_courses_row_title">Enrolled</string>
+    <string name="profile_saved_courses_row_title">Saved</string>
+    <string name="view_my_classes_enrolled_classes_empty_title">You aren’t enrolled in any classes</string>
+    <string name="view_my_classes_enrolled_classes_empty_sub_title">Once you’ve enrolled in some classes they’ll show up here</string>
+    <string name="view_my_classes_enrolled_classes_empty_discover_classes_button_title">Discover Classes</string>
+    <string name="view_my_classes_saved_courses_empty_view_sub_title">Saved classes will show up here until you’re ready to get started on them</string>
+    <string name="view_my_classes_completed_courses_empty_view_sub_title">Classes that you mark as complete will appear here</string>
+    <string name="my_courses_page_title">My Classes</string>
+    <string name="view_my_classes_saved_courses_empty_view_title">You don’t have any saved classes</string>
+    <string name="view_my_classes_completed_courses_empty_view_title">You haven’t completed any classes yet</string>
+    <string name="view_profile_projects_empty_view_title">You don’t have any projects yet</string>
+    <string name="view_profile_projects_empty_view_sub_title">Projects that you create will show up here</string>
+    <string name="view_profile_teaching_courses_empty_view_title">You aren’t teaching any classes yet</string>
+    <string name="view_profile_teaching_courses_empty_view_sub_title">Classes that you teach will show up here</string>
+    <string name="un_enroll_in_course_dialog_title">Are you sure?</string>
+    <string name="un_enroll_in_course_dialog_message">Unenrolling from this class will remove it from your profile. You will no longer receive notifications from this class. You will still be able to access and edit your class project from skillshare.com.</string>
+    <string name="un_enroll_in_course_dialog_un_enroll_button_text">Unenroll</string>
+    <string name="un_enroll_in_course_dialog_cancel_button_text">Cancel</string>
+    <string name="projects_page_title">Student Projects</string>
+    <string name="me_page_title">Me</string>
+    <string name="search_page_title">Search</string>
+    <string name="activity_search_bar_hint">Search classes, skills, teachers</string>
+    <string name="class_details_download_message">Download</string>
+    <string name="because_you_follow_prefix">Because you follow </string>
+    <string name="trending_title">Trending</string>
+    <string name="free_premium_tag_free_title">Free Class</string>
+    <string name="free_premium_tag_premium_title">Premium Class</string>
+    <string name="premium_banner_title">Available to Premium Members</string>
+    <string name="premium_banner_subtitle">Learn more</string>
+    <string name="free_discover_row_title">Trending Free Classes</string>
+    <string name="onboarding_info_title">Learning Made Personal</string>
+    <string name="follow_skills_tooltip_message">You can manage the tags \n you follow here</string>
+    <string name="next">Next</string>
+    <string name="title_activity_onboarding">Onboarding</string>
+    <string name="personalize_tag_saved_message">Changes Saved</string>
+
+    <string name="chromecast">chromecast</string>
+    <string name="menu_cast">Cast to</string>
+    <string name="menu_disconnect_cast_title">To stop casting:</string>
+    <string name="menu_disconnect_cast_line_item_title">Disconnect from %s</string>
+    <string name="cast_connect_item_description">Casting %s</string>
+    <string name="premium_member">Premium Member</string>
+    <string name="basic_member">Free Membership</string>
+    <string name="only_download_over_wifi_title">Only Download Over Wi-Fi</string>
+    <string name="trouble_syncing_your_subscription_message">It looks like there’s some trouble syncing your subscription to Skillshare. We’ll try again automatically the next time you launch the app</string>
+    <string name="invalid_subscription_token_message">Google Play did not recognize your subscription. Please contact us if your account doesn’t behave as it should.</string>
+    <string name="subscription_synced_successfully">We’ve successfully synced your recent purchase of Skillshare Premium!</string>
+    <string name="subscription_not_synced_title">Purchased But Not Synced</string>
+    <string name="subscription_not_synced">Your purchase was successful but we were unable to sync your account.</string>
+
+
+    <string name="title_activity_video_test">VideoTestActivity</string>
+    <string name="lessons_fragment_title">Lessons</string>
+    <string name="projects_fragment_title">Projects</string>
+    <string name="discussions_fragment_title">Discussions</string>
+    <string name="more_button_title">more</string>
+    <string name="course_actions_save_title">Save</string>
+    <string name="saved_course_for_later">Saved class for later</string>
+    <string name="unsaved_course">Class removed</string>
+    <string name="welcome_to_the_course">Welcome to the class!</string>
+    <string name="enroll_dialog_title">Enroll in this class?</string>
+    <string name="enroll_dialog_subtitle">To watch these videos you’ll need to enroll in the class</string>
+    <string name="enroll_dialog_enroll_button_text">Enroll</string>
+    <string name="enroll_dialog_saved_button_text">Saved</string>
+    <string name="enroll_dialog_save_for_later_button_text">Save</string>
+    <string name="projects_featured_projects_row_title_plural">%s Student Projects</string>
+    <string name="projects_featured_projects_row_title_singular">%s Student Project</string>
+    <string name="projects_featured_projects_row_title_empty">Student Projects</string>
+    <string name="projects_featured_projects_empty_text">Students haven\'t shared any projects yet</string>
+    <string name="projects_download_extra_content_text">Tap here to access this class’s project details and upload a project.</string>
+    <string name="projects_download_extra_content_text_with_link"><![CDATA[<a href=%s>Tap here to access this class’s project details and upload a project.</a>]]></string>
+    <string name="lessons_related_courses_row_title">Related Classes</string>
+    <string name="lessons_featured_related_courses_empty_text">This class has no related classes</string>
+    <string name="offline_unenroll_error_message">Sorry, you can’t unenroll in a class when you are offline</string>
+    <string name="unenrolled_succesfully">Successfully unenrolled from class</string>
+    <string name="course_actions_enroll_title">Enroll</string>
+    <plurals name="discussion_list_title">
+        <item quantity="one">%d Discussion</item>
+        <item quantity="other">%d Discussions</item>
+    </plurals>
+    <string name="discussions_singular_list_title">Discussion</string>
+    <string name="discussions_plural_list_title">Discussions</string>
+    <string name="more_button_text">more</string>
+    <string name="elipses">…</string>
+    <string name="discussions_view_all_replies">View all %d replies</string>
+    <string name="teacher_tag_text">Teacher</string>
+    <string name="no_discussion_have_been_started_yet">No discussions have been started yet</string>
+    <string name="send_button_text">Send</string>
+    <string name="title_activity_discussion_details">DiscussionDetailsActivity</string>
+    <string name="plural_discussion_details_title">%d Replies</string>
+    <string name="no_replies_have_been_started_yet">No replies have been posted yet</string>
+    <string name="post_reply_bar_hint">Reply…</string>
+    <string name="see_all_replies_button_text">View all %d replies</string>
+    <string name="singular_discussion_details_title">%d Reply</string>
+    <string name="course_actions_enrolling_title">Enrolling…</string>
+    <string name="onboarding_info_description">Bite-sized classes customized for you.</string>
+    <string name="personalize_button_text">Personalize</string>
+    <string name="profile_followed_skills_tag_cloud_empy_view_description">Follow skills to unlock class recommendations</string>
+    <string name="profile_followed_skills_row_title">Interested In</string>
+    <string name="title_activity_browse">Browse</string>
+    <string name="course_banner_next_up_preface">"Next up: %s"</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="categories_selector_dialog_page_title">Categories</string>
+    <string name="unsubscribe_disclaimer">Subscribed to Skillshare through the Google Play Store? Manage your subscription by opening the Play Store and navigating to the Skillshare listing</string>
+    <string name="button_manage">Manage</string>
+    <string name="error_enrolling_in_class">Error enrolling in class</string>
+    <string name="cant_enroll_when_offline">Can’t enroll when offline, try again when you’re online</string>
+    <string name="course_list_row_subtitle_suffix">Classes</string>
+    <string name="stitch_my_courses_url">/stitch/yourClasses?verticalListOnly=1</string>
+    <string name="download_page_empty_view_message">Premium members can download classes to watch offline</string>
+    <string name="follow_user_row_num_followers_message">%s Followers</string>
+    <string name="signing_up">Signing Up</string>
+    <string name="ok">OK</string>
+    <string name="message">Message</string>
+    <string name="pro_tip_offline_class">Pro tip: Premium Members can download\nclasses and watch with no internet connection.</string>
+    <string name="offline_try_again">Please check your internet connection and try again</string>
+    <string name="you_re_offline">You’re offline</string>
+    <string name="view_downloaded_courses">View Downloaded Courses</string>
+    <string name="retry">Retry</string>
+    <string name="retrying">Retrying</string>
+    <string name="love_it">Love it!</string>
+    <string name="wed_appreciate_your_rating">We’d appreciate it if you left us a rating in the Play Store.</string>
+    <string name="we_love_feedback">We love feedback</string>
+    <string name="rate_in_play_store">Rate in Play Store</string>
+    <string name="your_feedback_is_valuable_to_us">Your feedback is valuable to us.</string>
+    <string name="what_can_we_do_better">Let us know what we can do better…</string>
+    <string name="how_can_we_improve">How can we improve?</string>
+    <string name="how_do_you_like_the_app">How do you like the app?</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="we_really_appreciate_your_feedback">We really appreciate your feedback.</string>
+    <string name="we_d_love_your_feedback">We’d love your feedback.</string>
+    <string name="could_be_better">Could be better</string>
+    <string name="send">Send</string>
+
+    <!--Settings-->
+    <string name="toast_changes_require_restart">The application must be restarted before these changes take effect. Please force close the app.</string>
+    <string name="market_deeplink_uri_format">market://details?id=%s</string>
+    <string name="play_store_web_url_format">https://play.google.com/store/apps/details?id=%s</string>
+    <string name="logged_in_as">Logged in as %s</string>
+
+    <!-- Get Started -->
+    <string name="get_started_title">Explore your Creativity</string>
+    <string name="get_started_title_punctuation">.</string>
+    <string name="get_started_1_month">Get Started With 1 Month Free</string>
+    <string name="get_started_subtitle">Join Skillshare to watch, play, learn, make, and discover.</string>
+
+    <!-- Home -->
+    <string name="nav_bar_button_home">Home</string>
+
+    <!--Sign In / Up-->
+    <string name="need_help_format">Need help? ^1</string>
+    <string name="contact_our_support_team">Contact our Support team</string>
+    <string name="terms_and_privacy"><![CDATA[By signing up you agree to Skillshare’s <br/><a href="https://skillshare.com/ss/terms">Terms of Service</a> and <a href="https://skillshare.com/ss/privacy">Privacy Policy.</a>]]></string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_with_facebook">Continue with Facebook</string>
+    <string name="sign_in_with_facebook">Continue with Facebook</string>
+    <string name="sign_up_with_google">Continue with Google</string>
+    <string name="sign_in_with_google">Continue with Google</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="onboarding_signup_sign_in_text"><![CDATA[Already have an account? <b>Sign in</b>]]></string>
+    <string name="sign_up_to_continue">Sign up to continue</string>
+    <string name="sign_up_explore_copy">Explore your creativity with thousands of inspiring classes in design, illustration, photography, and more.</string>
+    <string name="or">Or</string>
+    <string name="sign_up_first_name">First Name</string>
+    <string name="sign_up_last_name">Last Name</string>
+    <string name="sign_in_email_address">Email Address</string>
+    <string name="sign_in_password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="password_length">Passwords should be at least 8 characters long.</string>
+
+    <!--Downloads-->
+    <string name="downloads_title">Downloads</string>
+    <string name="downloads_downloading_row_title">Downloading</string>
+    <string name="downloads_no_downloads_row_title">You Have No Offline Classes</string>
+    <string name="downloads_downloaded_row_title">Downloaded Classes</string>
+    <string name="downloads_class_not_available">Class is not available</string>
+    <string name="downloads_state_failed">Download failed</string>
+    <string name="downloads_state_partially_failed">Partially downloaded</string>
+    <string name="downloads_waiting_for_netwoork">Waiting for network</string>
+    <string name="downloads_waiting_for_wifi">Waiting for wi-fi</string>
+    <string name="downloads_state_paused">Download paused</string>
+    <string name="downloads_state_waiting_to_start">Waiting to start</string>
+
+    <!-- My Courses -->
+    <string name="my_courses_downloads_title">Downloads</string>
+    <string name="my_courses_saved_course_title">All Saved Classes</string>
+    <string name="my_courses_lists_title">My Lists</string>
+    <string name="my_courses_watch_history_title">Watch History</string>
+    <string name="my_courses_course_count">%d classes</string>
+    <string name="my_courses_list_count">%d lists</string>
+
+    <!-- Dialog -->
+    <string name="sign_out_q">Sign Out?</string>
+    <string name="switch_endpoint_message">Switching to %s will sign you out of your current session.</string>
+
+    <string name="dialog_force_update_title">App update required</string>
+    <string name="dialog_force_update_body">To continue using the app, you’ll need to update it to the most recent version.</string>
+    <string name="dialog_force_update_button_positive">Get the update</string>
+    <string name="dialog_force_update_button_negative">Close the app</string>
+
+    <string name="dialog_low_storage_title">Low Storage</string>
+    <string name="dialog_low_storage_body">Your device is running low on storage. All downloads will be paused.</string>
+
+    <string name="dialog_checkout_success_title">Enjoy Your Membership!</string>
+    <string name="dialog_checkout_success_body">You’re now a Premium Member with unlimited access to classes.</string>
+
+    <string name="dialog_force_sign_out_title">You’ve been signed out</string>
+    <string name="dialog_force_sign_out_message">Please try signing in again.</string>
+
+    <string name="dialog_turn_off_wifi_only_title">Turn off download on wi-fi only?</string>
+    <string name="dialog_turn_off_wifi_only_body">This will allow downloading on cellular network. You may not want to do this if you have a limited data plan.</string>
+    <string name="dialog_turn_off_wifi_only_turn_off">Turn off</string>
+
+    <string name="dialog_delete_all_downloads_title">Remove offline access?</string>
+    <string name="dialog_delete_all_downloads_body">Are you sure you want to remove offline access for all classes?</string>
+    <string name="dialog_delete_all_downloads_remove">Remove</string>
+
+    <string name="dialog_downloading_on_cell_title">Downloading using a cellular network</string>
+    <string name="dialog_downloading_on_cell_body">To save on cellular data, you can set the app to download on wi-fi only in settings</string>
+    <string name="dialog_downloading_on_cell_update_settings">Update settings</string>
+
+    <!-- Search -->
+    <string name="user_follow_count">%d Followers</string>
+    <string name="tag_course_count">%d Classes</string>
+    <string name="search_for">Search for \"%s\"</string>
+    <string name="reset">Reset</string>
+    <string name="search_history_load_error">Error loading Search History</string>
+    <string name="search_results_load_error">Error loading Search Results</string>
+    <string name="search_query_too_short">Your search is too short\n(minimum is 3 characters).</string>
+    <string name="search_history_clear_error">Error clearing Search History</string>
+    <string name="search_history_title">Recent</string>
+    <string name="search_skills_title">Popular</string>
+    <string name="filter">Filter</string>
+    <string name="total_results">%s Results</string>
+    <string name="filter_class_type">Class Type</string>
+    <string name="filter_class_type_all">All</string>
+    <string name="filter_class_type_original">Original</string>
+    <string name="filter_class_type_staff_pick">Staff Pick</string>
+    <string name="filter_class_level">Class Level</string>
+    <string name="filter_class_level_beginner">Beginner</string>
+    <string name="filter_class_level_intermediate">Intermediate</string>
+    <string name="filter_class_level_advanced">Advanced</string>
+    <string name="filter_created_within">Created Within</string>
+    <string name="filter_created_within_all_time">All Time</string>
+    <string name="filter_created_within_last_year">Last Year</string>
+    <string name="filter_created_within_last_month">Last Month</string>
+    <string name="filter_created_within_last_week">Last Week</string>
+    <string name="filter_created_within_last_day">Last Day</string>
+    <string name="filter_class_length">Class Length</string>
+    <string name="filter_class_length_shorter">&lt; 15 min</string>
+    <string name="filter_class_length_short">15–30 min</string>
+    <string name="filter_class_length_medium">30–60 min</string>
+    <string name="filter_class_length_long">&gt; 60 min</string>
+    <string name="filter_view_number_results">View %s Results</string>
+    <string name="filter_view_results">View Results</string>
+    <string name="filter_no_results">No Results</string>
+
+    <!-- Order of the strings dictates the order in the dropdown-->
+    <string-array name="search_filters_created_within">
+        <item>@string/filter_created_within_all_time</item>
+        <item>@string/filter_created_within_last_day</item>
+        <item>@string/filter_created_within_last_week</item>
+        <item>@string/filter_created_within_last_month</item>
+        <item>@string/filter_created_within_last_year</item>
+    </string-array>
+
+
+    <!-- Banners -->
+    <string name="push_opt_in_banner_title">Learning is hard, and you’re busy</string>
+    <string name="push_opt_in_banner_subtitle">Let us help by sending you occasional notifications about new, inspiring classes.</string>
+
+    <!-- Settings -->
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_personalized_notifications">Personalized Notifications</string>
+    <string name="settings_notifications_subtitle_off">Turn on notifications to get updates just for you. No spam! We promise.</string>
+    <string name="settings_notifications_subtitle_on">You’re all set to get personalized updates and alerts.</string>
+    <string name="settings_reminders">Weekly Reminders</string>
+    <string name="settings_reminders_subtitle">Set aside time every week for learning.</string>
+    <string name="settings_membership">Membership</string>
+    <string name="settings_membership_footer">You can manage your%s subscription %s</string>
+    <string name="settings_membership_footer_web">within your account settings at Skillshare.com.</string>
+    <string name="settings_membership_footer_android">in the Play Store.</string>
+    <string name="settings_membership_footer_ios">in the App Store.</string>
+    <string name="settings_membership_annual">\u0020annual</string>
+    <string name="settings_membership_monthly">\u0020monthly</string>
+    <string name="settings_basic_member">Basic Member</string>
+    <string name="settings_offline_access">Offline Access</string>
+    <string name="settings_playback">Playback</string>
+    <string name="settings_get_in_touch">Get In Touch</string>
+    <string name="settings_about">About</string>
+    <string name="settings_rate_skillshare">Rate Skillshare</string>
+    <string name="settings_contact_support">Contact Support</string>
+    <string name="settings_share_feedback">Share Feedback</string>
+    <string name="settings_terms_of_service">Terms of Service</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_developers">Developers</string>
+    <string name="settings_developer_options">Developer Options</string>
+    <string name="build_information">Build Information</string>
+    <string name="configuration">Configuration</string>
+    <string name="equals">=</string>
+    <string name="app_version">App Version</string>
+    <string name="log_request_data">Log Request Data</string>
+    <string name="build_options">Build Options</string>
+    <string name="settings_version_format">Version %s</string>
+    <string name="settings_id_format">ID: %s</string>
+    <string name="developer_options_rec_for_you">Force Rec For You</string>
+    <string name="developer_options_search_shortcuts">Force Search Shortcuts</string>
+    <string name="developer_options_checkout_guidelines">Force Checkout Guidelines</string>
+    <string name="developer_options_ratings">Reset Ratings CTA</string>
+    <string name="developer_options_search_tab">Force Search Tab</string>
+    <string name="developer_options_new_my_classes_tab">Force New My Classes Tab</string>
+
+    <!-- Buttons -->
+    <string name="button_not_now">Not Now</string>
+    <string name="button_turn_on">Turn On</string>
+    <string name="button_upgrade">Upgrade</string>
+    <string name="button_remove_all_downloaded_classes">Remove All Downloaded Classes</string>
+    <string name="button_sign_out">Sign Out</string>
+    <string name="button_go_premium">Go Premium</string>
+
+    <!-- WebViews -->
+    <string name="webview_title_terms_of_service">Terms of Service</string>
+    <string name="webview_url_terms_of_service">http://skillshare.com/ss/terms</string>
+    <string name="webview_title_privacy">Privacy Policy</string>
+    <string name="webview_url_privacy">http://skillshare.com/ss/privacy</string>
+    <string name="webview_title_subscriptions">Go Premium</string>
+
+    <!-- Push Notifications -->
+    <string name="channel_custom_reminders_title">Custom Reminders</string>
+    <string name="channel_custom_reminders_description">Personalized reminders to help you make learning an easy habit</string>
+    <string name="channel_media_playback_title">Media Playback</string>
+    <string name="channel_media_playback_description">A persistent reminder that media is playing in the background</string>
+    <string name="channel_blueshift_title">Other</string>
+    <string name="channel_blueshift_description">Other classes, teachers, and releases that you might find useful</string>
+
+    <!-- Media Playback Notification -->
+    <string name="media_playback_notification_title">Media is currently playing</string>
+
+    <!-- Custom Reminders -->
+    <string name="reminders_title">Your weekly reminder</string>
+    <string name="reminders_subtitle">We’ll remind you on:</string>
+    <string name="reminders_setup_title">Get weekly reminders to watch your classes</string>
+    <string name="reminders_setup_suggested_time_title_format">Is ^1\na good time?</string>
+    <string name="reminders_setup_suggested_time_subtitle">We’ll send a helpful reminder then with class suggestions!</string>
+    <string name="reminders_setup_accept_time_button">That Works</string>
+    <string name="reminders_setup_adjust_time_button">Adjust</string>
+    <string name="reminders_setup_time_picker_title">When’s a good time to remind you?</string>
+    <string name="reminders_setup_time_picker_button">Looks Good!</string>
+    <string name="reminders_setup_enable_notifications_title_format">Got it! We’ll remind you every ^1!</string>
+    <string name="reminders_setup_enable_notifications_subtitle">Turn on notifications to get this reminder!</string>
+    <string name="reminders_enable_notifications_button">Turn On Notifications</string>
+    <string name="reminders_more_reminders_clickable_segment">Let us know.</string>
+    <string name="reminder_card_today">Today</string>
+    <string name="reminder_card_tomorrow">Tomorrow</string>
+    <string name="reminder_card_in_x_days_format">in %d days</string>
+    <string name="reminder_card_subtitle_morning">Get ready for inspiring %s mornings! We’ll send you a little nudge to come watch your classes.</string>
+    <string name="reminder_card_subtitle_midday">Give your mind a midday boost every %s! We’ll send you a little nudge to come watch your classes.</string>
+    <string name="reminder_card_subtitle_evening">Take %s evenings to hone your skills! We’ll send you a little nudge to come watch your classes.</string>
+
+    <!--Home Tab-->
+    <string name="home_watch_tab_title">Watch</string>
+    <string name="home_welcome_back_format">Welcome back, ^1</string>
+    <string name="home_play_now_tab_title">Play Now</string>
+    <string name="home_continue_watching_title">Continue Watching</string>
+    <string name="home_search_query_hint">What do you want to learn today?</string>
+    <string name="home_saved_classes_title">Start your saved class</string>
+    <string name="home_free_classes_title">Try a free class</string>
+    <string name="home_popular_classes_title">Trending in</string>
+    <string name="home_recommended_for_you_title">Recommended For You</string>
+    <string name="home_offline_title">Looks like you’re offline</string>
+    <string name="home_offline_content">Check your internet connection and try again</string>
+    <string name="home_offline_content_downloads">Watch your downloaded classes while offline!</string>
+    <string name="home_offline_button_reconnect">Try Reconnecting</string>
+    <string name="home_offline_button_downloads">Go to My Downloads</string>
+
+    <!-- Featured Course Banner -->
+    <string name="featured_course_banner_course_title">Design Like Draplin: How to Make Awesome Merch</string>
+    <string name="featured_course_banner_button_text">Watch Class</string>
+
+    <!--Class Cards-->
+    <string name="class_card_x_min_left">%dm left</string>
+    <string name="class_card_x_in_lesson">^1 in lesson</string>
+    <string name="class_card_total_duration_xh_xm">%1$dh %2$dm</string>
+    <string name="class_card_total_duration_xm">%dm</string>
+    <string name="class_card_x_lessons">%d Lessons</string>
+    <string name="class_card_badge_staff_pick">Staff Pick</string>
+
+
+    <!-- Order of the strings dictates the order in the dropdown-->
+    <string-array name="home_popular_classes_category_filter_display">
+        <item>All Categories</item>
+        <item>Animation</item>
+        <item>Business Analytics</item>
+        <item>Creative Writing</item>
+        <item>Film &amp; Video</item>
+        <item>Fine Art</item>
+        <item>Freelance &amp; Entrepreneurship</item>
+        <item>Graphic Design</item>
+        <item>Illustration</item>
+        <item>Leadership &amp; Management</item>
+        <item>Lifestyle</item>
+        <item>Marketing</item>
+        <item>Music</item>
+        <item>Photography</item>
+        <item>Productivity</item>
+        <item>UI/UX Design</item>
+        <item>Web Development</item>
+    </string-array>
+
+    <string-array name="home_popular_classes_category_filter_values">
+        <item>all</item>
+        <item>animation</item>
+        <item>business-analytics</item>
+        <item>creative-writing</item>
+        <item>film-and-video</item>
+        <item>fine-art</item>
+        <item>freelance-and-entrepreneurship</item>
+        <item>graphic-design</item>
+        <item>illustration</item>
+        <item>leadership-and-management</item>
+        <item>lifestyle</item>
+        <item>marketing</item>
+        <item>music</item>
+        <item>photography</item>
+        <item>productivity</item>
+        <item>ui-ux-design</item>
+        <item>web-development</item>
+    </string-array>
+
+    <!--Manage Class Menu-->
+    <string name="manage_class_menu_complete_class">Mark this class as complete</string>
+    <string name="manage_class_menu_hide_class">Hide this class from my page</string>
+    <string name="manage_class_remove_from_saved_classes">Remove this from Saved Classes</string>
+
+    <!--Reminders Notification Content-->
+    <string name="reminder_notification_title">Your weekly reminder ⏰</string>
+    <string name="reminder_notification_action_watch_now">Watch Now</string>
+    <string name="reminder_notification_action_stop_reminder">Stop Reminder</string>
+
+    <!--Continue Watching-->
+    <string name="reminder_notification_cw_01">^1, want to dive back into this class you started?</string>
+    <string name="reminder_notification_cw_02">^1, why not continue with the next few lessons of ^2?</string>
+    <string name="reminder_notification_cw_03">^1, great progress on your class. Want to watch another lesson?</string>
+    <string name="reminder_notification_cw_04">Hi ^1, this is the reminder you set for yourself to watch ^2.</string>
+    <string name="reminder_notification_cw_05">Did you forget about us? We didn\’t forget about you! Come watch a lesson of ^1.</string>
+    <!--Recommended For You-->
+    <string name="reminder_notification_rfy_01">Remember us? We’re here and waiting for you, ^1. Come watch a class!</string>
+    <string name="reminder_notification_rfy_02">^1, you told us to give you a little nudge to watch your classes. So here we are, nudging. 😬</string>
+    <string name="reminder_notification_rfy_03">Hi there. You wanted to watch Skillshare on ^1. So here we are, on ^1. 👋</string>
+    <string name="reminder_notification_rfy_04">You set a reminder for today to come watch your classes, since sometimes you forget about us.</string>
+    <string name="reminder_notification_rfy_05">When was the last time you gave yourself time and space to learn a new skill? Watch a class today!</string>
+    <!--Text-Only-->
+    <string name="reminder_notification_to_01">You asked us to remind you to dive back into your classes. You’ve officially been reminded!</string>
+    <string name="reminder_notification_to_02">Making the time to learn is tough. You set this reminder in case you had time to watch your classes!</string>
+    <string name="reminder_notification_to_03">You wanted to watch Skillshare on ^1. So here we are, on ^1. 👋</string>
+
+    <!--Tool Tips-->
+    <string name="tooltip_reminder_title">Learning Reminders</string>
+    <string name="tooltip_reminder_subtitle">Try Our New</string>
+    <string name="tooltip_reminder_copy">Want to build a learning habit? Set a weekly reminder to watch your classes!</string>
+
+    <!-- Video Player -->
+    <string name="video_player_zero_time">00:00</string>
+    <string name="cast_connected_to">Connected to %s</string>
+    <!-- Video Options Menu -->
+    <string name="play_speed">Play Speed</string>
+    <string name="share_class">Share Class</string>
+    <string name="video_quality">Video Quality</string>
+    <string name="On">On</string>
+    <string name="Off">Off</string>
+    <string name="view_class_page">View Class Page</string>
+    <string name="background_audio">Background Audio</string>
+    <string name="background_audio_help">Continue listening to lessons while using other apps.</string>
+
+    <string-array name="video_playback_rate_labels">
+        <item name="0.5">0.5x</item>
+        <item name="1">1x (Normal)</item>
+        <item name="1.25">1.25x</item>
+        <item name="1.5">1.5x</item>
+        <item name="2">2x</item>
+    </string-array>
+
+    <!--    Represented with a string, but is a float (there are no float resources)    -->
+    <string-array name="video_playback_rate_values">
+        <item name="0.5">0.5</item>
+        <item name="1">1</item>
+        <item name="1.25">1.25</item>
+        <item name="1.5">1.5</item>
+        <item name="2">2</item>
+    </string-array>
+
+
+    <string-array name="video_playback_qualities">
+        <item name="default">Auto</item>
+        <item name="data_saver">Data Saver</item>
+    </string-array>
+
+    <!-- Cast Player -->
+    <string name="video_title">%d. %s</string>
+    <string name="now_casting">Now Casting</string>
+    <string name="playing">Playing</string>
+    <string name="paused">Paused</string>
+    <string name="current_video_title">%1s %2s</string>
+
+    <!-- Class Details Premium CTA -->
+    <string name="premium_cta_button_text_1">Premium Class</string>
+    <string name="premium_cta_button_text_2">Start a Free Trial</string>
+    <string name="premium_cta_bottom_text">As a Free user, you can only preview the first lesson.</string>
+
+    <!-- Class Details Lessons Tab -->
+    <string name="lessons_tab_num_students">%s students</string>
+    <string name="lessons_tab_num_reviews">%s Reviews</string>
+    <string name="lessons_tab_num_lessons_and_duration">%d Lessons (%s)</string>
+    <string name="lessons_tab_course_waiting_for_wifi">Waiting for wi-fi</string>
+    <string name="lessons_tab_course_waiting_for_network">Waiting for network</string>
+    <string name="lessons_tab_course_downloading">Downloading...</string>
+    <string name="lessons_tab_course_downloaded">Downloaded</string>
+    <string name="lessons_tab_course_not_downloaded">Download all</string>
+    <string name="lessons_tab_course_download_paused">Download paused</string>
+    <string name="lessons_tab_course_queued">Download queued</string>
+    <string name="lessons_tab_course_partially_failed">Partially downloaded</string>
+    <string name="lessons_tab_course_failed">Download failed</string>
+    <string name="lessons_tab_retry_download">Try again</string>
+    <string name="lessons_tab_pause_download">Pause</string>
+    <string name="lessons_tab_resume_download">Resume</string>
+    <string name="lessons_tab_row_position">%d.</string>
+    <string name="lessons_tab_description_more">%1$s&#8230;More</string>
+    <string name="lessons_tab_description_title">About This Class</string>
+
+    <!-- Common -->
+    <string name="separation_dot">·</string>
+    <string name="separation_dot_large">•</string>
+
+    <!--Error Messages-->
+    <string name="error_no_connection">Please check data connection and try again</string>
+    <string name="error_unsaving_class">Error unsaving class</string>
+    <string name="error_saving_class">Error saving class</string>
+    <string name="error_loading_classes">Error loading classes</string>
+    <string name="error_loading_category_classes_format">Error Loading %s classes</string>
+    <string name="error_completing_class">Error marking class as complete</string>
+    <string name="error_hiding_class">Error hiding class</string>
+    <string name="error_signing_in_google">Error signing in with Google</string>
+    <string name="error_signing_up_google">Error signing up with Google</string>
+    <string name="error_loading_profile">Error loading profile</string>
+    <string name="error_no_web_browser_found">No web browser found on device</string>
+    <string name="error_network_default">Sorry, we were unable to fulfill that request. Please try again shortly.</string>
+
+    <!--Success Messages-->
+    <string name="success_completing_class">Class marked as complete</string>
+    <string name="success_hiding_class">Class hidden. We won’t show you this class anymore.</string>
+
+    <!-- Projects -->
+    <string name="projects_created_in">Created In:</string>
+    <string name="x_people_liked_this_project">%d people liked this project</string>
+
+    <!--Subscribe-->
+    <string name="subscriptions_plan_value_label">Best Value</string>
+    <string name="premium_checkout_title">Start Your Free Month\nof Membership</string>
+    <string name="premium_checkout_subtitle">Get unlimited access to thousands of\n classes on-demand and on-the-go.</string>
+    <string name="premium_checkout_pick_a_plan">Pick a Plan</string>
+    <string name="premium_checkout_title_tablet">Start Your Free Month of Membership</string>
+    <string name="premium_checkout_subtitle_tablet">Get unlimited access to thousands of classes on-demand and on-the-go.</string>
+    <string name="annual">annual</string>
+    <string name="monthly">monthly</string>
+    <string name="billed_annually">Billed annually</string>
+    <string name="billed_monthly">Billed monthly</string>
+    <string name="_monthly_divisor">/mo</string>
+    <string name="_yearly_divisor">/yo</string>
+    <string name="monthly_divisor">/month</string>
+    <string name="yearly_divisor">/year</string>
+    <string name="premium_checkout_cta_title">Start Your Free Trial</string>
+    <string name="premium_checkout_cta_subtitle">Your first month is free. Then %1s per %2s.</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="save_x_percent">Save %d%% </string>
+    <string name="just_x_per_month">Just %s/month</string>
+
+    <!-- Search Skills -->
+    <string-array name="search_skill_labels">
+        <item>Animation</item>
+        <item>Graphic Design</item>
+        <item>Illustration</item>
+        <item>Photography</item>
+        <item>Film</item>
+        <item>Crafts</item>
+        <item>Originals</item>
+        <item>Staff Picks</item>
+    </string-array>
+
+    <string-array name="search_skill_values">
+        <item>Animation</item>
+        <item>Graphic Design</item>
+        <item>Illustration</item>
+        <item>Photography</item>
+        <item>Film</item>
+        <item>Crafts</item>
+        <item>Skillshare Original</item>
+        <item>Staff Pick</item>
+    </string-array>
+
+    <array name="search_skill_image_resources">
+        <item>@drawable/image_animation</item>
+        <item>@drawable/image_graphic_design</item>
+        <item>@drawable/image_illustration</item>
+        <item>@drawable/image_photography</item>
+        <item>@drawable/image_film_and_video</item>
+        <item>@drawable/image_crafts</item>
+        <item>@drawable/image_originals</item>
+        <item>@drawable/image_staff_picks</item>
+    </array>
+
+    <!--    Rating Dialog    -->
+    <string name="rating_cta_title">Are you enjoying the Skillshare app?</string>
+    <string name="rating_cta_subtitle">When you’re happy, we are too. Are you liking the app so far?</string>
+    <string name="rating_cta_secondary_button">Not Sure</string>
+    <string name="rating_cta_primary_button">Yes</string>
+    <string name="rating_cta_negative_title">How can we make Skillshare better for you?</string>
+    <string name="rating_cta_negative_subtitle">Tell us how we can improve. We value your feedback.</string>
+    <string name="rating_cta_negative_primary_button">Send Feedback</string>
+    <string name="rating_cta_negative_secondary_button">Not Now</string>
+    <string name="rating_cta_positive_title">That’s great to hear!</string>
+    <string name="rating_cta_positive_subtitle">We’re happy you’re happy. Will you rate us in the Play Store?</string>
+    <string name="rating_cta_positive_primary_button">Rate the App</string>
+    <string name="rating_cta_positive_secondary_button">Not Now</string>
+
+    <string name="email_not_setup">E-mail is not set up on this device. Reach us at appfeedback@skillshare.com</string>
+    <string name="thanks_for_rating">Thanks for taking the time to rate us!</string>
+    <string name="thanks_for_feedback">Thanks for sending us your feedback!</string>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/activity_margin"
+        app:srcCompat="@drawable/ic_project" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/no_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin"
+        android:gravity="center_horizontal"
+        style="@style/SkStyle.Text.Header.H5"
+        android:text="@string/no_activity_title_me" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/no_activity_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin"
+        style="@style/SkStyle.Text.Body2"
+        android:text="@string/no_activity_subtitle_me" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/offline_view"
+    android:paddingLeft="@dimen/activity_margin_large"
+    android:paddingRight="@dimen/activity_margin_large"
+    android:background="@color/white"
+    android:visibility="visible">
+
+        <LinearLayout
+            style="@style/SkStyle.TabletFriendlyWidthContainer"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_offline"
+            style="@style/SkStyle.Icon.Large" />
+
+        <TextView
+            android:text="@string/home_offline_title"
+            style="@style/SkStyle.Text.Header.H1"
+            android:layout_marginTop="@dimen/activity_content_margin_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View style="@style/SkStyle.Element.Separator"
+            android:layout_width="40dp"
+            android:layout_marginTop="@dimen/card_content_margin_xxlarge"/>
+
+        <TextView
+            android:id="@+id/view_offline_content_text"
+            android:layout_marginTop="@dimen/card_content_margin_xxlarge"
+            android:layout_marginBottom="@dimen/card_content_margin_xxlarge"
+            style="@style/SkStyle.Text.Body1"
+            tools:text="@string/home_offline_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/view_offline_button_primary"
+            android:text="@string/home_offline_button_downloads"
+            android:layout_marginBottom="@dimen/activity_content_vertical_margin_medium"
+            style="@style/SkStyle.Button.Primary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/view_offline_button_secondary"
+            android:text="@string/home_offline_button_reconnect"
+            style="@style/SkStyle.Button.Secondary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</RelativeLayout>

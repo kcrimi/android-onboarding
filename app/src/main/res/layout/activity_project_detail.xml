@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.project.ProjectDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar"
+        style="@style/SkStyle.Toolbar">
+
+        <TextView
+            android:id="@+id/projects_title"
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class Projects"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/project_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar" />
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp"
+        android:indeterminate="true"
+        android:progressTint="?attr/themeColorPrimary" />
+
+
+    <include
+        android:id="@+id/offline_project"
+        layout="@layout/offline_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="266dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/project_private"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="266dp"
+        android:background="?android:colorBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/SkStyle.Icon.Large"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/icon_privateproject" />
+
+        <TextView
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorry, this project is only viewable to the author." />
+
+    </LinearLayout>
+
+</RelativeLayout>

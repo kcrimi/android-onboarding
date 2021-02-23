@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="com.skillshare.Skillshare.client.common.component.cast.CastView"
+    android:background="@color/transparent">
+
+    <com.skillshare.Skillshare.client.common.component.cast.CastMiniControllerView
+        android:id="@+id/view_cast_mini_controller"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.skillshare.Skillshare.client.common.component.cast.CastBigControllerView
+        android:id="@+id/view_cast_big_controller"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_to_silver"
+    android:padding="@dimen/activity_margin_medium"
+    tools:showIn="@layout/view_my_courses">
+
+    <ImageView
+        android:id="@+id/view_my_courses_row_icon"
+        style="@style/SkStyle.Icon"
+        android:src="@drawable/ic_download" />
+
+    <TextView
+        android:id="@+id/view_my_courses_row_title"
+        style="@style/SkStyle.Text.Header.H5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/view_my_courses_row_icon"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_large"
+        android:layout_toEndOf="@id/view_my_courses_row_icon"
+        tools:text="@string/my_courses_downloads_title" />
+
+    <TextView
+        android:id="@+id/view_my_courses_row_count"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_my_courses_row_title"
+        android:layout_alignStart="@id/view_my_courses_row_title"
+        android:layout_marginTop="4dp"
+        tools:text="6 classes" />
+
+    <ImageView
+        style="@style/SkStyle.Icon"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_right" />
+
+</RelativeLayout>

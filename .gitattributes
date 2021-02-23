@@ -1,0 +1,7 @@
+# Used for git-crypt
+skillshare.properties filter=git-crypt diff=git-crypt
+signing.properties filter=git-crypt diff=git-crypt
+assets/deploy/gradle_play_publisher.json filter=git-crypt diff=git-crypt
+assets/deploy/skillshare.keystore filter=git-crypt diff=git-crypt
+app/google-services.json filter=git-crypt diff=git-crypt
+assets/deploy/firebase.json filter=git-crypt diff=git-crypt

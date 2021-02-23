@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/activity_margin_medium"
+    android:paddingEnd="@dimen/activity_margin_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_lessons_featured_related_courses_row_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/half_activity_margin"
+        android:paddingBottom="@dimen/half_activity_margin"
+        android:paddingTop="@dimen/half_activity_margin">
+
+        <TextView
+            android:id="@+id/view_lessons_featured_related_courses_row_title_text_view"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/lessons_related_courses_row_title" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/view_lessons_featured_related_courses_row_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.skillshare.Skillshare.client.common.component.course.row.related.RelatedCoursesRowCellView
+            android:id="@+id/view_lessons_featured_related_courses_row_cell_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin" />
+
+        <com.skillshare.Skillshare.client.common.component.course.row.related.RelatedCoursesRowCellView
+            android:id="@+id/view_lessons_featured_related_courses_row_cell_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin" />
+
+        <com.skillshare.Skillshare.client.common.component.course.row.related.RelatedCoursesRowCellView
+            android:id="@+id/view_lessons_featured_related_courses_row_cell_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_lessons_featured_related_courses_row_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_empty_row_background"
+        android:paddingBottom="24dp"
+        android:paddingTop="24dp"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/lessons_featured_related_courses_empty_text" />
+    </RelativeLayout>
+</LinearLayout>

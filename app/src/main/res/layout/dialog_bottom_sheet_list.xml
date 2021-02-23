@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_bottom_sheet_margin"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet_list_title_section"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bottom_sheet_list_title"
+            tools:text="Lesson 4"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_marginLeft="@dimen/dialog_bottom_sheet_margin"
+            android:layout_marginRight="@dimen/dialog_bottom_sheet_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/bottom_sheet_list_subtitle"
+            tools:text="Exercise: Expanding Menu"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_marginTop="@dimen/dialog_bottom_sheet_item_margin"
+            android:layout_marginLeft="@dimen/dialog_bottom_sheet_margin"
+            android:layout_marginRight="@dimen/dialog_bottom_sheet_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bottom_sheet_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?themeColorGreyLight" />
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet_list_cancel_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_content_margin_xlarge"
+        android:paddingBottom="@dimen/activity_content_margin_xlarge"
+        android:background="@drawable/canvas_to_silver"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            style="@style/SkStyle.Icon"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:src="@drawable/icon_cancel" />
+
+        <TextView
+            android:id="@+id/bottom_sheet_list_cancel"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+{
+  "spaces": [
+    {
+      "space_type": "navigation",
+      "self_url": "/stitch/products",
+      "blocks": [
+        {
+          "block_title": "Go Premium",
+          "block_type": "navbar",
+          "item_type": "NavbarButton",
+          "accessories": [],
+          "items": []
+        }
+      ]
+    },
+    {
+      "space_type": "vertical_list",
+      "self_url": "/stitch/subscriptionPlans",
+      "blocks": [
+        {
+          "block_title": null,
+          "block_type": "content",
+          "item_type": "None",
+          "accessories": [
+            {
+              "accessory_type": "text",
+              "id": "center_aligned",
+              "title": "Select a plan to get unlimited access to 16,000+ classes",
+              "actions": []
+            }
+          ],
+          "items": []
+        },
+        {
+          "block_title": null,
+          "block_type": "slide_selector",
+          "item_type": "SubscriptionPlan",
+          "accessories": [
+            {
+              "accessory_type": "text",
+              "id": "disclaimer",
+              "title": "No commitments. Cancel anytime",
+              "actions": []
+            },
+            {
+              "accessory_type": "page_indicator",
+              "id": "page_indicator",
+              "title": null,
+              "actions": []
+            }
+          ],
+          "items": [
+            {
+              "sku": 123456,
+              "plan_id": "basic",
+              "billing_period": "mo",
+              "is_popular": false,
+              "platform": "android",
+              "name": "MONTHLY",
+              "description": "billed monthly",
+              "price": "$15",
+              "is_default": false
+            },
+            {
+              "sku": 123457,
+              "plan_id": "basic-2",
+              "billing_period": "mo",
+              "is_popular": true,
+              "platform": "android",
+              "name": "ANNUAL",
+              "description": "$120 billed once a year - save 33%",
+              "price": "$10",
+              "is_default": true
+            },
+            {
+              "sku": 123458,
+              "plan_id": "basic-3",
+              "billing_period": "mo",
+              "is_popular": false,
+              "platform": "android",
+              "name": "6 MONTHS",
+              "description": "billed every 6 months - save 15%",
+              "price": "$13",
+              "is_default": false
+            }
+          ]
+        },
+        {
+          "block_type": "header",
+          "block_title": null,
+          "item_type": "None",
+          "accessories": [
+            {
+              "accessory_type": "text",
+              "id": "center_aligned",
+              "title": "Why Premium?"
+            }
+          ],
+          "items": []
+        },
+        {
+          "block_type": "grid",
+          "block_title": null,
+          "item_type": "SubscriptionPlanBenefit",
+          "accessories": [],
+          "items": [
+            {
+              "icon_id": "play_button_in_circle_grey",
+              "description": "Unlimited access to 16,000 + classes"
+            },
+            {
+              "icon_id": "play_button_in_circle_grey",
+              "description": "Download classes to view offline"
+            },
+            {
+              "icon_id": "play_button_in_circle_grey",
+              "description": "Collaborate with more than 2 million members form around the world"
+            },
+            {
+              "icon_id": "play_button_in_circle_grey",
+              "description": "Lear from experts in design, business, photography and more"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

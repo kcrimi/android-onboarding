@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="?inverseTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/view_video_player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.skillshare.Skillshare.client.video.common.view.BrightcoveVideoPlayerWrapperView
+            android:id="@+id/view_video_player_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/view_video_player_cover_layout"
+            style="@style/TouchOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/view_video_player_cover_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/view_video_player_cast_status"
+                style="@style/SkStyle.Text.Body2.Ellipsize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:background="#80000000"/>
+
+            <ImageView
+                android:id="@+id/view_video_player_cover_play_button"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/view_video_player_progress_wheel"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/activity_margin"
+            app:matProg_barColor="@color/off_white"
+            app:matProg_barWidth="4dp"
+            app:matProg_progressIndeterminate="true" />
+
+        <com.skillshare.Skillshare.client.video.common.view.VideoPlayerControls
+            android:id="@+id/view_video_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_video_player_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/course_detail_header_shadow"
+        android:navigationIcon="@drawable/icon_back_white"
+        app:titleTextAppearance="?android:attr/textAppearanceMedium"
+        app:titleTextColor="@color/white">
+
+        <LinearLayout
+            android:id="@+id/view_video_player_toolbar_next_lesson_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/view_video_player_toolbar_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="|"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/view_video_player_toolbar_next_lesson_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Next Lesson"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/view_video_player_toolbar_next_lesson_button_carat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_next_lesson"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".client.main.tabs.profile.settings.settings.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_settings_action_bar"
+        style="@style/SkStyle.Toolbar.Transparent"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_settings_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+        android:id="@+id/activity_settings_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_settings_action_bar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/activity_settings_view_settings_list"
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        layout="@layout/view_settings_list"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_settings_action_bar"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

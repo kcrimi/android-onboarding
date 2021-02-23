@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/project_paragraph"
+    style="@style/SkStyle.Text.Body2"
+    android:padding="@dimen/activity_content_margin_large"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

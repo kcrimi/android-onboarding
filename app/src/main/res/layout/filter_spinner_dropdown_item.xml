@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SkStyle.Text.Body2"
+    tools:text="Creative"
+    android:paddingLeft="@dimen/line_item_horizontal_margin_large"
+    android:paddingTop="@dimen/line_item_horizontal_margin"
+    android:paddingBottom="@dimen/line_item_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

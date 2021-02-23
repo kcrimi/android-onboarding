@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/half_activity_margin">
+
+        <TextView
+            android:id="@+id/view_profile_followed_skills_tag_cloud_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/SkStyle.Text.Header.H5"
+            tools:text="@string/profile_tag_cloud_title" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:layout_marginTop="4dp" >
+
+        <com.skillshare.Skillshare.client.common.component.common.no_swipe_recycler_view.NoSwipeRecyclerView
+            android:id="@+id/view_tag_cloud_no_swipe_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/view_profile_followed_skills_tag_cloud_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_empty_row_background"
+            android:paddingBottom="24dp"
+            android:paddingTop="24dp"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/profile_followed_skills_tag_cloud_empy_view_description" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:drawable/divider_horizontal_bright" />
+
+</LinearLayout>

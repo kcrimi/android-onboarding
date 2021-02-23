@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_stitch_toolbar"
+            style="@style/SkStyle.Toolbar"
+            android:elevation="@dimen/standard_toolbar_elevation">
+
+            <TextView
+                android:id="@+id/activity_stitch_toolbar_title_text_view"
+                style="@style/SkStyle.Text.Header.Toolbar"
+                tools:text="Activity Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <include
+            android:id="@+id/activity_browse_loading_view"
+            layout="@layout/view_loading" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_stitch_toolbar"
+        android:elevation="0dp">
+
+        <com.skillshare.Skillshare.client.common.stitch.helpers.view.base.BaseStitchContainer
+            android:id="@+id/activity_stitch_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+            android:id="@+id/activity_stitch_offline_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+</FrameLayout>

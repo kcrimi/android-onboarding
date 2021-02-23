@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_projects_featured_projects_row_cell_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clipChildren="false"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_projects_featured_projects_row_cell_featured_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty_featured_row_cell_background" />
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_featured_course_row_cell_touch_overlay"
+                style="@style/TouchOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

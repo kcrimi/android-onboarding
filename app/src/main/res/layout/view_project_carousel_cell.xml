@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/carousel_cell_width"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_featured_project_row_cell_image_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clipChildren="false"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/view_featured_project_row_cell_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_featured_project_row_cell_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty_featured_row_cell_background" />
+
+            <RelativeLayout
+                android:id="@+id/view_featured_project_row_cell_likes_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@id/view_featured_project_row_cell_image_view"
+                android:layout_alignRight="@id/view_featured_project_row_cell_image_view"
+                android:clipChildren="false"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="?inverseTheme"
+                    android:background="@drawable/editor_pick_bg"
+                    android:clipChildren="false">
+
+                    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+                        android:id="@+id/view_featured_project_row_cell_likes_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="5.5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="10.6dp"
+                        app:textStyle="normal"
+                        tools:text="1m" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/ic_heart_stroke" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_featured_project_row_cell_touch_overlay"
+                style="@style/TouchOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/view_featured_project_row_cell_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_featured_project_row_cell_image_card_view"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:paddingTop="10dp"
+        android:textColor="@color/text_gray"
+        android:textSize="14dp"
+        app:textStyle="semibold" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/view_project_row_cell_author_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_featured_project_row_cell_title_text_view"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_gray"
+        android:textSize="12dp"
+        app:textStyle="normal" />
+</RelativeLayout>

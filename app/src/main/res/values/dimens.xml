@@ -1,0 +1,166 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="half_activity_margin">8dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="featured_list_cell_height">200dp</dimen>
+    <dimen name="featured_list_cell_width">220dp</dimen>
+    <dimen name="to_scroll_height">138dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="standard_horizontal_spacing">4dp</dimen>
+    <dimen name="standard_button_corner_radius">4dp</dimen>
+    <dimen name="large_button_corner_radius">8dp</dimen>
+    <dimen name="standard_vertical_spacing">4dp</dimen>
+    <dimen name="standard_button_padding">16dp</dimen>
+    <dimen name="standard_toolbar_elevation">4dp</dimen>
+
+    <dimen name="sliding_tab_strip_default_bottom_border_height">2dp</dimen>
+    <dimen name="sliding_tab_strip_default_divider_height">10dp</dimen>
+    <dimen name="sliding_tab_strip_default_divider_thickness">2dp</dimen>
+    <dimen name="sliding_tab_strip_default_selected_indicator_height">8dp</dimen>
+    <dimen name="sliding_tab_layout_default_title_offset">24dp</dimen>
+    <dimen name="sliding_tab_layout_default_tab_view_top_bottom_padding">4dp</dimen>
+    <dimen name="sliding_tab_layout_default_tab_view_left_right_padding">8dp</dimen>
+    <dimen name="sliding_tab_layout_default_tab_view_text_size">12sp</dimen>
+
+    <dimen name="settings_cell_padding">16dp</dimen>
+    <dimen name="tablet_content_width">540dp</dimen>
+    <dimen name="dialog_margin">24dp</dimen>
+    <dimen name="hero_carousel_cell_width">250dp</dimen>
+    <dimen name="carousel_cell_width">250dp</dimen>
+    <dimen name="button_margin_size">12dp</dimen>
+    <dimen name="button_compound_drawable_padding">10dp</dimen>
+
+    <dimen name="match_parent">-1px</dimen>
+
+    <!--Post-Style Guide-->
+
+    <!--Text -->
+    <dimen name="text_size_marketing">64sp</dimen>
+    <dimen name="text_size_h1">44sp</dimen>
+    <dimen name="text_size_h2">36sp</dimen>
+    <dimen name="text_size_h3">26sp</dimen>
+    <dimen name="text_size_h4">20sp</dimen>
+    <dimen name="text_size_h5">16sp</dimen>
+    <dimen name="text_size_h6">14sp</dimen>
+    <dimen name="text_size_h7">12sp</dimen>
+    <dimen name="text_size_body1">24sp</dimen>
+    <dimen name="text_size_body2">16sp</dimen>
+    <dimen name="text_size_body3">14sp</dimen>
+    <dimen name="text_size_body4">12sp</dimen>
+    <dimen name="text_size_label">12sp</dimen>
+    <dimen name="text_size_badge">10sp</dimen>
+    <dimen name="text_size_toolbar">@dimen/text_size_h5</dimen>
+
+    <!-- Spacing -->
+    <dimen name="line_item_horizontal_margin_small">4dp</dimen>
+    <dimen name="line_item_horizontal_margin">8dp</dimen>
+    <dimen name="line_item_horizontal_margin_medium">12dp</dimen>
+    <dimen name="line_item_horizontal_margin_large">16dp</dimen>
+    <dimen name="activity_content_vertical_margin_xxsmall">2dp</dimen>
+    <dimen name="activity_content_vertical_margin_xsmall">4dp</dimen>
+    <dimen name="activity_content_vertical_margin_small">8dp</dimen>
+    <dimen name="activity_content_vertical_margin_medium">12dp</dimen>
+    <dimen name="activity_content_vertical_margin">16dp</dimen>
+    <dimen name="activity_content_margin_small">8dp</dimen>
+    <dimen name="activity_content_margin_large">20dp</dimen>
+    <dimen name="activity_content_margin_xlarge">24dp</dimen>
+    <dimen name="activity_content_margin_xxlarge">32dp</dimen>
+    <dimen name="activity_margin_large">40dp</dimen>
+    <dimen name="activity_margin_medium">20dp</dimen>
+    <dimen name="activity_margin_medium_plus">30dp</dimen>
+    <dimen name="activity_margin_small">10dp</dimen>
+
+    <!-- Card Spacing -->
+    <dimen name="card_padding_small">12dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="card_padding_large">40dp</dimen>
+    <dimen name="card_padding_xlarge">52dp</dimen>
+    <dimen name="card_content_margin_xxlarge">40dp</dimen>
+    <dimen name="card_content_margin_xlarge">32dp</dimen>
+    <dimen name="card_content_margin_large">20dp</dimen>
+    <dimen name="card_content_margin">16dp</dimen>
+    <dimen name="card_content_margin_medium">12dp</dimen>
+    <dimen name="card_content_margin_small">8dp</dimen>
+    <dimen name="card_content_margin_xsmall">4dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_corner_radius">5dp</dimen>
+    <dimen name="card_carousel_item_width">295dp</dimen>
+    <dimen name="card_carousel_item_class_in_progress_height">332dp</dimen>
+    <dimen name="card_carousel_item_class_discover_height">353dp</dimen>
+    <dimen name="card_carousel_item_image_thumbnail_height">160dp</dimen>
+    <dimen name="card_carousel_item_height">347dp</dimen>
+
+    <dimen name="user_avatar_diameter">55dp</dimen>
+    <dimen name="user_avatar_diameter_small">30dp</dimen>
+    <dimen name="user_avatar_diameter_teacher">36dp</dimen>
+    <dimen name="user_avatar_diameter_teacher_small">48dp</dimen>
+    <dimen name="user_avatar_diameter_large">72dp</dimen>
+
+    <dimen name="dialog_bottom_sheet_item_margin">4dp</dimen>
+    <dimen name="dialog_bottom_sheet_margin">16dp</dimen>
+    <dimen name="dialog_bottom_sheet_corner_radius">18dp</dimen>
+
+    <dimen name="dialog_overlay_card_height">400dp</dimen>
+    <dimen name="dialog_overlay_card_width">288dp</dimen>
+
+    <dimen name="button_height">44dp</dimen>
+    <dimen name="edittext_height">44dp</dimen>
+
+    <dimen name="icon_size_small">14dp</dimen>
+    <dimen name="icon_size_medium">20dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="icon_size_large">60dp</dimen>
+
+    <dimen name="progress_bar_height">10dp</dimen>
+
+    <dimen name="search_bar_overlay_height">80dp</dimen>
+    <dimen name="search_bar_height">48dp</dimen>
+    <dimen name="search_suggestion_padding_horizontal">20dp</dimen>
+    <dimen name="search_suggestion_title_offset">40dp</dimen>
+    <item name="search_skill_aspect_ratio" type="string">H,2:1</item>
+    <dimen name="search_skill_margin_inner">6dp</dimen>
+    <dimen name="search_skill_margin_outer">6dp</dimen>
+    <dimen name="search_suggestions_adapter_margin">14dp</dimen>
+    <dimen name="search_suggestions_skills_inner_margin">12dp</dimen>
+    <item name="search_tiles_column_count" type="integer">2</item>
+
+    <dimen name="main_nav_tab_height">57dp</dimen>
+
+    <!-- System Dimens -->
+    <dimen name="system_standard_notification_height_collapsed">64dp</dimen>
+    <dimen name="system_standard_notification_height_expanded">256dp</dimen>
+
+    <!-- Cast Mini Player-->
+    <dimen name="cast_mini_player_padding_horizontal">16dp</dimen>
+    <dimen name="cast_mini_player_padding_vertical">12dp</dimen>
+    <dimen name="cast_mini_player_content_margin_horizontal">16dp</dimen>
+    <dimen name="cast_mini_player_content_margin_vertical">12dp</dimen>
+    <dimen name="cast_mini_player_button_size">40dp</dimen>
+
+    <!-- Cast Big Player -->
+    <dimen name="cast_player_video_thumbnail_width">210dp</dimen>
+    <dimen name="cast_player_video_carousel_item_margin">16dp</dimen>
+
+    <!-- Class Details -->
+    <dimen name="class_details_horizontal_padding">10dp</dimen>
+    <dimen name="class_details_lessons_list_vertical_margin">10dp</dimen>
+    <dimen name="class_details_video_player_height">235dp</dimen>
+    <dimen name="class_details_projects_cta_padding">100dp</dimen>
+    <dimen name="class_details_tab_height">56dp</dimen>
+    <dimen name="class_details_tab_indicator_height">4dp</dimen>
+    <dimen name="class_details_lesson_position_width">32dp</dimen>
+
+    <!-- Premium -->
+    <dimen name="premium_plan_cell_height">150dp</dimen>
+    <dimen name="premium_plan_cell_width">@dimen/match_parent</dimen>
+    <dimen name="premium_cta_button_width">@dimen/match_parent</dimen>
+
+    <!-- Featured Course Row -->
+    <dimen name="featured_course_padding_start">@dimen/activity_margin_medium</dimen>
+    <item name="featured_course_aspect_ratio" type="string">H,3:2</item>
+    <item name="featured_course_copy_width_percent" type="fraction">.75</item>
+    <dimen name="featured_course_text_size">@dimen/text_size_h3</dimen>
+
+</resources>

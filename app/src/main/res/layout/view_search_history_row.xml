@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_search_history_row_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/view_search_history_row_icon"
+        style="@style/SkStyle.Icon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_recent_clock" />
+
+    <TextView
+        android:layout_toEndOf="@id/view_search_history_row_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_large"
+        android:id="@+id/view_search_history_row_query"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="Sample Search History" />
+
+</RelativeLayout>

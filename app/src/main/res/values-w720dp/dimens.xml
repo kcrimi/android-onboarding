@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="class_details_video_player_height">405dp</dimen>
+    <dimen name="hero_carousel_cell_width">350dp</dimen>
+    <dimen name="carousel_cell_width">250dp</dimen>
+
+    <!-- Premium -->
+    <dimen name="premium_plan_cell_height">210dp</dimen>
+    <dimen name="premium_plan_cell_width">300dp</dimen>
+    <dimen name="premium_cta_button_width">600dp</dimen>
+
+    <!-- Featured Course Row -->
+    <dimen name="featured_course_padding_start">40dp</dimen>
+    <item name="featured_course_aspect_ratio" type="string">H,2:1</item>
+    <item name="featured_course_copy_width_percent" type="fraction">.6</item>
+    <dimen name="featured_course_text_size">@dimen/text_size_h2</dimen>
+
+    <dimen name="search_suggestions_adapter_margin">32dp</dimen>
+    <dimen name="search_suggestions_skills_inner_margin">16dp</dimen>
+</resources>

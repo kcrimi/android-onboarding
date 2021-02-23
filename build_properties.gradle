@@ -1,0 +1,45 @@
+
+// Add new properties here and provide a sane default
+// Properties defined here can be overridden in environment variables
+// or skillshare.properties.  Currently only strings and booleans are supported
+
+def buildProps = [
+        'GOOGLE_ANALYTICS_TOKEN' : "",
+        'HOCKEY_TOKEN_BETA' : "",
+        'HOCKEY_TOKEN_ALPHA' : "",
+        'APPSFLYER_API_KEY' : "",
+        'SENTRY_KEY_PROD' : "",
+        'SENTRY_KEY_BETA' : "",
+        'SENTRY_KEY_ALPHA' : "",
+        'SENTRY_AUTH_TOKEN' : "",
+        'BLUESHIFT_KEY_PROD' : "",
+        'BLUESHIFT_KEY_BETA' : "",
+        'BLUESHIFT_KEY_ALPHA' : "",
+        'BRIGHTCOVE_ACCOUNT' : "",
+        'BRIGHTCOVE_POLICY_KEY' : "",
+        'FACEBOOK_APP_ID' : "",
+        'FACEBOOK_LOGIN_PROTOCOL_SCHEME' : "",
+        'GOOGLE_CAST_APP_ID': ""
+]
+
+// Override defaults with environment variables (Mostly for CI envs)
+def env = System.getenv()
+buildProps.each { entry -> entry.setValue(env.get(entry.getKey()) ?: entry.getValue()) }
+
+// Override current with skillshare.properties file
+Properties props = new Properties()
+def propertiesFile = new File("skillshare.properties")
+if ( propertiesFile.exists() ) {
+    props.load(propertiesFile.newInputStream())
+    buildProps.each { entry -> entry.setValue(props.getProperty(entry.getKey()) ?: entry.getValue()) }
+}
+// Add needed extra quotes for strings so buildConfig to be happy.
+buildProps.each { entry -> def value = entry.getValue()
+    // A bit of a hack for not quoting booleans
+    if( value != "true" && value != "false") {
+        entry.setValue("\"${entry.getValue()}\"")
+    }
+}
+
+// Load into the project extension variables
+ext.buildProperties = buildProps

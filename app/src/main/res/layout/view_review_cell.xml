@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/view_reviews_row_cell_recommended_icon_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_review_positive" />
+
+    <TextView
+        android:id="@+id/view_review_row_cell_testimonial_text_view"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_toRightOf="@id/view_reviews_row_cell_recommended_icon_image_view"
+        tools:text="Bacon ipsum dolor amet pork belly shank hamburger, capicola bresaola brisket pig sirloin salami andouille prosciutto flank. Turkey alcatra strip steak, cupim bacon spare ribs pastrami leberkas pork sausage shoulder flank drumstick. Shankle chuck flank, pig corned beef cow" />
+
+    <include
+        android:id="@+id/view_reviewer_info"
+        layout="@layout/view_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_review_row_cell_testimonial_text_view"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/half_activity_margin"
+        android:layout_toRightOf="@id/view_reviews_row_cell_recommended_icon_image_view" />
+</RelativeLayout>

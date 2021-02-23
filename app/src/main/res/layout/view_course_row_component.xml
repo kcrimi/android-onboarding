@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/view_course_row_component_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin">
+
+        <FrameLayout
+            android:id="@+id/view_course_row_component_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_content_margin_large"
+            android:clipChildren="false">
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_course_row_component_image_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty_featured_row_cell_background" />
+
+            <ImageView
+                android:id="@+id/view_course_row_component_play_button_image_view"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/play_button" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/view_course_row_component_course_title_text_view"
+            style="@style/SkStyle.Text.Header.H6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/view_course_row_component_image_layout"
+            android:layout_gravity="top"
+            android:layout_toRightOf="@id/view_course_row_component_image_layout"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Brand Identity: Design Adaptable Branding Systemsadshfjsahdfksahdfkjashdka" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_course_row_component_course_title_text_view"
+            android:layout_marginTop="@dimen/half_activity_margin"
+            android:layout_toRightOf="@id/view_course_row_component_image_layout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/view_course_row_component_download_icon"
+                style="@style/SkStyle.Icon.Medium.Untinted"
+                android:layout_marginRight="@dimen/standard_horizontal_spacing"
+                android:src="@drawable/ic_downloaded" />
+
+            <TextView
+                android:id="@+id/view_course_row_component_teacher_name_text_view"
+                style="@style/SkStyle.Text.Body4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Alexander Emmanuel" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/view_course_row_component_course_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_course_row_component_image_layout">
+
+            <include
+                android:id="@+id/view_course_row_component_course_metadata"
+                layout="@layout/view_course_stats_metadata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/activity_margin" />
+
+            <ImageButton
+                android:id="@+id/view_course_row_component_action_image_button"
+                style="@style/SkStyle.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:visibility="visible"
+                tools:src="@drawable/bs_ic_more_light" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:drawable/divider_horizontal_bright" />
+    </RelativeLayout>
+</merge>

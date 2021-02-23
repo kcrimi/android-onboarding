@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:clipChildren="false">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_profile_swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/fragment_profile_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false">
+
+                <com.skillshare.Skillshare.client.common.component.user.header.UserProfileHeader
+                    android:id="@+id/fragment_profile_user_profile_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?themeColorSecondary"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_margin"/>
+
+                <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/fragment_profile_progress_wheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="32dp"
+                    android:visibility="gone"
+                    app:matProg_barColor="?attr/themeColorPrimary"
+                    app:matProg_barWidth="2dp"
+                    app:matProg_progressIndeterminate="true" />
+
+                <include
+                    android:layout_below="@id/fragment_profile_user_profile_header"
+                    android:id="@+id/fragment_profile_empty_view"
+                    layout="@layout/no_activity_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <include
+                    android:layout_below="@id/fragment_profile_user_profile_header"
+                    android:id="@+id/fragment_profile_private_user_view"
+                    layout="@layout/fragment_profile_private_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <com.skillshare.Skillshare.client.common.component.offline_view.OfflineView
+                    android:layout_below="@id/fragment_profile_user_profile_header"
+                    android:id="@+id/fragment_profile_offline_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_below="@id/fragment_profile_user_profile_header"
+                    android:id="@+id/fragment_profile_inner_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:orientation="vertical">
+
+                    <com.skillshare.Skillshare.client.common.stitch.component.block.carousel.CourseCarouselView
+                        android:id="@+id/fragment_profile_teaching_course_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:paddingTop="@dimen/activity_margin"
+                        android:visibility="gone" />
+
+                    <com.skillshare.Skillshare.client.common.component.project.carousel.ProjectCarouselView
+                        android:id="@+id/fragment_profile_project_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:visibility="gone" />
+
+                    <com.skillshare.Skillshare.client.common.stitch.component.block.cloud.TagCloud
+                        android:id="@+id/fragment_profile_interested_in_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_margin"
+                        android:layout_marginTop="@dimen/activity_margin"
+                        android:layout_marginRight="@dimen/activity_margin"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_profile_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:background="@android:color/transparent"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_profile_toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                style="@style/SkStyle.Text.Header.Toolbar"
+                android:visibility="invisible"
+                tools:text="Andrew Mercando" />
+
+            <com.skillshare.Skillshare.client.common.component.user.button.FollowAuthorButton
+                android:visibility="gone"
+                android:id="@+id/fragment_profile_follow_user_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

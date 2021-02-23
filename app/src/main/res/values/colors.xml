@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Overall app appearance -->
+    <color name="ic_launcher_background">@color/navy</color>
+
+    <color name="off_white">#f1f4f4</color>
+    <color name="semi_trans_mid_gray">#e6afb9bf</color>
+    <color name="text_gray">#494d55</color>
+
+    <!-- Post-Style Guide -->
+
+    <!-- Color Definitions -->
+
+    <!--Start Rebrand Colors-->
+    <color name="wander_green">#00FF84</color>
+    <color name="navy">#002333</color>
+    <color name="charcoal">#394649</color>
+    <color name="concrete">#DCDEE1</color>
+    <color name="canvas">#F4F4F4</color>
+    <color name="canvas_75">#BFF4F4F4</color>
+    <color name="red">#FF4A4A</color>
+    <color name="blue">#00B7FF</color>
+    <color name="violet">#3722D3</color>
+    <color name="violet_75">#BF3722D3</color>
+    <color name="yellow">#FFE03D</color>
+
+    <!--End Rebrand Colors-->
+
+    <color name="black">#000000</color>
+    <color name="semi_trans_black_70">#b3000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="semi_trans_white_70">#B3FFFFFF</color>
+
+    <color name="card_background">@color/white</color>
+
+</resources>

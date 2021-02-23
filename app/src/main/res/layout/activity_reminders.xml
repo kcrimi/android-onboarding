@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SkStyle.Activity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:src="@drawable/ic_back"
+        style="@style/SkStyle.Icon"
+        android:padding="@dimen/activity_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/reminders_activity_title"
+            style="@style/SkStyle.Text.Header.H3"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:text="@string/reminders_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/reminder_subtitle_container"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_content_vertical_margin"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon_clock"
+                android:tint="?android:colorForeground"
+                android:layout_marginRight="@dimen/line_item_horizontal_margin"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+
+            <TextView
+                style="@style/SkStyle.Text.Label"
+                android:text="@string/reminders_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/reminders_content_view"
+            android:paddingTop="@dimen/activity_content_margin_large"
+            android:animateLayoutChanges="true"
+            android:layout_below="@id/reminders_activity_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/reminders_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

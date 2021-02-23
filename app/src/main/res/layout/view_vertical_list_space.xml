@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skillshare.Skillshare.client.common.component.swipe_to_refresh.CustomSwipeToRefresh xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_vertical_list_swipe_refresh_layout"
+    android:elevation="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_vertical_list_recycler_view"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.skillshare.Skillshare.client.common.component.swipe_to_refresh.CustomSwipeToRefresh>

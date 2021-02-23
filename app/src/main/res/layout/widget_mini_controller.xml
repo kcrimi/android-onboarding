@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="?inverseTheme"
+    android:background="@color/black"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/cast_mini_player_padding_horizontal"
+    android:paddingTop="@dimen/cast_mini_player_padding_vertical"
+    android:paddingRight="@dimen/cast_mini_player_padding_horizontal"
+    android:paddingBottom="@dimen/cast_mini_player_padding_vertical"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/widget_mini_controller_expand_button"
+            android:layout_gravity="center_vertical"
+            android:layout_width="32dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                style="@style/SkStyle.Icon"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_chevron_up" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/widget_mini_controller_label_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cast_mini_player_content_margin_horizontal"
+            android:layout_marginRight="@dimen/cast_mini_player_content_margin_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget_mini_controller_video_title_text_view"
+                style="@style/SkStyle.Text.Header.H5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/standard_vertical_spacing"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                tools:text="1. Introduction" />
+
+            <TextView
+                android:id="@+id/widget_mini_controller_course_title_text_view"
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="Lettering For Designers: One Drop Cap Letterform at a Time" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/widget_mini_controller_rewind_10_seconds_button"
+            style="@style/SkStyle.ImageButton"
+            android:layout_width="@dimen/cast_mini_player_button_size"
+            android:layout_height="@dimen/cast_mini_player_button_size"
+            android:layout_marginRight="@dimen/cast_mini_player_content_margin_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/player_button_backward_10" />
+
+        <ImageButton
+            android:id="@+id/widget_mini_controller_play_pause_button"
+            style="@style/SkStyle.ImageButton"
+            android:layout_width="@dimen/cast_mini_player_button_size"
+            android:layout_height="@dimen/cast_mini_player_button_size"
+            android:background="@drawable/toolbar_button_background"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/player_button_play" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/widget_mini_controller_progress_bar"
+        style="@style/SkStyle.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/cast_mini_player_content_margin_vertical"
+        android:progressDrawable="@drawable/seek_bar" />
+
+</merge>

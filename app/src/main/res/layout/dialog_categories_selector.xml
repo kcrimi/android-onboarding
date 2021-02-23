@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/SkStyle.Toolbar"
+        android:id="@+id/dialog_categories_selector_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/standard_toolbar_elevation">
+
+        <TextView
+            android:id="@+id/dialog_categories_selector_title_text_view"
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Categories" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_categories_selector_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

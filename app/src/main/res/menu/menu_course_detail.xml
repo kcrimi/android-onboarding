@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".client.course_details.course_details.view.CourseDetailsActivity">
+    <item
+        android:id="@+id/action_cast"
+        android:orderInCategory="0"
+        app:showAsAction="always"
+        app:actionProviderClass="com.skillshare.Skillshare.client.common.component.cast.ThemeableMediaRouteActionProvider"
+        android:title="@string/menu_cast"/>
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/icon_bookmark"
+        android:orderInCategory="1"
+        android:title="@string/course_actions_save_title"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_captions"
+        android:icon="@drawable/icon_captions_off"
+        android:orderInCategory="1"
+        android:title="@string/course_actions_save_title"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_overflow"
+        android:icon="@drawable/icon_overflow_white"
+        android:orderInCategory="100"
+        android:title="@string/action_share"
+        app:showAsAction="always" />
+
+</menu>

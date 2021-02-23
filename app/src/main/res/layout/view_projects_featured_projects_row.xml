@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_projects_featured_projects_row_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/half_activity_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="@dimen/half_activity_margin"
+        android:paddingTop="@dimen/half_activity_margin">
+
+        <TextView
+            android:id="@+id/view_projects_featured_projects_row_title_text_view"
+            style="@style/SkStyle.Text.Header.H5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="Student Projects" />
+
+        <TextView
+            style="@style/SkStyle.Text.Header.H5.Highlight"
+            android:id="@+id/view_projects_featured_projects_row_see_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|right"
+            android:text="@string/see_all_button_text" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/view_projects_featured_projects_row_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <com.skillshare.Skillshare.client.common.component.project.collection_row.ProjectCollectionRowCellView
+                android:id="@+id/view_projects_featured_projects_row_cell_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="32"
+                android:clipChildren="false"
+                android:clipToPadding="false" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2" />
+
+            <com.skillshare.Skillshare.client.common.component.project.collection_row.ProjectCollectionRowCellView
+                android:id="@+id/view_projects_featured_projects_row_cell_center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="32"
+                android:clipChildren="false"
+                android:clipToPadding="false" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2" />
+
+            <com.skillshare.Skillshare.client.common.component.project.collection_row.ProjectCollectionRowCellView
+                android:id="@+id/view_projects_featured_projects_row_cell_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="32"
+                android:clipChildren="false" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_projects_featured_projects_row_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_empty_row_background"
+            android:paddingBottom="24dp"
+            android:paddingTop="24dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SkStyle.Text.Body3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/projects_featured_projects_empty_text" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

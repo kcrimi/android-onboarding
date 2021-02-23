@@ -1,0 +1,375 @@
+version: 2.1
+
+references: # define variables below
+
+  ## Constants ##
+  working_directory: &working_directory
+    ~/code
+
+  git_filters:
+    - &branch_preview_branch build-preview
+    - &branch_release /^release/\d+.\d+.\d+$/
+    - &branch_store master
+    - &tag_version /\d+\.\d+\.\d+\.\d+/
+
+  github_push_key_fingerprint: &github_push_key_fingerprint
+    "7c:a7:9b:40:94:b5:5e:b0:d2:cd:2c:aa:88:5e:6a:e5"
+
+
+  ## Parameters ##
+  build_types:
+    - &build_type_alpha "Alpha"
+    - &build_type_beta "Beta"
+    - &build_type_regression "Regression"
+    - &build_type_release "Release"
+
+  param_build_type: &param_build_type
+    build-type:
+      type: enum
+      enum: [*build_type_alpha, *build_type_beta, *build_type_regression, *build_type_release]
+
+  sentry_build_types:
+    - &sentry_build_type_alpha "ALPHA"
+    - &sentry_build_type_beta "BETA"
+    - &sentry_build_type_release "RELEASE"
+
+  param_sentry_build_type: &param_sentry_build_type
+    sentry-build-type:
+      type: enum
+      enum: [*sentry_build_type_alpha, *sentry_build_type_beta, *sentry_build_type_release]
+
+## Executors - Environment configurations on which to run jobs ##
+executors:
+  default-executor:
+    working_directory: *working_directory
+    resource_class: small
+    docker:
+      - image: circleci/android:api-29
+
+  build-executor:
+    working_directory: *working_directory
+    resource_class: large
+    docker:
+      - image: circleci/android:api-29
+    environment:
+      TERM: dumb
+      ANDROID_HOME: /opt/android/sdk
+      _JAVA_OPTIONS: "-XX:+UseContainerSupport"
+
+## Commands - Sets of tasks to be used in jobs ##
+commands:
+  unit-tests:
+    description: "Runs unit tests for the specified build variant"
+    parameters:
+      <<: *param_build_type
+    steps:
+      - run:
+          name: Run << parameters.build-type >> Tests
+          command: ./gradlew test<< parameters.build-type >>
+  decrypt-using-gitcrypt:
+    description: "Installs gitcrypt, generate the key, and decrypt the files"
+    steps:
+      - run:
+          name: Install Git-Crypt
+          command: |
+            echo "Installing libssl"
+            sudo apt-get install libssl-dev
+            echo "Downloading git-crypt"
+            cd /tmp && wget https://github.com/AGWA/git-crypt/archive/0.6.0.zip
+            echo "Unzipping git-crypt"
+            unzip 0.6.0.zip && cd git-crypt-0.6.0/
+            echo "Installing git-crypt"
+            make && sudo make install
+      - run:
+          name: Create git-crypt Key
+          command: echo "$GIT_CRYPT_KEY" | base64 --decode > skillshare.crypt-key
+      - run:
+          name: Decrypt files
+          command: git-crypt unlock skillshare.crypt-key
+
+  checkout-and-decrypt:
+    description: "Checks out code and decrypts it with gitcrypt"
+    steps:
+      - checkout
+      - decrypt-using-gitcrypt
+
+  generate-signing-properties:
+    description: "Generate the signing.properties file for builds"
+    steps:
+      - run:
+          name: Generate signing.properties file
+          command: ./scripts/ci/generate_signing_properties.sh
+
+  persist-to-working-directory:
+    description: "Persist everything to working directory to be available in the next job"
+    steps:
+      - persist_to_workspace:
+          root: .
+          paths: .
+
+  attach-to-working-directory:
+    description: "Attach the container to saved workpace from a previous job"
+    steps:
+      - attach_workspace:
+          at: *working_directory
+
+  assemble-build:
+    description: "Assemble a build of the specified buildType"
+    parameters:
+      <<: *param_build_type
+    steps:
+      - run:
+          name: Assemble << parameters.build-type >> Build
+          command: ./gradlew --quiet --no-daemon :app:assemble<< parameters.build-type >>
+
+  store-apk-artifact:
+    description: "Store the built apk as an artifact"
+    steps:
+      - store_artifacts:
+          path: app/build/outputs/apk
+          destination: apk
+
+  set-sentry-env:
+    description: "Set Sentry ENV variable required for uploading obfuscation mapping"
+    parameters:
+      <<: *param_sentry_build_type
+    steps:
+      - run:
+          name: Set Sentry Env Variables
+          command: |
+            echo 'export SENTRY_PROJECT="$SENTRY_PROJECT_<< parameters.sentry-build-type >>"' >> $BASH_ENV
+
+  add-github-ssh-keys:
+    description: "Adds the ssh key for github"
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - *github_push_key_fingerprint
+
+  generate-release-notes:
+    description: "Generates release notes txt to be used with fabric and firebase"
+    steps:
+      - run:
+          name: Generate Release Notes File
+          command: ./scripts/ci/generate_release_notes.sh
+
+  publish-apk-to-firebase:
+    description: "Publish the previously generated APK to Firebase App Distirbution"
+    parameters:
+      <<: *param_build_type
+    steps:
+      - run:
+          name: Publish Build to Firebase Distribution
+          command: ./gradlew appDistributionUpload<< parameters.build-type >> --exclude-task package<< parameters.build-type >>
+
+## Jobs - sets of tasks to be run as pass/fail steps within workflows ##
+jobs:
+  test:
+    executor: build-executor
+    resource_class: large
+    parameters:
+      <<: *param_build_type
+    steps:
+      - checkout-and-decrypt
+      - unit-tests:
+          build-type: << parameters.build-type >>
+
+  create-tag-and-bump-version:
+    executor: default-executor
+    steps:
+      - checkout-and-decrypt
+      - add-github-ssh-keys
+      - run:
+          name: Create tag for alpha build if needed
+          command: ./scripts/ci/cut_build_with_git_user.sh
+
+  build-apk:
+    executor: build-executor
+    parameters:
+      <<: *param_build_type
+      <<: *param_sentry_build_type
+    steps:
+      - checkout-and-decrypt
+      - generate-signing-properties
+      - set-sentry-env:
+          sentry-build-type: << parameters.sentry-build-type >>
+      - assemble-build:
+          build-type: << parameters.build-type >>
+      - store-apk-artifact
+      - persist-to-working-directory
+
+  upload-to-play-store:
+    executor: build-executor
+    steps:
+      - attach-to-working-directory
+      - run:
+          name: Publish APK to Play Store
+          command: ./gradlew --quiet publishApkRelease
+      - store-apk-artifact
+
+  upload-to-firebase:
+    executor: default-executor
+    parameters:
+      <<: *param_build_type
+    steps:
+      - attach-to-working-directory
+      - generate-release-notes
+      - publish-apk-to-firebase:
+          build-type: << parameters.build-type >>
+
+  nightly-build:
+    executor: default-executor
+    steps:
+      - add-github-ssh-keys
+      - checkout-and-decrypt
+      - run:
+          name: Trigger Build if New Changes
+          command: ./scripts/ci/nightly_build.sh
+
+## Workflows - Collections of jobs to be executed in order of their defined dependencies ##
+workflows:
+  # Runs on every push to any other branch
+  feature-branch:
+    jobs:
+      - test:
+          name: test-alpha
+          build-type: *build_type_alpha
+          filters:
+            branches:
+              ignore:
+                - *branch_store
+                - *branch_release
+                - *branch_preview_branch
+      - test:
+          name: test-release
+          build-type: *build_type_release
+          filters:
+            branches:
+              ignore:
+                - *branch_store
+                - *branch_release
+                - *branch_preview_branch
+
+  # Builds Alpha and distributes based on preview branch or version bump tags
+  build-alpha-and-distribute:
+    jobs:
+      - test:
+          name: test-release
+          build-type: *build_type_release
+          filters:
+            branches:
+              only: *branch_preview_branch
+            tags:
+              only: *tag_version
+      - test:
+          name: test-alpha
+          build-type: *build_type_alpha
+          filters:
+            branches:
+              only: *branch_preview_branch
+            tags:
+              only: *tag_version
+      - build-apk:
+          name: build-apk-alpha
+          build-type: *build_type_alpha
+          sentry-build-type: *sentry_build_type_alpha
+          filters:
+            branches:
+              only: *branch_preview_branch
+            tags:
+              only: *tag_version
+      - upload-to-firebase:
+          name: upload-alpha-to-firebase
+          build-type: *build_type_alpha
+          requires:
+            - test-alpha
+            - test-release
+            - build-apk-alpha
+          filters:
+            branches:
+              only: *branch_preview_branch
+            tags:
+              only: *tag_version
+
+  # Builds Beta and Regression and uploads to Firebase.
+  # Also creates a version tag to kick off an alpha if needed
+  build-beta-and-regression-and-distribute:
+    jobs:
+      - test:
+          name: test-release
+          build-type: *build_type_release
+          filters:
+            branches:
+              only: *branch_release
+      - test:
+          name: test-beta
+          build-type: *build_type_beta
+          filters:
+            branches:
+              only: *branch_release
+      - create-tag-and-bump-version:
+          filters:
+            branches:
+              only: *branch_release
+      - build-apk:
+          name: build-apk-beta
+          build-type: *build_type_beta
+          sentry-build-type: *sentry_build_type_beta
+          filters:
+            branches:
+              only: *branch_release
+      - build-apk:
+          name: build-apk-regression
+          build-type: *build_type_regression
+          sentry-build-type: *sentry_build_type_beta
+          filters:
+            branches:
+              only: *branch_release
+      - upload-to-firebase:
+          name: upload-beta-to-firebase
+          build-type: *build_type_beta
+          requires:
+            - test-release
+            - test-beta
+            - build-apk-beta
+      - upload-to-firebase:
+          name: upload-regression-to-firebase
+          build-type: *build_type_regression
+          requires:
+            - test-release
+            - test-beta
+            - build-apk-regression
+
+  # Builds a Release and uploads it to the Play store
+  build-store-and-publish:
+    jobs:
+      - test:
+          build-type: *build_type_release
+          filters:
+            branches:
+              only: *branch_store
+      - build-apk:
+          name: build-apk-release
+          build-type: *build_type_release
+          sentry-build-type: *sentry_build_type_release
+          filters:
+            branches:
+              only: *branch_store
+      - upload-to-play-store:
+          requires:
+            - test
+            - build-apk-release
+
+  # Runs nightly and creates a new version tag if there have been new changes merged in the past day
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only: develop
+    jobs:
+      - nightly-build
+
+
+

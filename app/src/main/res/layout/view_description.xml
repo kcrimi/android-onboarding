@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_description"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:parentTag="LinearLayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_description_toolbar"
+        style="@style/SkStyle.Toolbar.Transparent"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lessons_tab_description_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        style="@style/SkStyle.TabletFriendlyWidthContainer"
+        android:scrollbars="none"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/activity_margin_medium"
+        android:paddingEnd="@dimen/activity_margin_medium">
+
+        <TextView
+            android:paddingTop="@dimen/activity_margin"
+            android:id="@+id/view_description_description"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Lorum Ipsum aejgnejrgnaeljngekjangjraengjanergjklrnaekgjnaerlkgjnkjergnlkajergnjaer\n\n\ng naergjaerkng aerjkn gjkraengkjl earnkg jlaerngk jlearnkg jlnaergk jnaerg kjlnaerg nkjaerg nkajlerg njakerng kjaerng akjlerg njklaerng krljae gnjklaerng jkraeg naerg nljaerngjkljrkaengk jlearng lajerkgklaerjklg laejnkrg jjaerlg nkjlearg jaern kgjrnael gjnaerg jnaerjkgl \n\nnrkaeng kejarng klranegk enarl gjklearljkg nkaejr gnjaern gaerjn gjkleanr kgjlearjg nlrjkaeng ljkaer ngiujaernig janlegkjnaerg jknjklaerg nlraejgjaekrgnjkaelrng kjearnlgjkear" />
+    </ScrollView>
+</merge>

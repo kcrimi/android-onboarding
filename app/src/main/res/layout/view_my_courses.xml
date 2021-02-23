@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SkStyle.Activity.White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_my_courses_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:layout_height="wrap_content"
+        android:background="?themeColorSecondary"
+        app:menu="@menu/menu_me_page_signed_in">
+
+        <RelativeLayout
+            android:id="@+id/view_my_courses_header_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            android:layout_marginBottom="@dimen/activity_margin_medium_plus"
+            android:background="?themeColorSecondary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/view_my_courses_user_image"
+                style="@style/SkStyle.Avatar.MyClasses"
+                tools:src="@drawable/splash" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/line_item_horizontal_margin_medium"
+                android:layout_toEndOf="@id/view_my_courses_user_image"
+                android:orientation="vertical"
+                android:theme="@style/SkillshareTheme.Inverse">
+
+                <TextView
+                    android:id="@+id/view_my_courses_user_name"
+                    style="@style/SkStyle.Text.Header.H4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Emily Frouin" />
+
+                <TextView
+                    android:id="@+id/view_my_courses_view_profile"
+                    style="@style/SkStyle.Text.Body3.Highlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="View Profile" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_my_courses_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/view_my_courses_list_title"
+                style="@style/SkStyle.Text.Header.H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin_medium"
+                android:layout_marginTop="@dimen/activity_margin_large"
+                android:layout_marginBottom="@dimen/activity_margin_small"
+                android:text="@string/my_courses_page_title" />
+
+            <include
+                android:id="@+id/view_my_courses_downloads_row"
+                layout="@layout/view_my_courses_row" />
+
+            <include
+                android:id="@+id/view_my_courses_saved_courses_row"
+                layout="@layout/view_my_courses_row" />
+
+            <include
+                android:id="@+id/view_my_courses_lists_row"
+                layout="@layout/view_my_courses_row" />
+
+            <include
+                android:id="@+id/view_my_courses_watch_history_row"
+                layout="@layout/view_my_courses_row" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

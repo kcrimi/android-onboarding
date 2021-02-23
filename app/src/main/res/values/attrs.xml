@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme Attrs -->
+    <attr name="fontRegular" format="reference"/>
+    <attr name="fontSerifBold" format="reference"/>
+    <attr name="fontSemiBold" format="reference"/>
+    <attr name="fontBold" format="reference"/>
+
+    <attr name="themeColorPrimary" format="color"/>
+    <attr name="themeColorCanvas" format="color"/>
+    <attr name="themeColorCanvas_75" format="color"/>
+    <attr name="themeColorGreyLight" format="color"/>
+    <attr name="themeColorGreyMedium" format="color"/>
+    <attr name="themeColorGreyDark" format="color"/>
+    <attr name="themeColorPrimaryDark" format="color"/>
+    <attr name="themeColorYellow" format="color"/>
+    <attr name="themeColorSecondary" format="color"/>
+    <attr name="themeColorSecondary_75" format="color"/>
+    <attr name="themeColorBlue" format="color"/>
+    <attr name="themeColorRed" format="color"/>
+
+    <attr name="themeColorTextHighlight" format="color"/>
+    <attr name="buttonColorPrimary" format="color"/>
+    <attr name="buttonColorSecondary" format="color"/>
+    <attr name="themeColorProgress" format="color"/>
+    <attr name="iconStyle" format="reference"/>
+
+    <!-- General -->
+    <attr name="inverseTheme" format="reference"/>
+    <attr name="normalTheme" format="reference"/>
+
+
+    <declare-styleable name="CustomTextView">
+        <attr name="textStyle" />
+    </declare-styleable>
+    <attr name="textStyle">
+        <flag name="normal" value="0x00" />
+        <flag name="semibold" value="0x01" />
+        <flag name="bold" value="0x02" />
+    </attr>
+
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="showBottomBorder" format="boolean" />
+        <attr name="bottomBorderColor" format="color" />
+        <attr name="bottomBorderAlpha" format="integer" />
+        <attr name="bottomBorderHeight" format="dimension" />
+
+        <attr name="showSelectedIndicator" format="boolean" />
+        <attr name="selectedIndicatorColor" format="color" />
+        <attr name="selectedIndicatorAlpha" format="integer" />
+        <attr name="selectedIndicatorHeight" format="dimension" />
+
+        <attr name="showTabDividers" format="boolean" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerAlpha" format="integer" />
+        <attr name="dividerHeight" format="dimension" />
+
+        <attr name="titleOffset" format="dimension" />
+        <attr name="tabViewLeftRightPadding" format="dimension" />
+        <attr name="tabViewTopBottomPadding" format="dimension" />
+        <attr name="tabTitleTextSize" format="dimension" />
+
+        <attr name="selectedTabTextColor" format="color" />
+        <attr name="selectedTabTextAlpha" format="integer" />
+
+        <attr name="unSelectedTabTextColor" format="color" />
+        <attr name="unSelectedTabTextAlpha" format="integer" />
+
+        <attr name="highlightSelectedTabTitle" format="boolean" />
+        <attr name="smoothScrollOnPageChange" format="boolean" />
+
+        <attr name="distributeEvenly" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ThemeableMediaRouteButton">
+        <!-- This drawable is a state list where the "checked" state
+             indicates active media routing.  Checkable indicates connecting
+             and non-checked / non-checkable indicates
+             that media is playing to the local device only. -->
+        <attr name="routeEnabledDrawable" format="reference" />
+        <attr name="iconColor" format="reference|color" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+    </declare-styleable>
+
+    <declare-styleable name="CtaCard">
+        <attr name="cardStyle" format="reference"/>
+    </declare-styleable>
+</resources>

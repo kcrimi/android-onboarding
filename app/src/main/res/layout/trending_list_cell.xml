@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:onClick="onEditorPick">
+
+    <ImageView
+        android:id="@+id/featured_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/editor_pick_shadow" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/course_cell_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginRight="56.1dp"
+        android:layout_marginBottom="34dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="21dp"
+        android:lineSpacingMultiplier="1.2"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        app:textStyle="semibold"
+        android:shadowColor="#7f000000"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="4" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/course_cell_teacher_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="211dp"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        app:textStyle="normal"
+        android:shadowColor="#7f000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="4" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="24.4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingRight="7dp"
+        android:background="@drawable/editor_pick_bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="5.5dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/icon_trending" />
+
+        <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="Trending"
+            android:textSize="14dp"
+            android:textColor="@android:color/white"
+            app:textStyle="semibold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

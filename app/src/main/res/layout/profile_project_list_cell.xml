@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="10dp"
+    android:layout_width="@dimen/featured_list_cell_width"
+    android:layout_height="240dp">
+
+    <RelativeLayout
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="165dp">
+
+        <ImageView
+            android:id="@+id/project_cover"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:theme="?inverseTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editor_pick_bg">
+
+                <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+                    android:id="@+id/project_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5.5dp"
+                    android:text="1m"
+                    android:textSize="10.6dp"
+                    android:textColor="@android:color/white"
+                    app:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="3.2dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/ic_heart_stroke" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:paddingTop="10.5dp"
+        android:textColor="@color/text_gray"
+        android:textSize="14dp"
+        tools:text="Project Name"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:textStyle="semibold" />
+
+    <com.skillshare.Skillshare.client.common.component.common.text_view.CustomTextView
+        android:id="@+id/project_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/project_name"
+        android:textColor="@color/text_gray"
+        android:layout_marginTop="4dp"
+        tools:text="Project Author"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="12dp"
+        app:textStyle="normal" />
+</RelativeLayout>

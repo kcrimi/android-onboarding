@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lessons_list_row_background"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/activity_content_margin_large"
+    android:paddingEnd="@dimen/activity_content_margin_large"
+    android:paddingTop="@dimen/activity_content_vertical_margin"
+    android:paddingBottom="@dimen/activity_content_vertical_margin">
+
+    <TextView
+        android:id="@+id/view_lesson_list_row_position"
+        style="@style/SkStyle.Text.Body2"
+        android:layout_width="@dimen/class_details_lesson_position_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_lesson_list_row_title_container"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_medium"
+        android:gravity="start"
+        android:textColor="@color/lessons_list_row_text_color"
+        tools:text="100." />
+
+    <ImageView
+        android:id="@+id/view_lesson_list_row_play_icon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_small"
+        android:visibility="visible"
+        tools:src="@drawable/ic_checkmark" />
+
+    <LinearLayout
+        android:id="@+id/view_lesson_list_row_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/line_item_horizontal_margin_small"
+        android:layout_marginEnd="@dimen/activity_content_margin_large"
+        android:layout_toStartOf="@id/view_lesson_list_row_dl_icon"
+        android:layout_toEndOf="@id/view_lesson_list_row_position"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_lesson_list_row_title"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lessons_list_row_text_color"
+            tools:text="Principle #423" />
+
+        <!-- Below the 4sp marginTop matches the lineSpacingExtra that the text above uses -->
+        <TextView
+            android:id="@+id/view_lesson_list_row_duration"
+            style="@style/SkStyle.Text.Body3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4sp"
+            android:textColor="@color/lessons_list_row_text_color"
+            tools:text="1:40" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/view_lesson_list_row_dl_icon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        tools:src="@drawable/ic_locked" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.onboarding.onboarding.view.OnboardingActivity">
+
+    <com.skillshare.Skillshare.client.common.component.common.no_swipe_view_pager.NoSwipeViewPager
+        android:id="@+id/activity_onboarding_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

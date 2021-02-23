@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skillshare.Skillshare.client.common.stitch.component.block.empty_row.EmptyRowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_empty_row_cell_empty_row_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/activity_margin"/>

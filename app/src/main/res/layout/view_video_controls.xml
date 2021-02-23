@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="?inverseTheme"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:id="@+id/view_video_controls_track_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="24dp">
+
+            <!--We intentionally used "dp" instead of "sp" below to prevent text size configuration changes-->
+
+            <TextView
+                android:id="@+id/video_total_time"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/video_player_zero_time"
+                android:textSize="16dp"
+                style="@style/SkStyle.Text.Body2" />
+
+            <TextView
+                android:id="@+id/video_current_time"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/video_player_zero_time"
+                android:gravity="right"
+                android:textSize="16dp"
+                style="@style/SkStyle.Text.Body2" />
+
+            <SeekBar
+                android:id="@+id/video_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/video_total_time"
+                android:layout_toRightOf="@id/video_current_time"
+                style="@style/SkStyle.SeekBar"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/media_controller_full_screen_button"
+            style="@style/SkStyle.Icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/overflow_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_full_screen" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_video_controls_center_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_video_controls_track_bar"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/view_video_controls_center_buttons_portrait" />
+    </RelativeLayout>
+</RelativeLayout>

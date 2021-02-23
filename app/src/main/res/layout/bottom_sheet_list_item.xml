@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_view_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/activity_margin_medium"
+    android:paddingTop="@dimen/activity_margin"
+    android:paddingEnd="@dimen/activity_margin_medium"
+    android:paddingBottom="@dimen/activity_margin"
+    android:background="@drawable/canvas_to_silver"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/list_view_item_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/list_view_item_icon"
+            style="@style/SkStyle.Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_margin"
+            tools:src="@drawable/ic_checkmark" />
+
+        <TextView
+            android:id="@+id/list_view_item_title"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_content_margin_small"
+            android:layout_toEndOf="@id/list_view_item_icon"
+            tools:text="Play Speed" />
+
+        <TextView
+            android:id="@+id/list_view_item_separator"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_content_margin_small"
+            android:layout_toEndOf="@id/list_view_item_title"
+            android:text="@string/separation_dot" />
+
+        <TextView
+            android:id="@+id/list_view_item_subtitle"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/list_view_item_separator"
+            android:ellipsize="end"
+            android:lines="1"
+            tools:text="1x (Normal)" />
+
+        <Switch
+            android:id="@+id/list_view_item_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/list_view_item_subtext"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_view_item_top_container"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/activity_margin_large"
+        android:layout_marginEnd="@dimen/activity_margin_large"
+        android:layout_marginTop="@dimen/activity_content_vertical_margin_small"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="?themeColorGreyDark"
+        android:visibility="visible"
+        tools:text="@string/background_audio_help" />
+
+</RelativeLayout>

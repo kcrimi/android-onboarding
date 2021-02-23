@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/view_course_hero_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_to_silver"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:theme="@style/SkStyle.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+                android:id="@+id/view_course_hero_header_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/splash" />
+
+            <TextView
+                android:id="@+id/view_course_hero_header_tag"
+                style="@style/SkStyle.Text.Header.H6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:background="?themeColorSecondary"
+                android:gravity="center"
+                android:paddingBottom="@dimen/standard_vertical_spacing"
+                android:paddingLeft="@dimen/half_activity_margin"
+                android:paddingRight="@dimen/half_activity_margin"
+                android:paddingTop="@dimen/standard_vertical_spacing"
+                tools:text="Featured Class" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/view_course_hero_metadata"
+            layout="@layout/view_course_hero_metadata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_course_hero_carousel_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:clipChildren="false"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:background="@android:drawable/divider_horizontal_bright" />
+</LinearLayout>

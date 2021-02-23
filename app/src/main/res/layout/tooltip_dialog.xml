@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_view"
+    android:layout_marginStart="@dimen/line_item_horizontal_margin_small"
+    android:layout_marginEnd="@dimen/line_item_horizontal_margin_small"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:theme="?inverseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tooltip_top_arrow"
+            android:visibility="visible"
+            app:srcCompat="@drawable/tooltip_triangle_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/tooltip_dialog_box"
+            android:gravity="left"
+            android:layout_below="@id/tooltip_top_arrow"
+            android:orientation="vertical"
+            android:background="@drawable/tooltip_background"
+            android:padding="@dimen/card_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tooltip_subtitle"
+                style="@style/SkStyle.Text.Label"
+                android:textColor="@color/white"
+                android:text="@string/tooltip_reminder_subtitle"
+                android:layout_marginBottom="@dimen/card_content_margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/SkStyle.Text.Header.H3.Highlight"
+                android:text="@string/tooltip_reminder_title"
+                android:layout_marginBottom="@dimen/activity_margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tooltip_content"
+                style="@style/SkStyle.Text.Body2"
+                android:text="@string/tooltip_reminder_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bottom_arrow"
+            android:visibility="gone"
+            android:layout_below="@id/tooltip_dialog_box"
+            app:srcCompat="@drawable/tooltip_triangle_down"
+            android:layout_width="wrap_content"
+            android:layout_height="15.9dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

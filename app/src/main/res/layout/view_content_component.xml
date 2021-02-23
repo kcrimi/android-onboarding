@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/view_content_component_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/view_content_component_left_text_view"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|left|center_vertical"
+            android:layout_weight="50"
+            android:visibility="gone"
+            tools:text="Lorem Ipsum this is some left aligned text"/>
+
+        <TextView
+            android:id="@+id/view_content_component_center_text_view"
+            style="@style/SkStyle.Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_weight="50"
+            tools:text="Lorem Ipsum this is some center aligned text"/>
+
+    </LinearLayout>
+</merge>

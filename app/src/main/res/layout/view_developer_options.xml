@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_developer_options_toolbar"
+        style="@style/SkStyle.Toolbar"
+        android:elevation="@dimen/standard_toolbar_elevation"
+        android:navigationIcon="@drawable/ic_back"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/SkStyle.Text.Header.Toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_developer_options" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/activity_margin_medium"
+            android:layout_marginEnd="@dimen/activity_margin_medium"
+            style="@style/SkStyle.Settings.RowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/build_information" />
+
+            <FrameLayout
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:id="@+id/view_developer_options_app_version_cell">
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_version" />
+
+                <TextView
+                    android:id="@+id/view_developer_options_app_version"
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    tools:text="5.1.6.6 (4816)"/>
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/off_white" />
+
+            <FrameLayout
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                android:id="@+id/view_developer_options_configuration_cell">
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/configuration" />
+
+                <ImageView
+                    android:id="@+id/view_developer_options_configuration"
+                    style="@style/SkStyle.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/icon_next_lesson" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/SkStyle.Settings.RowTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/build_options" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/off_white" />
+
+            <LinearLayout
+                android:id="@+id/view_developer_options_api_selection_row"
+                style="@style/SkStyle.Settings.RowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/view_developer_options_endpoint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/off_white" />
+
+            <FrameLayout
+                android:id="@+id/view_developer_options_log_request_data_cell"
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/log_request_data" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/view_developer_options_report_log_request_data_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/view_developer_options_force_rec_for_you_cell"
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/developer_options_rec_for_you" />
+
+                <Switch
+                    android:id="@+id/view_developer_options_force_rec_for_you_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/view_developer_options_ratings_dialog_cell"
+                style="@style/SkStyle.Settings.RowContainerInner"
+                android:layout_marginBottom="@dimen/activity_margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SkStyle.Text.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/developer_options_ratings" />
+
+                <Button
+                    style="@style/SkStyle.Button.Primary"
+                    android:id="@+id/view_developer_options_ratings_dialog_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

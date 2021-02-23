@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="?inverseTheme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_free_premium_tag_background"
+    android:paddingBottom="2dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="2dp">
+
+    <TextView
+        android:id="@+id/widget_free_premium_tag_text_view"
+        style="@style/SkStyle.Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Free Class" />
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_lessons_featured_related_courses_row_cell_content_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <com.skillshare.Skillshare.client.common.component.common.fixed_aspect_image_view.LandscapeFixedAspectRatioImageView
+        android:id="@+id/view_lessons_featured_related_courses_row_cell_cover_image_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/half_activity_margin"
+        android:layout_weight="30"
+        android:scaleType="centerCrop"
+        android:src="@drawable/empty_featured_row_cell_background" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_lessons_featured_related_courses_row_cell_title_text_view"
+            style="@style/SkStyle.Text.Header.H6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Brand Identity: Design Adaptable Brandign Systems" />
+
+        <TextView
+            android:id="@+id/view_lessons_featured_related_courses_row_cell_teacher_name_text_view"
+            style="@style/SkStyle.Text.Body4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_vertical_spacing"
+            tools:text="Michael Karnjanaprakorn" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="?inverseTheme"
+    style="@style/SkStyle.Inverse"
+    android:padding="@dimen/activity_margin"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_button_bar_primary_banner_button"
+        style="@style/SkStyle.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Start Your Free Month"/>
+
+</FrameLayout>
